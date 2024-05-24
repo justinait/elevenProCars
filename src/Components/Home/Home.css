@@ -83,3 +83,30 @@
         margin: 14px 0;
     }
 }
+@media (min-width: 1200px) {
+    .ourFocus {
+        font-size: 63px;
+        width: 40%;
+    }
+    .ourFocusText{
+        width: 35%;
+        font-size: 22px;
+        margin: 4% 11% 4% 3%;
+    }
+    .ourServices {
+        display: none;
+    }
+    .homeContainerDiv {
+        margin: 5% 0;
+    }
+    .overlay {
+        height: 99.5%;
+    }
+    .homeImageContainer {
+        width: 50%;
+    }
+    .homeDiv{
+        
+    display: flex;
+    }
+}

@@ -30,3 +30,9 @@
         width: 80px;
     }
 }
+@media(min-width:1200px){
+    .logoNavbar {
+        width: 90px;
+        margin: 4% 2% 2% 4%;
+    }
+}
