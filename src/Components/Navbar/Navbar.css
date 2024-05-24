@@ -25,3 +25,8 @@
     font-size: 16px;
     letter-spacing: 0.05em;
 }
+@media(min-width:700px){
+    .logoNavbar {
+        width: 80px;
+    }
+}

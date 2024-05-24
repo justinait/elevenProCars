@@ -24,7 +24,7 @@ function Home() {
         <div className='homeImageContainer'>
             <div className='overlay'></div>
             <img className='homeServicesImage' src={image4} alt="" />
-            <div className='homeImagePhrase'>
+            <div className='homeImagePhrase homeImagePhraseTablet'>
                 <p className='homeImageP'>Unforgettable Unique Experience. </p>
                 <p className='homeImageP'>Reservations at Nightclubs and Restaurants.</p>
                 <p className='homeImageP'>Logistics for Easy Parking in High-Demand Areas.</p>

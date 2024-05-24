@@ -30,6 +30,22 @@
     text-align: center;
 }
 .heroText {
-
     color: #242424;
+}
+
+@media(min-width:700px){
+    .titleHero {        
+        margin-top: 45vh;
+        font-size: 94px;
+        margin: 52vh 10% 0;
+        line-height: normal;
+        line-height: 95px;
+    }
+    .heroText{
+        
+    font-size: 35px;
+    }
+    .heroContainer{
+        justify-content: center;
+    }
 }
