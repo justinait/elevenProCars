@@ -2,6 +2,8 @@ import React from 'react'
 import image from '/cars/maclaren naranja (1) cut.jpg'
 import image2 from '/cars/tres autos (2).jpg'
 import image3 from '/cars/mercedes camioneta blanca (2).jpg'
+import image4 from '/cars/mercedes deportivo gris.jpg'
+
 
 import './Home.css'
 
@@ -18,15 +20,14 @@ function Home() {
             <p className='homeImagePhrase'>Let's get you on the road.<br /> Expertise. Commitment. Value.</p>
             <img src={image3} alt="" className='homeServicesImage'/>
         </div>
-        <div>
             <p className='ourFocus ourServices'>OUR SERVICES</p>
-            <div>
-                <p className='ourFocusText'>
-                    Unforgettable Unique Experience. <br />
-                    Exclusive Car to Enjoy Mallorca's Coves and Beaches. <br />
-                    Reservations at Nightclubs and Restaurants. <br />
-                    Logistics for Easy Parking in High-Demand Areas.
-                </p>
+        <div className='homeImageContainer'>
+            <div className='overlay'></div>
+            <img className='homeServicesImage' src={image4} alt="" />
+            <div className='homeImagePhrase'>
+                <p className='homeImageP'>Unforgettable Unique Experience. </p>
+                <p className='homeImageP'>Reservations at Nightclubs and Restaurants.</p>
+                <p className='homeImageP'>Logistics for Easy Parking in High-Demand Areas.</p>
             </div>
         </div>
     </div>
