@@ -1,0 +1,35 @@
+.heroContainer {
+    background-image: url('/cars/hero.jpg');
+    height: 96vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: unset;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    justify-content: end;
+    z-index: 2;
+}
+
+.heroImage {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.titleHero {
+    font-size: 30px;
+    font-family: "Libre Caslon Text", serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+    font-size: 54px;
+    color: #242424;
+    text-align: center;
+}
+.heroText {
+
+    color: #242424;
+}
