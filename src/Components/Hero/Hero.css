@@ -1,6 +1,7 @@
 .heroContainer {
-    background-image: url('/cars/hero.jpg');
+    background-image: url('/cars/heroeleven.jpg');
     height: 96vh;
+    height: 69vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -10,8 +11,9 @@
     background-position: center;
     object-fit: cover;
     background-size: cover;
-    justify-content: end;
+    justify-content: center;
     z-index: 2;
+    justify-content: flex-end;
 }
 
 .heroImage {
@@ -20,58 +22,49 @@
     object-fit: cover;
 }
 .titleHero {
-    font-size: 30px;
+    
     font-family: "Libre Caslon Text", serif;
-    text-transform: uppercase;
     font-weight: 600;
     margin: 0;
-    font-size: 54px;
-    color: #242424;
-    text-align: center;
-    line-height: 60px;
+    /* color: #242424; */
+    font-size: 23px;
+    padding: 2% 5%;
+    /* text-align: center; */
+    line-height: 32px;
+    z-index: 2;
+    width: 90%;
 }
 .heroText {
-    color: #242424;
+    /* color: #242424; */
 }
-
+.overlayHero {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 69vh;
+    background-color: rgba(0, 0, 0, 0.25); /* Color negro transparente */
+    z-index: 1;
+}
 @media(min-width:700px){
     .titleHero {        
-        margin-top: 45vh;
-        font-size: 94px;
-        margin: 52vh 10% 0;
+        font-size: 42px;
         line-height: normal;
-        line-height: 95px;
     }
     .heroText{
-        
-    font-size: 35px;
+        font-size: 35px;
     }
+}
+
+
+
+@media(min-width:1200px){
     .heroContainer{
-        justify-content: center;
+        height: 96vh;
     }
-}
-
-@media(min-width:1000px){
-    .titleHero {
-        margin-top: 45vh;
-        font-size: 110px;
-        margin: 52vh 15% 0;
-        line-height: normal;
-        line-height: 110px;
-    }
-    .heroText {
-        font-size: 45px;
-    }
-}
-
-@media(min-width:1000px){
-    .titleHero {        
-        font-size: 80px;
-        margin: 60vh 4% 0;
-    }
-    .heroText {
-        font-size: 45px;
-        margin: 0;
+    .overlayHero {
+        height: 96vh;
     }
 }
 

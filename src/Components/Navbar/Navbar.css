@@ -5,11 +5,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to bottom, #242424, transparent);
+    justify-content: space-around;
+
+    /* background: linear-gradient(to bottom, #242424, transparent); */
 }
 .logoNavbar {
     width: 50px;
-    margin: 5%;
+    margin: 5% 0;
 }
 .rightNavbar {
     display: flex;
@@ -25,14 +27,41 @@
     font-size: 16px;
     letter-spacing: 0.05em;
 }
+.navbarBrand {
+    
+    color: #242424;
+    font-size: 30px;
+    font-family: "Libre Caslon Text", serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0; 
+    font-size: 16px;
+    z-index: 3;
+    letter-spacing: 0.35em;
+}
 @media(min-width:700px){
     .logoNavbar {
         width: 80px;
+    }
+    .navbarBrand{
+        font-size: 32px;
     }
 }
 @media(min-width:1200px){
     .logoNavbar {
         width: 90px;
-        margin: 4% 2% 2% 4%;
+        margin: 7% 0px;
+    }
+    .navbarContainer {
+        width: 86%;
+        position: absolute;
+        display: flex;
+        padding: 0 7%;
+        justify-content: flex-end;
+    }
+    .navbarBrand {
+        font-size: 54px;
+        width: 70vw;
+        letter-spacing: 0.3em;
     }
 }

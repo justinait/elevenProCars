@@ -82,6 +82,10 @@
         font-weight: 300;
         margin: 14px 0;
     }
+    .homeContainerDiv{
+        
+    margin: 8% 0;
+    }
 }
 @media (min-width: 1200px) {
     .ourFocus {
@@ -102,11 +106,43 @@
     .overlay {
         height: 99.5%;
     }
-    .homeImageContainer {
+    .homeServicesImage {
+        height: 400px;
+    }
+    .homeImagePhrase, .homeImageP{
+        font-size: 27px;
+        margin: 0;
+        font-weight: 200;
+        top: unset;
+        bottom: -6%;
+        width: 93%;
+    }
+    /* .homeImageContainer {
         width: 50%;
     }
     .homeDiv{
         
-    display: flex;
+        display: flex;
+    }
+    .homeServicesImage{
+        
+        height: 50vh;
+        object-position: bottom;
+    }
+    .homeImagePhraseTablet{
+        top: unset;
+        bottom: -11%;
+    }
+    .homeImageP{
+        font-size: 24px;
+    } */
+}
+@media(min-width:1400px){
+
+    .homeImagePhrase{
+        bottom: -2%;
+    }
+    .homeImageP{
+        bottom: -5%;
     }
 }

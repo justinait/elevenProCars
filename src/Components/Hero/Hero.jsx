@@ -6,8 +6,10 @@ import './Hero.css'
 function Hero() {
   return (
     <div className='heroContainer'>
-      <p className='titleHero'>Eleven Pro Cars</p>
-      <p className='heroText'>Mallorca Rental Luxury Cars Agency</p>
+      <div className='overlayHero'></div>
+      {/* <p className='titleHero'>Eleven Pro Cars</p> */}
+      {/* <p className='titleHero'>Mallorca Rental Luxury Cars Agency</p> */}
+      <p className='titleHero'>Premium Cars. <br /> Ultimate Comfort. <br /> Unmatched Service.</p>
       {/* <p className='heroText'>Mallorca, Spain</p> */}
     </div>
   )

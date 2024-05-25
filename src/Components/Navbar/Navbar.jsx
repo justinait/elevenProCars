@@ -5,12 +5,9 @@ import './Navbar.css'
 function Navbar() {
   return (
     <div className='navbarContainer'>
+      <p className='navbarBrand'>Eleven Pro Cars</p>
       <img src={logo} alt="" className='logoNavbar'/>
-      <div className='rightNavbar'>
-        {/* <p className='rightNavbarItem'>Services</p>
-        <p className='rightNavbarItem'>Cars</p> */}
-        
-      </div>
+      
     </div>
   )
 }
