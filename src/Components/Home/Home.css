@@ -57,6 +57,10 @@
     font-weight: 500;
     margin: 7px 0;
 }
+
+.desktopOnly{
+    display: none;
+}
 @media(min-width:700px){
     .ourFocus {
         font-size: 45px;
@@ -65,7 +69,7 @@
         font-size: 19px;
     }
     .overlay {
-        height: 99%;
+        height: 100%;
     }
     .homeImagePhrase {
         text-align: right;
@@ -88,6 +92,12 @@
     }
 }
 @media (min-width: 1200px) {
+    .mobileOnly {
+        display: none;
+    }
+    .desktopOnly{
+        display: block;
+    }
     .ourFocus {
         font-size: 63px;
         width: 40%;
@@ -103,11 +113,8 @@
     .homeContainerDiv {
         margin: 5% 0;
     }
-    .overlay {
-        height: 99.5%;
-    }
     .homeServicesImage {
-        height: 400px;
+        height: 420px;
     }
     .homeImagePhrase, .homeImageP{
         font-size: 27px;
@@ -117,25 +124,7 @@
         bottom: -6%;
         width: 93%;
     }
-    /* .homeImageContainer {
-        width: 50%;
-    }
-    .homeDiv{
-        
-        display: flex;
-    }
-    .homeServicesImage{
-        
-        height: 50vh;
-        object-position: bottom;
-    }
-    .homeImagePhraseTablet{
-        top: unset;
-        bottom: -11%;
-    }
-    .homeImageP{
-        font-size: 24px;
-    } */
+   
 }
 @media(min-width:1400px){
 
@@ -144,5 +133,18 @@
     }
     .homeImageP{
         bottom: -5%;
+    }
+    
+    .homeServicesImage {
+        height: 450px;
+    }
+    
+    .homeImagePhrase, .homeImageP{
+        font-size: 28px;
+        margin: 0;
+        font-weight: 300;
+    }
+    .homeImagePhraseTablet {
+        bottom: -10%;
     }
 }

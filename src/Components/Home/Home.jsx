@@ -1,8 +1,10 @@
 import React from 'react'
-import image from '/cars/maclaren naranja (1) cut.jpg'
+// import image from '/cars/azul maclaren(1).jpg'
 import image2 from '/cars/tres autos (2).jpg'
 import image3 from '/cars/mercedes camioneta blanca (2).jpg'
 import image4 from '/cars/mercedes deportivo gris.jpg'
+import image from '/cars/maclaren naranja (1).jpg'
+import image5 from '/cars/2 mercedesjeep (1).jpg'
 
 
 import './Home.css'
@@ -20,12 +22,14 @@ function Home() {
             <div className='homeImageContainer'>
                 <div className='overlay'></div>
                 <p className='homeImagePhrase'>Let's get you on the road.<br /> Expertise. Commitment. Value.</p>
-                <img src={image3} alt="" className='homeServicesImage'/>
+                <img src={image3} alt="" className='homeServicesImage mobileOnly'/>
+                <img src={image5} alt="" className='homeServicesImage desktopOnly'/>
             </div>
             <p className='ourFocus ourServices'>OUR SERVICES</p>
             <div className='homeImageContainer'>
                 <div className='overlay'></div>
-                <img className='homeServicesImage' src={image4} alt="" />
+                <img className='homeServicesImage mobileOnly' src={image4} alt="" />
+                <img className='homeServicesImage desktopOnly' src={image} alt="" />
                 <div className='homeImagePhrase homeImagePhraseTablet'>
                     <p className='homeImageP'>Unforgettable Unique Experience. </p>
                     <p className='homeImageP'>Reservations at Nightclubs and Restaurants.</p>

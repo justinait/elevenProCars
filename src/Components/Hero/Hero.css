@@ -63,6 +63,10 @@
     .heroContainer{
         height: 96vh;
     }
+    .titleHero{
+        font-size: 38px;
+        display: none;
+    }
     .overlayHero {
         height: 96vh;
     }
