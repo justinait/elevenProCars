@@ -3,6 +3,7 @@ import './Cars.css'
 import Mercedesg63 from '/cars/mercedes-benz-g63-amg (3).jpg'
 import Mercedesg63Back from '/cars/mercedes-benz-g63-amg (1).jpg'
 import RangeRoverSport from '/cars/RangeRoverSportBlancaCut (2).jpg'
+import RangeRoverSportBlack from '/cars/RangeRoverSportSVGNegra (2).jpg'
 import RangeRoverSportSVG from '/cars/RangeRoverSportSVGBlanca (2).jpg'
 import mercedesCamioneta from '/cars/mercedesGL (1).jpg'
 import mercedesCamionetaBack from '/cars/mercedesGL (2).jpg'
@@ -46,6 +47,8 @@ function Cars() {
           <img src={RangeRoverSport} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
             <p className='titleCar'>Range Rover Sport</p>
+          </div>
+        </div>
             {/* <p className='carDescription'>Rent a 2023 Range Rover Sport
               to experience the elegance,
               luxury and power of the car,
@@ -54,9 +57,13 @@ function Cars() {
               with its powerful V8 engine and
               luxurious cabin.
             </p> */}
+
+        <div className='carCard'>
+          <img src={RangeRoverSportBlack} alt="" className='carItemFirstImage'/>
+          <div className='infoBlur'>
+            <p className='titleCar'>Range Rover Sport SVG</p>
           </div>
         </div>
-
         
         <div className='carCard'>
           <img src={mercedesGLC} alt="" className='carItemFirstImage'/>
