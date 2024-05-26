@@ -6,7 +6,7 @@ import './Links.css'
 function Links() {
   return (
     <div className='linksContainer'>
-      <a className='whatsappLink' target='_blank' href='wa.link/qva9cx'>
+      <a className='whatsappLink' target='_blank' href='https://wa.link/qva9cx'>
         <WhatsAppIcon className='linksIcons'/>
       </a>
     </div>
