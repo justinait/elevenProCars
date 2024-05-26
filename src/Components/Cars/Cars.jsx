@@ -61,7 +61,7 @@ function Cars() {
         <div className='carCard'>
           <img src={RangeRoverSportBlack} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Range Rover Sport SVG</p>
+            <p className='titleCar'>Range Rover Sport</p>
           </div>
         </div>
         
