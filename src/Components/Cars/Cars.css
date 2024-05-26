@@ -73,10 +73,16 @@
         font-size: 29px;
     }
     .ourCars{
-        margin: 10% auto 2%;
+        margin: 7% auto ;
         font-size: 51px;
     }
     .sloganCars{
-        font-size: 14px;
+        font-size: 16px;
+        display: none;
+    }
+}
+@media(min-width:1800px){
+    .carItemFirstImage, .infoBlur {
+        height: 600px;
     }
 }

@@ -148,3 +148,8 @@
         bottom: -10%;
     }
 }
+@media(min-width:1800px){
+    .homeServicesImage {
+        height: 600px;
+    }
+}
