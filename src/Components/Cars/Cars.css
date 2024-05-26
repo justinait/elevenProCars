@@ -1,3 +1,63 @@
 .sloganCars{
     text-align: center;
 }
+
+.carCard {
+    position: relative;
+    margin: 2% 0;
+}
+
+.carItemFirstImage {
+    width: 100%;
+    display: block;
+    height: 200px;
+    object-fit: cover;
+}
+  
+.infoBlur {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    justify-content: flex-end;
+}
+.infoBlur p {
+    padding: 3%;
+    font-weight: 500;
+}
+.detailCarItem {
+    font-weight: 200 !important;
+}
+
+.ourCars {
+    margin: 13% auto 2%;
+    font-family: "Libre Caslon Text", serif;
+    width: 50vw;
+    font-size: 25px;
+    text-align: center;
+}
+
+@media(min-width:700px){
+    .carItemFirstImage, .infoBlur {
+        height: 325px;
+    }
+    .infoBlur {
+        
+        font-size: 24px;
+    }
+}
+@media(min-width:700px){
+    .carItemFirstImage, .infoBlur {
+        height: 450px;
+    }
+    .infoBlur {
+        font-size: 24px;
+    }
+}
