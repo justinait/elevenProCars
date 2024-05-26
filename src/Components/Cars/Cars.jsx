@@ -61,7 +61,7 @@ function Cars() {
         <div className='carCard'>
           <img src={mercedesGLC} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Mercedes Benz Glc coupe amg</p>
+            <p className='titleCar'>Mercedes Benz GLE coupe amg</p>
             <p className='detailCarItem'></p>
           </div>
         </div>
@@ -69,7 +69,7 @@ function Cars() {
         <div className='carCard'>
           <img src={RangeRoverSportSVG} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Range Rover Sport SVG</p>
+            <p className='titleCar'>Range Rover Sport SVR</p>
             <p></p>
           </div>
         </div>
@@ -77,7 +77,7 @@ function Cars() {
         <div className='carCard'>
           <img src={mercedesGLE} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Mercedes Benz Gle coupe amg</p>
+            <p className='titleCar'>Mercedes Benz GLC coupe amg</p>
             <p className='detailCarItem'></p>
           </div>
         </div>
@@ -85,14 +85,14 @@ function Cars() {
         <div className='carCard'>
           <img src={mercedesCamioneta} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Mercedes Benz GL63 AMG</p>
+            <p className='titleCar'>Mercedes Benz GLE S63 AMG</p>
           </div>
         </div>
         
         <div className='carCard'>
           <img src={mercedesGLCSUV} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Mercedes Benz GLC SUV AMG</p>
+            <p className='titleCar'>Mercedes Benz GLE SUV AMG</p>
             
           </div>
         </div>
@@ -116,28 +116,28 @@ function Cars() {
         <div className='carCard'>
           <img src={mercedesClaseA} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Mercedes Benz Class A AMG</p>
+            <p className='titleCar'>Mercedes Benz A Class AMG</p>
             
           </div>
         </div>
         <div className='carCard'>
           <img src={GLBAzul} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Mercedes Benz GLB</p>
+            <p className='titleCar'>Mercedes Benz GLB AMG</p>
           </div>
         </div>
 
         <div className='carCard'>
           <img src={mercedesClaseC} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Mercedes Benz C Class Convertible</p>
+            <p className='titleCar'>Mercedes Benz C Class CABRIO AMG</p>
           </div>
         </div>
 
         <div className='carCard'>
           <img src={mercedesGLA} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Mercedes Benz GLA</p>
+            <p className='titleCar'>Mercedes Benz GLA AMG</p>
           </div>
         </div>
       </div>
