@@ -1,5 +1,6 @@
 import './App.css'
 import Cars from './Components/Cars/Cars'
+import Footer from './Components/Footer/Footer'
 import Hero from './Components/Hero/Hero'
 import Home from './Components/Home/Home'
 import Links from './Components/Links/Links'
@@ -14,6 +15,7 @@ function App() {
       <Home />
       <Links />
       <Cars/>
+      {/* <Footer /> */}
     </>
   )
 }
