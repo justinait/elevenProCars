@@ -2,7 +2,7 @@ import React from 'react'
 import './Cars.css'
 import Mercedesg63 from '/cars/mercedes-benz-g63-amg (3).jpg'
 import Mercedesg63Back from '/cars/mercedes-benz-g63-amg (1).jpg'
-import RangeRoverSport from '/cars/RangeRoverSportBlanca (2).jpg'
+import RangeRoverSport from '/cars/RangeRoverSportBlancaCut (2).jpg'
 import RangeRoverSportSVG from '/cars/RangeRoverSportSVGBlanca (2).jpg'
 import mercedesCamioneta from '/cars/mercedesGL (1).jpg'
 import mercedesCamionetaBack from '/cars/mercedesGL (2).jpg'
@@ -15,6 +15,8 @@ import mercedesGLC220 from '/cars/mercedesGLCNegro (1).jpg'
 import jeepRubicon from '/cars/jeep (1).jpg'
 import GLBAzul from  '/cars/GLBAzul.jpg'
 import mercedesClaseA from '/cars/ClaseAMercedes2.jpg'
+import mercedesGLA from '/cars/mercedesGLA (2).jpg'
+import mercedesClaseC from '/cars/mercedesClassC3.jpg'
 
 function Cars() {
   return (
@@ -84,14 +86,14 @@ function Cars() {
           <img src={mercedesCamioneta} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
             <p className='titleCar'>Mercedes Benz GL63 AMG</p>
-            <p className='detailCarItem'>Luxury & Comfort</p>
           </div>
         </div>
+        
         <div className='carCard'>
           <img src={mercedesGLCSUV} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
             <p className='titleCar'>Mercedes Benz GLC SUV AMG</p>
-            <p className='detailCarItem'>Luxury & Comfort</p>
+            
           </div>
         </div>
 
@@ -99,7 +101,7 @@ function Cars() {
           <img src={mercedesGLC220} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
             <p className='titleCar'>Mercedes Benz GLC 220D</p>
-            <p className='detailCarItem'>Luxury & Comfort</p>
+            
           </div>
         </div>
 
@@ -107,22 +109,35 @@ function Cars() {
           <img src={jeepRubicon} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
             <p className='titleCar'>Jeep Rubicon</p>
-            <p className='detailCarItem'>Luxury & Comfort</p>
+            
           </div>
         </div>
 
         <div className='carCard'>
           <img src={mercedesClaseA} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Mercedes Benz Clase A AMG</p>
-            <p className='detailCarItem'>Luxury & Comfort</p>
+            <p className='titleCar'>Mercedes Benz Class A AMG</p>
+            
           </div>
         </div>
         <div className='carCard'>
           <img src={GLBAzul} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Mercedes Benz GLB Azul</p>
-            <p className='detailCarItem'>Luxury & Comfort</p>
+            <p className='titleCar'>Mercedes Benz GLB</p>
+          </div>
+        </div>
+
+        <div className='carCard'>
+          <img src={mercedesClaseC} alt="" className='carItemFirstImage'/>
+          <div className='infoBlur'>
+            <p className='titleCar'>Mercedes Benz C Class Convertible</p>
+          </div>
+        </div>
+
+        <div className='carCard'>
+          <img src={mercedesGLA} alt="" className='carItemFirstImage'/>
+          <div className='infoBlur'>
+            <p className='titleCar'>Mercedes Benz GLA</p>
           </div>
         </div>
       </div>
