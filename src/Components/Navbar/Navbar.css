@@ -5,13 +5,11 @@
     justify-content: space-between;
     align-items: center;
     justify-content: space-around;
-    flex-direction: column-reverse;
-
     /* background: linear-gradient(to bottom, #242424, transparent); */
 }
 .logoNavbar {
     width: 50px;
-    margin: 10% 0 8%;
+    margin: 8% 0;
     z-index: 12;
 }
 .rightNavbar {
@@ -29,14 +27,14 @@
     letter-spacing: 0.05em;
 }
 .navbarBrand {
-    /* color: #242424; */
+    color: #242424;
     font-size: 30px;
     font-family: "Libre Caslon Text", serif;
     text-transform: uppercase;
     font-weight: 600;
     margin: 0; 
-    font-size: 33px;
-    padding: 18% 10% 0;
+    font-size: 14px;
+    padding: 0;
     z-index: 3;
     letter-spacing: 0.35em;
     text-align: center;

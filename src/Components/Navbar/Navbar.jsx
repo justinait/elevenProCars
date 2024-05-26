@@ -5,8 +5,8 @@ import './Navbar.css'
 function Navbar() {
   return (
     <div className='navbarContainer'>
-      <h1 className='navbarBrand'>Eleven Pro Cars</h1>
       <img src={logo} alt="" className='logoNavbar'/>
+      <h1 className='navbarBrand'>Eleven Pro Cars</h1>
       
     </div>
   )
