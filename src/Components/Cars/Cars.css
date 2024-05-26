@@ -72,6 +72,10 @@
     .infoBlur {
         font-size: 29px;
     }
+    .carCard {
+        
+        margin: 1% 0;
+    }
     .ourCars{
         margin: 7% auto ;
         font-size: 51px;

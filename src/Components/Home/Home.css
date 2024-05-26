@@ -45,7 +45,7 @@
     left: 0;
     width: 100%;
     height: 98%;
-    background-color: rgba(0, 0, 0, 0.4); /* Color negro transparente */
+    background-color: rgba(0, 0, 0, 0.2); /* Color negro transparente */
     z-index: 1;
 }
 .ourServices {
