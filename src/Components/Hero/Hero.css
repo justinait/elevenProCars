@@ -22,7 +22,7 @@
     object-fit: cover;
 }
 .titleHero {
-    
+    display: none;
     font-family: "Libre Caslon Text", serif;
     font-weight: 600;
     margin: 0;
