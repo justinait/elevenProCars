@@ -44,44 +44,36 @@
         width: 80px;
     }
     .navbarBrand{
-        font-size: 54px;
-        padding: 3% 13% 0;
+        font-size: 26px;
+    }
+    .navbarContainer{
+        justify-content: space-around;
     }
 }
 @media(min-width:1000px){
     .navbarBrand{
-        font-size: 70px;
-        padding: 3% 20% 0;
+        font-size: 30px;
     }
 }
 @media(min-width:1200px){
     .logoNavbar {
+        margin: 4% 0;
         width: 90px;
-        margin: 4% 0px 13%;
     }
-    .navbarContainer {
+    /* .navbarContainer {
         width: 86%;
         position: absolute;
         display: flex;
         padding: 0 7%;
         justify-content: flex-end;
         flex-direction: column-reverse;
-    }
+    } */
     .navbarBrand {
-        font-size: 54px;
+        font-size: 40px;
         letter-spacing: 0.3em;
-        color: white;
-        padding: 3% 5% 0;
     
     }
 }
 @media(min-width:1400px){
-    .navbarBrand {
-        font-size: 66px;
-        letter-spacing: 0.35em;
-        /* padding: 0% 20% 0; */
-    }
-    .logoNavbar {
-        margin: 4% 0px 5.5%;
-    }
+    
 }
