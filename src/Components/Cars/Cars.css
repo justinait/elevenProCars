@@ -1,5 +1,7 @@
 .sloganCars{
     text-align: center;
+    font-size: 11px;
+    margin-bottom: 8%;
 }
 
 .carCard {
@@ -29,7 +31,7 @@
     justify-content: flex-end;
 }
 .infoBlur p {
-    padding: 3%;
+    padding: 0 8%;
     font-weight: 500;
 }
 .detailCarItem {
@@ -53,11 +55,15 @@
         font-size: 24px;
     }
 }
-@media(min-width:700px){
+@media(min-width:1200px){
     .carItemFirstImage, .infoBlur {
         height: 450px;
     }
     .infoBlur {
         font-size: 24px;
+    }
+    .ourCars{
+        margin: 10% auto 2%;
+        font-size: 51px;
     }
 }
