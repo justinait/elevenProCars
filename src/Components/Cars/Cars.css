@@ -28,14 +28,18 @@
     background: rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(6px);
     text-align: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .infoBlur p {
     padding: 0 8%;
+}
+.titleCar {
     font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 0;
 }
 .detailCarItem {
-    font-weight: 200 !important;
+    font-weight: 200;
 }
 
 .ourCars {
@@ -45,7 +49,13 @@
     font-size: 25px;
     text-align: center;
 }
-
+.carDescription {
+    
+    font-size: 10px;
+    font-weight: 200;
+    color: white;
+    z-index: 10;
+}
 @media(min-width:700px){
     .carItemFirstImage, .infoBlur {
         height: 325px;

@@ -7,6 +7,10 @@ import RangeRoverSportSVG from '/cars/RangeRoverSportSVGBlanca (2).jpg'
 import mercedesCamioneta from '/cars/mercedesGL (1).jpg'
 import mercedesCamionetaBack from '/cars/mercedesGL (2).jpg'
 import negro from '/cars/negro.jpg'
+import mercedesS63 from '/cars/mercedesS63Amg.jpg'
+import mercedesGLC from '/cars/Glccoupeamglíneaamg.jpg'
+import mercedesGLE from '/cars/Mercedesgle.jpg'
+import mercedesGLCSUV from '/cars/MercedesGLC.jpg'
 
 
 function Cars() {
@@ -16,38 +20,82 @@ function Cars() {
       <p className='sloganCars'>Drive the car you want</p>
 
       <div className='carsContainer'>
+
         <div className='carCard'>
           <img src={Mercedesg63} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p>Mercedes Benz G63 AMG</p>
+            <p className='titleCar'>Mercedes Benz G63 AMG</p>
             <p className='detailCarItem'>Luxury & Comfort</p>
           </div>
         </div>
+
+        <div className='carCard'>
+          <img src={mercedesS63} alt="" className='carItemFirstImage'/>
+          <div className='infoBlur'>
+            <p className='titleCar'>Mercedes Benz S63 Viturbo v8 AMG</p>
+            <p className='detailCarItem'></p>
+          </div>
+        </div>
+
         <div className='carCard'>
           <img src={RangeRoverSport} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p>Range Rover Sport</p>
-            <p></p>
+            <p className='titleCar'>Range Rover Sport</p>
+            {/* <p className='carDescription'>Rent a 2023 Range Rover Sport
+              to experience the elegance,
+              luxury and power of the car,
+              designed to maneuver the
+              steepest and most remotes treets
+              with its powerful V8 engine and
+              luxurious cabin.
+            </p> */}
           </div>
         </div>
+
+        
+        <div className='carCard'>
+          <img src={mercedesGLC} alt="" className='carItemFirstImage'/>
+          <div className='infoBlur'>
+            <p className='titleCar'>Mercedes Benz Glc coupe amg</p>
+            <p className='detailCarItem'></p>
+          </div>
+        </div>
+
         <div className='carCard'>
           <img src={RangeRoverSportSVG} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p>Range Rover Sport SVG</p>
+            <p className='titleCar'>Range Rover Sport SVG</p>
             <p></p>
           </div>
         </div>
+        
+        <div className='carCard'>
+          <img src={mercedesGLE} alt="" className='carItemFirstImage'/>
+          <div className='infoBlur'>
+            <p className='titleCar'>Mercedes Benz Gle coupe amg</p>
+            <p className='detailCarItem'></p>
+          </div>
+        </div>
+
         <div className='carCard'>
           <img src={mercedesCamioneta} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p>Mercedes Benz GL63 AMG</p>
+            <p className='titleCar'>Mercedes Benz GL63 AMG</p>
             <p className='detailCarItem'>Luxury & Comfort</p>
           </div>
         </div>
         <div className='carCard'>
-          <img src={negro} alt="" className='carItemFirstImage'/>
+          <img src={mercedesGLCSUV} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p>Mercedes Benz GLC 220D</p>
+            <p className='titleCar'>Mercedes Benz GLC SUV AMG</p>
+            <p className='detailCarItem'>Luxury & Comfort</p>
+          </div>
+        </div>
+
+        <div className='carCard'>
+          <img src={mercedesGLCSUV} alt="" className='carItemFirstImage'/>
+          <div className='infoBlur'>
+            <p className='titleCar'>Mercedes Benz GLC SUV AMG</p>
             <p className='detailCarItem'>Luxury & Comfort</p>
           </div>
         </div>
