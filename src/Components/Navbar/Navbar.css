@@ -12,6 +12,7 @@
 .logoNavbar {
     width: 50px;
     margin: 10% 0 8%;
+    z-index: 12;
 }
 .rightNavbar {
     display: flex;

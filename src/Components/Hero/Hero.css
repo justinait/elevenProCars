@@ -1,5 +1,5 @@
 .heroContainer {
-    background-image: url('/cars/heroeleven.jpg');
+    background-image: url('/cars/heroIA.jpg');
     height: 96vh;
     height: 69vh;
     width: 100%;
@@ -33,9 +33,6 @@
     line-height: 32px;
     z-index: 2;
     width: 90%;
-}
-.heroText {
-    /* color: #242424; */
 }
 .overlayHero {
     
