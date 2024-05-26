@@ -1,12 +1,11 @@
 import React from 'react'
 // import image from '/cars/azul maclaren(1).jpg'
-import image2 from '/cars/tres autos (2).jpg'
-import image3 from '/cars/mercedes camioneta blanca (2).jpg'
+import image3 from '/cars/RangeRoverSportBlanca (2).jpg'
 // import image4 from '/cars/mercedes deportivo gris.jpg'
 import image4 from '/cars/VolanteMercedes3.jpg'
 
-import image from '/cars/maclaren naranja (1).jpg'
-import image5 from '/cars/2 mercedesjeep (1).jpg'
+import image from '/cars/maclarennaranja (1).jpg'
+import image5 from '/cars/2Backmercedesjeep (1).jpg'
 
 
 import './Home.css'
