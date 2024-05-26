@@ -10,8 +10,11 @@ import negro from '/cars/negro.jpg'
 import mercedesS63 from '/cars/mercedesS63Amg.jpg'
 import mercedesGLC from '/cars/Glccoupeamglíneaamg.jpg'
 import mercedesGLE from '/cars/Mercedesgle.jpg'
-import mercedesGLCSUV from '/cars/MercedesGLC.jpg'
-
+import mercedesGLCSUV from '/cars/MercedesGLCGris.jpg'
+import mercedesGLC220 from '/cars/mercedesGLCNegro (1).jpg'
+import jeepRubicon from '/cars/jeep (1).jpg'
+import GLBAzul from  '/cars/GLBAzul.jpg'
+import mercedesClaseA from '/cars/ClaseAMercedes2.jpg'
 
 function Cars() {
   return (
@@ -93,9 +96,32 @@ function Cars() {
         </div>
 
         <div className='carCard'>
-          <img src={mercedesGLCSUV} alt="" className='carItemFirstImage'/>
+          <img src={mercedesGLC220} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
-            <p className='titleCar'>Mercedes Benz GLC SUV AMG</p>
+            <p className='titleCar'>Mercedes Benz GLC 220D</p>
+            <p className='detailCarItem'>Luxury & Comfort</p>
+          </div>
+        </div>
+
+        <div className='carCard'>
+          <img src={jeepRubicon} alt="" className='carItemFirstImage'/>
+          <div className='infoBlur'>
+            <p className='titleCar'>Jeep Rubicon</p>
+            <p className='detailCarItem'>Luxury & Comfort</p>
+          </div>
+        </div>
+
+        <div className='carCard'>
+          <img src={mercedesClaseA} alt="" className='carItemFirstImage'/>
+          <div className='infoBlur'>
+            <p className='titleCar'>Mercedes Benz Clase A AMG</p>
+            <p className='detailCarItem'>Luxury & Comfort</p>
+          </div>
+        </div>
+        <div className='carCard'>
+          <img src={GLBAzul} alt="" className='carItemFirstImage'/>
+          <div className='infoBlur'>
+            <p className='titleCar'>Mercedes Benz GLB Azul</p>
             <p className='detailCarItem'>Luxury & Comfort</p>
           </div>
         </div>
