@@ -59,6 +59,22 @@
         font-size: 2.5em !important;
     }
 }
+@media (min-width:1400px){
+    
+    .linksIcons {
+        font-size: 2em !important;
+    }
+    .linksContainer {
+        left: 92vw;
+    }
+    .whatsappLink {   
+        padding: 20%;
+        border-radius: 30%;
+    }
+    .css-i4bv87-MuiSvgIcon-root{
+        font-size: 2.8em !important;
+    }
+}
 @media (min-width:1900px){
     
     .linksIcons {
@@ -66,5 +82,8 @@
     }
     .linksContainer {
         left: 93vw;
+    }
+    .css-i4bv87-MuiSvgIcon-root{
+        font-size: 3.5em !important;
     }
 }
