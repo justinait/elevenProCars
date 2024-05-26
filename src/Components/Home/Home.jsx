@@ -3,7 +3,6 @@ import React from 'react'
 import image3 from '/cars/RangeRoverSportBlanca (2).jpg'
 // import image4 from '/cars/mercedes deportivo gris.jpg'
 import image4 from '/cars/VolanteMercedes3.jpg'
-
 import image from '/cars/maclarennaranja (1).jpg'
 import image5 from '/cars/2Backmercedesjeep (1).jpg'
 
