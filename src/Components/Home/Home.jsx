@@ -32,44 +32,36 @@ function Home() {
         </div>
         <div className='homeDiv'>
 
-            <div className='homeImageContainer'>
-                <div className='overlay'></div>
-                <p className='homeImagePhrase'>Let's get you on the road.<br /> Expertise. Commitment. Value.</p>
-                <img src={image3} alt="" className='homeServicesImage mobileOnly'/>
-                <img src={image5} alt="" className='homeServicesImage desktopOnly'/>
-            </div>
-
-            {/* <p className='ourFocus ourServices'>OUR SERVICES</p> */}
             <div className='aboutDiv'>
                 <div className='overlay darkerOverlay'></div>
                 <div className='aboutDivContainer'>
-                    <p className='ourFocus'>ABOUT US</p>
+                    <p className='ourFocus '>ABOUT US</p>
                     <div className='aboutInfoContainer'>
                         <div>
-                            <div>
+                            <div className='aboutInfoContainerDiv'>
                                 <p className='aboutUsTitles'><LocationOnIcon fontSize='small'/> Where?</p>
                                 <p>Airports, Hotels, or
                                 wherever you need in
                                 Palma de Mallorca, Spain.
                                 </p>
                             </div>
-                            <div>
+                            <div className='aboutInfoContainerDiv'>
                                 <p className='aboutUsTitles'><InstagramIcon fontSize='small'/>Instagram</p>
                                 <a style={{cursor: 'pointer', color: 'white' }} target='_blank' href='https://wa.link/qva9cx'>@elevenpro_cars</a>
                             </div>
                             
-                            <div>
+                            <div className='aboutInfoContainerDiv'>
                                 <p className='aboutUsTitles'><DownloadIcon fontSize='small'/>Catalog</p>
                                 <p onClick={downloadPDF} 
                                 style={{cursor: 'pointer', textDecoration: 'underline' }}> Download here</p>
                             </div>
                         </div>
                         <div>
-                            <div>
+                            <div className='aboutInfoContainerDiv'>
                                 <p className='aboutUsTitles'><CalendarMonthIcon fontSize='small'/>Reservations</p>
                                 <p> <a  style={{cursor: 'pointer', textDecoration: 'underline', color: 'white' }} target='_blank' href='https://wa.link/qva9cx'> Click here</a> or <br />+34 634 18 70 73</p>
                             </div>
-                            <div>
+                            <div className='aboutInfoContainerDiv'>
                                 <p className='aboutUsTitles'><LoyaltyIcon fontSize='small'/>Why us?</p>
                                 <ul> 
                                     <li>Reservations at nightclubs and Restaurants.</li>
@@ -88,6 +80,13 @@ function Home() {
                     <p className='homeImageP'>Reservations at Nightclubs and Restaurants.</p>
                     <p className='homeImageP'>Logistics for Easy Parking in High-Demand Areas.</p>
                 </div> */}
+            </div>
+
+            <div className='homeImageContainer'>
+                <div className='overlay'></div>
+                <p className='homeImagePhrase'>Let's get you on the road.<br /> Expertise. Commitment. Value.</p>
+                <img src={image3} alt="" className='homeServicesImage mobileOnly'/>
+                <img src={image5} alt="" className='homeServicesImage desktopOnly'/>
             </div>
 
         </div>

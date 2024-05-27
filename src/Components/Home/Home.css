@@ -87,14 +87,17 @@
     flex-direction: row;
     font-size: 11.5px;
     font-weight: 300;
+    justify-content: space-between;
+    width: 90vw;
 }
-.aboutInfoContainer div {
-    width: 45vw;
+.aboutInfoContainerDiv {
+    width: 40vw;
+    margin-bottom: 3em;
 }
 .aboutDiv p, .aboutDiv a, .aboutDiv li {
     z-index: 5;
     position: relative;
-    width: 84%;
+    width: 98%;
 }
 .aboutDiv ul {
     padding-left: 20px;
