@@ -15,7 +15,7 @@ function App() {
       <Home />
       <Links />
       <Cars/>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

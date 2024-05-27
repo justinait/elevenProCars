@@ -1,4 +1,4 @@
-.footerContainer {
+.footerContainer2 {
     height: 800px;
     background-image: url('/public/cars/volanteMacLaren.jpg');
     width: 100%;
@@ -13,4 +13,18 @@
     justify-content: center;
     z-index: 2;
     justify-content: flex-end;
+}
+.footerContainer {
+    /* text-align: center; */
+    font-size: 14px;
+    padding: 0 5%;
+}
+.footerContainer strong {
+    font-weight: 500;
+}
+.catalog {
+    font-weight: 300;
+}
+.footerContainer h2 {
+    text-align: center;
 }
