@@ -106,7 +106,8 @@
     text-transform: uppercase;
     display: flex;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
+    align-items: center;
     margin-bottom: 0.5em;
 }
 /* .aboutDivContainer {
@@ -138,9 +139,14 @@
         font-weight: 300;
         margin: 14px 0;
     }
-    .homeContainerDiv{
-        
-    margin: 8% 0;
+    .homeContainerDiv{ 
+        margin: 8% 0;
+    }
+    .aboutUsTitles {
+        font-size: 27px;
+    }
+    .aboutInfoContainer {
+        font-size: 18.5px;
     }
 }
 @media (min-width: 1200px) {
@@ -180,7 +186,23 @@
         bottom: -6%;
         width: 93%;
     }
-   
+    .aboutDiv {
+        height: 100%; 
+        padding: 5% 0;
+    }
+    .aboutUsTitles {
+        
+        margin-bottom: 0em;
+    }
+    .aboutInfoContainerDiv{
+        width: 30vw;
+    }
+    .aboutDiv p, .aboutDiv a, .aboutDiv li {
+        width: 86%;
+    }
+    .aboutInfoContainer {
+        margin-top: 5%;
+    }
 }
 @media(min-width:1400px){
 
