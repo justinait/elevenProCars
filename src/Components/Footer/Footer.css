@@ -21,6 +21,7 @@
 }
 .footerContainer strong {
     font-weight: 500;
+    padding-left: 1%;
 }
 .catalog {
     font-weight: 300;
@@ -34,10 +35,43 @@
     font-size: 10px;
     margin: 0;
     color:#656668;   
+    display: block !important;
 }
 .justina strong {
     color:#656668;   
 }
-a {
+.justina a {
     color:#656668;   
+}
+.footerContainer p {
+    display: flex;
+}
+@media(min-width:700px){
+
+    .footerContainer h2 {
+        margin: 5%;
+        font-size: 30px;
+    }
+    .footerContainer{
+        font-size: 18px;
+    }
+    .justina {
+        font-size: 12px;
+    }
+    
+}
+@media(min-width:1200px){
+
+    .footerContainer h2 {
+        margin: 5%;
+        font-size: 30px;
+    }
+    .footerContainer{
+        font-size: 18px;
+    }
+    .footerContainer strong {
+        font-weight: 500;
+        padding-left: 0.3%;
+    }
+    
 }
