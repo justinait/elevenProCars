@@ -40,7 +40,7 @@ function Cars() {
               ride in the city and
               uncompromising control on the
               most difficult trails.</p>
-            {/* <p className='detailCarItem'>Luxury & Comfort</p> */}
+            {/* <p className='detailCarItem desktopOnly'>Luxury & Comfort</p> */}
           </div>
         </div>
 
@@ -48,7 +48,6 @@ function Cars() {
           <img src={mercedesS63} alt="" className='carItemFirstImage'/>
           <div className='infoBlur'>
             <p className='titleCar'>Mercedes Benz S63 Viturbo v8 AMG</p>
-            <p className='detailCarItem'></p>
           </div>
         </div>
 
@@ -151,13 +150,13 @@ function Cars() {
           <div className='infoBlur'>
             <p className='titleCar'>Jeep Rubicon</p>
             <p className='carDescription'>The Jeep Rubicon is a rugged and
-          versatile SUV built for off-road
-          adventures. Powered by a 3.6L V6 engine
-          generating 285 horsepower and a 6-speed manual transmission,
-          is built to handle the toughest terrains
-          with ease, delivering a fun and exciting
-          ride for adventurers .
-</p>
+              versatile SUV built for off-road
+              adventures. Powered by a 3.6L V6 engine
+              generating 285 horsepower and a 6-speed manual transmission,
+              is built to handle the toughest terrains
+              with ease, delivering a fun and exciting
+              ride for adventurers .
+            </p>
             
           </div>
         </div>
