@@ -20,6 +20,7 @@ function Footer() {
       <p className='catalog'>If you want to see more, <strong onClick={downloadPDF} style={{cursor: 'pointer', textDecoration: 'underline' }}>download our catalog</strong></p>
       <p>Palma de Mallorca, Spain.</p>
       {/* <p>elevenprocars@gmail.com</p> */}
+      <p className='justina'>Powered by <a target='_blank' href="https://imjustwebs.com/"><strong > I'mJustWebs</strong></a></p>
     </div>
   )
 }
