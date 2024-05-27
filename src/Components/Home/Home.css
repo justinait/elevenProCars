@@ -94,7 +94,7 @@
 .aboutDiv p, .aboutDiv a, .aboutDiv li {
     z-index: 5;
     position: relative;
-    width: 90%;
+    width: 84%;
 }
 .aboutDiv ul {
     padding-left: 20px;

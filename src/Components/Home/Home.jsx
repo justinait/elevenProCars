@@ -50,7 +50,7 @@ function Home() {
                                 <p className='aboutUsTitles'><LocationOnIcon fontSize='small'/> Where?</p>
                                 <p>Airports, Hotels, or
                                 wherever you need in
-                                Palma de Mallorca, Spain
+                                Palma de Mallorca, Spain.
                                 </p>
                             </div>
                             <div>
@@ -67,13 +67,13 @@ function Home() {
                         <div>
                             <div>
                                 <p className='aboutUsTitles'><CalendarMonthIcon fontSize='small'/>Reservations</p>
-                                <p> <a  style={{cursor: 'pointer', textDecoration: 'underline', color: 'white' }} target='_blank' href='https://wa.link/qva9cx'> click here</a> or <br />+34 634 18 70 73</p>
+                                <p> <a  style={{cursor: 'pointer', textDecoration: 'underline', color: 'white' }} target='_blank' href='https://wa.link/qva9cx'> Click here</a> or <br />+34 634 18 70 73</p>
                             </div>
                             <div>
                                 <p className='aboutUsTitles'><LoyaltyIcon fontSize='small'/>Why us?</p>
                                 <ul> 
                                     <li>Reservations at nightclubs and Restaurants.</li>
-                                    <li>Logistics for easy parking in high-demand areas</li>
+                                    <li>Logistics for easy parking in high-demand areas.</li>
                                     <li>Unforgettable unique experience.</li>
                                 </ul>
                             </div>
