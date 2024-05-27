@@ -46,6 +46,7 @@
 .footerContainer p {
     display: flex;
 }
+
 @media(min-width:700px){
 
     .footerContainer h2 {
