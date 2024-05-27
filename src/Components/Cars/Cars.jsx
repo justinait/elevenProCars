@@ -41,6 +41,7 @@ function Cars() {
               uncompromising control on the
               most difficult trails.</p>
             {/* <p className='detailCarItem'>Luxury & Comfort</p> */}
+          <button className='bookNowCarItem'>Book Now!</button>
           </div>
         </div>
 
