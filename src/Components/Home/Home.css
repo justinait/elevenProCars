@@ -98,6 +98,10 @@
     .desktopOnly{
         display: block;
     }
+    
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
     .ourFocus {
         font-size: 63px;
         width: 40%;
