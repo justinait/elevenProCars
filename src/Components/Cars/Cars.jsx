@@ -54,6 +54,7 @@ function Cars() {
                   }
                 {/* <p className='detailCarItem desktopOnly'>Luxury & Comfort</p> */}
                 </div>
+                <a style={{cursor: 'pointer', textDecoration: 'none', color: 'white' }}  target='_blank' href='https://wa.link/qva9cx' className='bookNowCarItem'>Book Now!</a>
               </div>
             )
           })

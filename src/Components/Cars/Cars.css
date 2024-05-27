@@ -57,6 +57,10 @@
 }
 .bookNowCarItem {
     
+    font-size: 14px;
+    padding: 1% 2%;
+    position: absolute;
+    bottom: 0%;
     background: black;
     color: white;
     border: none;
