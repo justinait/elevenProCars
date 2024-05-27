@@ -48,6 +48,9 @@
     background-color: rgba(0, 0, 0, 0.2); /* Color negro transparente */
     z-index: 1;
 }
+.darkerOverlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
 .ourServices {
     width: 100%;
     margin: 8% 0;
@@ -61,6 +64,52 @@
 .desktopOnly{
     display: none;
 }
+.aboutDiv {
+    background-image: url('/public/cars/VolanteMercedes3.jpg');
+    position: relative;
+    height: 69vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: unset;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    justify-content: center;
+    /* z-index: 2; */
+}
+.aboutInfoContainer {
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-size: 11.5px;
+    font-weight: 300;
+}
+.aboutInfoContainer div {
+    width: 45vw;
+}
+.aboutDiv p, .aboutDiv a, .aboutDiv li {
+    z-index: 5;
+    position: relative;
+    width: 90%;
+}
+.aboutDiv ul {
+    padding-left: 20px;
+}
+.aboutUsTitles {
+    text-transform: uppercase;
+    display: flex;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 0.5em;
+}
+/* .aboutDivContainer {
+    display: flex;
+    flex-direction: column;
+} */
 @media(min-width:700px){
     .ourFocus {
         font-size: 45px;
