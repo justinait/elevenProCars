@@ -91,7 +91,7 @@
     width: 90vw;
 }
 .aboutInfoContainerDiv {
-    width: 40vw;
+    width: 36vw;
     margin-bottom: 3em;
 }
 .aboutDiv p, .aboutDiv a, .aboutDiv li {
@@ -106,7 +106,7 @@
     text-transform: uppercase;
     display: flex;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     align-items: center;
     margin-bottom: 0.5em;
 }
