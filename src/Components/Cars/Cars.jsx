@@ -43,7 +43,7 @@ function Cars() {
         {
           cars.map((e, i)=> {
             return (
-              <div className='carCard'>
+              <div className='carCard' key={i}>
                 <img src={e.image} alt="" className='carItemFirstImage'/>
                 <div className='infoBlur'>
                   <p className='titleCar'>{e.name}</p>
