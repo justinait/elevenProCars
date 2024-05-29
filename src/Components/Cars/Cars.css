@@ -69,7 +69,7 @@
 }
 @media(min-width:700px){
     .carItemFirstImage, .infoBlur {
-        height: 325px;
+        height: 500px;
     }
     .infoBlur {
         font-size: 24px;
@@ -82,17 +82,40 @@
         padding: 0 8%;
     }
 }
+@media(min-width:1000px){
+    .carItemFirstImage, .infoBlur {
+        height: 600px;
+    }
+}
+
 @media(min-width:1200px){
     .carItemFirstImage, .infoBlur {
         height: 450px;
     }
     .infoBlur {
         font-size: 27px;
-        width: 40%;
+        width: 50%;
         align-items: flex-start;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .carsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     .carCard {
-        margin: 1% 0;
+        margin:  0.3% 0;
+        width: 49.8%;
+    }
+    .carItemFirstImage:hover ~.infoBlur {
+        opacity: 1;
+        visibility: visible;
+    }
+    .infoBlur:hover {
+        opacity: 1;
+        visibility: visible;
     }
     .ourCars{
         margin: 7% auto ;
@@ -107,7 +130,7 @@
         text-align: left;
     }
     .carDescription{
-        font-size: 19px;
+        font-size: 16px;
         padding: 0 11%;
         text-align: left;
     }
