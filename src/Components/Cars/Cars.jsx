@@ -15,8 +15,13 @@ function Cars() {
   
     });
   }, []);
-
+  const handleBook = (name) => {
+    const whatsappMessage = `Quisiera reservar ${name}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=+34634187073&text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+  };
   return (
+    
     <div>
       <p className='ourCars'>OUR CARS</p>
       <p className='sloganCars'>Drive the car you want</p>
@@ -36,7 +41,7 @@ function Cars() {
                   }
                 {/* <p className='detailCarItem desktopOnly'>Luxury & Comfort</p> */}
                 </div>
-                <a style={{cursor: 'pointer', textDecoration: 'none', color: 'white' }}  target='_blank' href='https://wa.link/qva9cx' className='bookNowCarItem'>Book Now!</a>
+                <button onClick={()=>handleBook(e.name)} style={{cursor: 'pointer', textDecoration: 'none', color: 'white' }} className='bookNowCarItem'>Book Now!</button>
               </div>
             )
           })
