@@ -5,11 +5,11 @@
     justify-content: space-between;
     align-items: center;
     justify-content: space-around;
-    /* background: linear-gradient(to bottom, #242424, transparent); */
+    /* background: #eeeeeebd; */
 }
 .logoNavbar {
     width: 50px;
-    margin: 8% 0;
+    margin: 3% 0;
     z-index: 12;
 }
 .rightNavbar {
