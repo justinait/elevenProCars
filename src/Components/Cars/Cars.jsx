@@ -1,23 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './Cars.css'
-import Mercedesg63 from '/cars/mercedes-benz-g63-amg (3).jpg'
-import Mercedesg63Back from '/cars/mercedes-benz-g63-amg (1).jpg'
-import RangeRoverSport from '/cars/RangeRoverSportBlancaCut (2).jpg'
-import RangeRoverSportBlack from '/cars/RangeRoverSportNegra (2).jpg'
-import RangeRoverSportSVG from '/cars/RangeRoverSportSVGBlanca (2).jpg'
-import mercedesCamioneta from '/cars/mercedesGL (1).jpg'
-import mercedesCamionetaBack from '/cars/mercedesGL (2).jpg'
-import negro from '/cars/negro.jpg'
-import mercedesS63 from '/cars/mercedesS63Amg.jpg'
-import mercedesGLC from '/cars/Glccoupeamglíneaamg.jpg'
-import mercedesGLE from '/cars/Mercedesgle.jpg'
-import mercedesGLCSUV from '/cars/MercedesGLCGris.jpg'
-import mercedesGLC220 from '/cars/mercedesGLCNegro (1).jpg'
-import jeepRubicon from '/cars/jeep (1).jpg'
-import GLBAzul from  '/cars/glb.jpg'
-import mercedesClaseA from '/cars/ClaseAMercedes2.jpg'
-import mercedesGLA from '/cars/mercedesGLA (2).jpg'
-import mercedesClaseC from '/cars/mercedesClassC3.jpg'
 
 function Cars() {
 
@@ -33,8 +15,13 @@ function Cars() {
   
     });
   }, []);
-
+  const handleBook = (name) => {
+    const whatsappMessage = `Quisiera reservar ${name}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=+34634187073&text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+  };
   return (
+    
     <div>
       <p className='ourCars'>OUR CARS</p>
       <p className='sloganCars'>Drive the car you want</p>
@@ -54,7 +41,7 @@ function Cars() {
                   }
                 {/* <p className='detailCarItem desktopOnly'>Luxury & Comfort</p> */}
                 </div>
-                <a style={{cursor: 'pointer', textDecoration: 'none', color: 'white' }}  target='_blank' href='https://wa.link/qva9cx' className='bookNowCarItem'>Book Now!</a>
+                <button onClick={()=>handleBook(e.name)} style={{cursor: 'pointer', textDecoration: 'none', color: 'white' }} className='bookNowCarItem'>Book Now!</button>
               </div>
             )
           })
