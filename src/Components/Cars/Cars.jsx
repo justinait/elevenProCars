@@ -79,19 +79,19 @@ function Cars() {
                 <img src={selectedItem.image} alt={selectedItem.name} className='imageModalCars' />
               </Carousel.Item>
               {
-                selectedItem.imageBack &&
+                selectedItem?.imageBack &&
                 <Carousel.Item>
                   <img src={selectedItem.imageBack} alt={selectedItem.name} className='imageModalCars' />
                 </Carousel.Item>
               }
               {
-                selectedItem.imageInside &&
+                selectedItem?.imageInside &&
                 <Carousel.Item>
                   <img src={selectedItem.imageInside} alt={selectedItem.name} className='imageModalCars' />
                 </Carousel.Item>
               }
               {
-                selectedItem.extraImage &&
+                selectedItem?.extraImage &&
                 <Carousel.Item>
                   <img src={selectedItem.extraImage} alt={selectedItem.name} className='imageModalCars' />
                 </Carousel.Item>
