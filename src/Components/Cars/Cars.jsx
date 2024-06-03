@@ -6,6 +6,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 function Cars() {
 
+  const [discountCode, setDiscountCode] = useState('')
   const [cars, setCars] = useState([])
   const [show, setShow] = useState(false);
   const [selectedItem, setSelectedItem] = useState(false);
@@ -30,11 +31,18 @@ function Cars() {
     });
   }, []);
 
-  const handleBook = (name) => {
-    const whatsappMessage = `Quisiera reservar ${name}`;
+  const handleBook = (name, discountCode) => {
+    let whatsappMessage = `Quisiera reservar ${name}`;
+    
+    if (discountCode && discountCode !== '') {
+        whatsappMessage += ` Tengo un código de descuento: ${discountCode}`;
+    }
+    
     const whatsappUrl = `https://api.whatsapp.com/send?phone=+34634187073&text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
+    show && handleClose();
   };
+
   return (
     
     <div>
@@ -56,13 +64,13 @@ function Cars() {
                   }
                 {/* <p className='detailCarItem desktopOnly'>Luxury & Comfort</p> */}
                 </div>
-                <button onClick={()=>handleBook(e.name)} style={{cursor: 'pointer', textDecoration: 'none', color: 'white' }} className='bookNowCarItem'>Book Now!</button>
+                {/* <button onClick={()=>handleBook(e.name)} style={{cursor: 'pointer', textDecoration: 'none', color: 'white' }} className='bookNowCarItem'>Book Now!</button> */}
               </div>
             )
           })
         }    
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header>
+        <Modal show={show} onHide={handleClose} >
+          <Modal.Header closeButton>
             <p className='modalTitle'>{selectedItem.name}</p>
           </Modal.Header>
           <Modal.Body>
@@ -90,12 +98,20 @@ function Cars() {
         
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="dark" onClick={handleClose}>
-              BOOK NOW
-            </Button>
+            <div>
+              <input 
+                type="text" 
+                id="discountCode" 
+                value={discountCode} 
+                onChange={(e) => setDiscountCode(e.target.value)} 
+                required 
+                placeholder='I have a discount code' 
+                className='inputContact'
+              />
+              <Button className='bookNowModal' onClick={()=>handleBook(selectedItem.name, discountCode)}>
+                BOOK NOW
+              </Button>
+            </div>
           </Modal.Footer>
         </Modal> 
       </div>
