@@ -75,6 +75,9 @@ function Cars() {
           </Modal.Header>
           <Modal.Body>
             <Carousel>
+              <Carousel.Item>
+                <img src={selectedItem.image} alt={selectedItem.name} className='imageModalCars' />
+              </Carousel.Item>
               {
                 selectedItem.imageBack &&
                 <Carousel.Item>
