@@ -126,6 +126,9 @@ input {
 }
 
 @media(min-width:1200px){
+    .modal-dialog {
+        max-width: 60vw !important;
+    }
     .carItemFirstImage, .infoBlur {
         height: 450px;
     }
@@ -149,9 +152,14 @@ input {
     .carItemFirstImage:hover ~.infoBlur {
         opacity: 1;
         visibility: visible;
+        cursor: pointer;
+    }
+    .carItemFirstImage:hover {
+        cursor: pointer;
     }
     .infoBlur:hover {
         opacity: 1;
+        cursor: pointer;
         visibility: visible;
     }
     .ourCars{
