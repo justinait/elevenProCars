@@ -96,7 +96,30 @@ function Cars() {
                   <img src={selectedItem.extraImage} alt={selectedItem.name} className='imageModalCars' />
                 </Carousel.Item>
               }
-              
+              {
+                selectedItem?.extraImage2 &&
+                <Carousel.Item>
+                  <img src={selectedItem.extraImage2} alt={selectedItem.name} className='imageModalCars' />
+                </Carousel.Item>
+              }
+              {
+                selectedItem?.extraImage3 &&
+                <Carousel.Item>
+                  <img src={selectedItem.extraImage3} alt={selectedItem.name} className='imageModalCars' />
+                </Carousel.Item>
+              }
+              {
+                selectedItem?.extraImage4 &&
+                <Carousel.Item>
+                  <img src={selectedItem.extraImage4} alt={selectedItem.name} className='imageModalCars' />
+                </Carousel.Item>
+              }
+              {
+                selectedItem?.extraImage5 &&
+                <Carousel.Item>
+                  <img src={selectedItem.extraImage5} alt={selectedItem.name} className='imageModalCars' />
+                </Carousel.Item>
+              }
             </Carousel>
         
           </Modal.Body>
