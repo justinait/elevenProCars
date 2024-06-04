@@ -47,7 +47,7 @@ function Home() {
                             </div>
                             <div className='aboutInfoContainerDiv'>
                                 <p className='aboutUsTitles'><InstagramIcon fontSize='small'/>Instagram</p>
-                                <a style={{cursor: 'pointer', color: 'white' }} target='_blank' href='https://wa.link/qva9cx'>@elevenpro_cars</a>
+                                <a style={{cursor: 'pointer', color: 'white' }} target='_blank' href='https://www.instagram.com/elevenpro_cars/'>@elevenpro_cars</a>
                             </div>
                             
                             <div className='aboutInfoContainerDiv'>
