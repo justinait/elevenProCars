@@ -12,6 +12,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import './Home.css'
 import Hero from '../Hero/Hero'
+import Starred from '../Starred/Starred'
 
 function Home() {
     const downloadPDF = () => {
@@ -93,7 +94,7 @@ function Home() {
             </div>
 
         </div>
-        
+        <Starred/>
     </div>
   )
 }

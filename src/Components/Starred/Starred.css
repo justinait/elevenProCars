@@ -1,0 +1,11 @@
+.ourCarsStarred{
+    padding-top: 10vh;
+}
+.seeAllStarred {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
