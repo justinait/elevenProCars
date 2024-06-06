@@ -1,7 +1,7 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Cars from './Components/Cars/Cars'
 import Footer from './Components/Footer/Footer'
-import Hero from './Components/Hero/Hero'
 import Home from './Components/Home/Home'
 import Links from './Components/Links/Links'
 import Navbar from './Components/Navbar/Navbar'
@@ -11,12 +11,24 @@ function App() {
 
   return (
     <>
+    <BrowserRouter>
+        
       <Navbar />
-      <Hero/>
-      <Home />
       <Links />
-      <Cars/>
+
+      <Routes className=''>
+
+        <Route path='/' element={< Home />} />
+        
+        <Route path='/cars' element={<Cars/>} />
+        
+      </Routes>
+
       <Footer />
+
+    </BrowserRouter>
+      
+      
     </>
   )
 }

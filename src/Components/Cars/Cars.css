@@ -41,7 +41,8 @@
 }
 
 .ourCars {
-    margin: 13% auto 2%;
+    margin: auto;
+    padding-top: 18vh;
     font-family: "Libre Caslon Text", serif;
     width: 50vw;
     font-size: 25px;

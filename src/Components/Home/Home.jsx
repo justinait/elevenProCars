@@ -11,6 +11,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import './Home.css'
+import Hero from '../Hero/Hero'
 
 function Home() {
     const downloadPDF = () => {
@@ -25,9 +26,11 @@ function Home() {
       };
   return (
     <div>
+        <Hero/>
         <div className='homeContainerDiv'>
             <p className='ourFocus'>OUR FOCUS</p>
-            <p className='ourFocusText'>We aim to provide our clients with a unique and exclusive service, offering 
+            <p className='ourFocusText'>
+                We aim to provide our clients with a unique and exclusive service, offering 
                 luxury cars at your convenience. <br /> <strong>Whenever and wherever you need them.</strong></p>
         </div>
         <div className='homeDiv'>
@@ -90,6 +93,7 @@ function Home() {
             </div>
 
         </div>
+        
     </div>
   )
 }

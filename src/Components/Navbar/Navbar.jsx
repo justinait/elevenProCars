@@ -1,13 +1,14 @@
 import React from 'react'
 import logo from '/logo2.png'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
     <div className='navbarContainer'>
-      <img src={logo} alt="" className='logoNavbar'/>
-      <h1 className='navbarBrand'>Eleven Pro Cars</h1>
-      
+      <Link to={'/'} className='navbarBrand'>Eleven Pro Cars</Link>
+      {/* <img src={logo} alt="" className='logoNavbar'/> */}
+      <Link to={'/cars'} className='carsNavbar'>Our cars</Link>
     </div>
   )
 }

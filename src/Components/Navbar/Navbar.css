@@ -5,8 +5,17 @@
     justify-content: space-between;
     align-items: center;
     justify-content: space-around;
-    /* background: #eeeeeebd; */
+    background: #eeeeeebd;
+    height: 10vh;
 }
+.navbarContainer a {
+    text-decoration: none;
+}
+.carsNavbar {
+    color: #242424;
+    font-family: "Libre Caslon Text", serif;
+    margin-bottom: 0;
+};
 .logoNavbar {
     width: 50px;
     margin: 5% 0;
@@ -36,7 +45,7 @@
     font-size: 14px;
     padding: 0;
     z-index: 3;
-    letter-spacing: 0.35em;
+    letter-spacing: 0.3em;
     text-align: center;
 }
 @media(min-width:700px){
