@@ -46,7 +46,7 @@ function Home() {
                                 <p className='aboutUsTitles'><LocationOnIcon fontSize='small'/> Where?</p>
                                 <p>Airports, Hotels, or
                                 wherever you need in
-                                Palma de Mallorca, Spain.
+                                Mallorca, Spain.
                                 </p>
                             </div>
                             <div className='aboutInfoContainerDiv'>
