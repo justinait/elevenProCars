@@ -5,20 +5,21 @@
     justify-content: space-between;
     align-items: center;
     justify-content: space-around;
-    background: #eeeeeebd;
+    background: black;
     height: 10vh;
 }
 .navbarContainer a {
     text-decoration: none;
 }
 .carsNavbar {
-    color: #242424;
+    color: #bebebe;
     font-family: "Libre Caslon Text", serif;
     margin-bottom: 0;
-};
+    
+    font-size: smaller;
+}
 .logoNavbar {
-    width: 50px;
-    margin: 5% 0;
+    width: 175px;
     z-index: 12;
 }
 .rightNavbar {
