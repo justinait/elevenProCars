@@ -13,6 +13,7 @@ import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import './Home.css'
 import Hero from '../Hero/Hero'
 import Starred from '../Starred/Starred'
+import OtherHousesIcon from '@mui/icons-material/OtherHouses';
 
 function Home() {
     const downloadPDF = () => {
@@ -43,36 +44,40 @@ function Home() {
                     <div className='aboutInfoContainer'>
                         <div>
                             <div className='aboutInfoContainerDiv'>
-                                <p className='aboutUsTitles'><LocationOnIcon fontSize='small'/> Where?</p>
+                                <p className='aboutUsTitles'><LocationOnIcon fontSize='medium'/> Mallorca, Spain</p>
                                 <p>Airports, Hotels, or
-                                wherever you need in
-                                Mallorca, Spain.
+                                wherever you need.
                                 </p>
                             </div>
                             <div className='aboutInfoContainerDiv'>
-                                <p className='aboutUsTitles'><InstagramIcon fontSize='small'/>Instagram</p>
-                                <a style={{cursor: 'pointer', color: 'white' }} target='_blank' href='https://www.instagram.com/elevenpro_cars/'>@elevenpro_cars</a>
-                            </div>
-                            
-                            <div className='aboutInfoContainerDiv'>
-                                <p className='aboutUsTitles'><DownloadIcon fontSize='small'/>Catalog</p>
-                                <p onClick={downloadPDF} 
-                                style={{cursor: 'pointer', textDecoration: 'underline' }}> Download here</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='aboutInfoContainerDiv'>
-                                <p className='aboutUsTitles'><CalendarMonthIcon fontSize='small'/>Reservations</p>
-                                <p> <a  style={{cursor: 'pointer', textDecoration: 'underline', color: 'white' }} target='_blank' href='https://wa.link/qva9cx'> Click here</a> or <br />+34 634 18 70 73</p>
+                                <p className='aboutUsTitles'><OtherHousesIcon fontSize='medium'/> Other services</p>
+                                <p>We manage your stay in <br /> villas, chalets, houses.
+                                </p>
                             </div>
                             <div className='aboutInfoContainerDiv'>
-                                <p className='aboutUsTitles'><LoyaltyIcon fontSize='small'/>Why us?</p>
+                                <p className='aboutUsTitles'><CalendarMonthIcon fontSize='medium'/>Reservations</p>
+                                <p> <a  style={{cursor: 'pointer', textDecoration: 'underline', color: 'white' }} target='_blank' href='https://wa.link/qva9cx'> Click here</a> or <br /> <strong> +34 634 18 70 73</strong></p>
+                            </div>
+
+                            <div className='aboutInfoContainerDiv'>
+                                <p className='aboutUsTitles'><LoyaltyIcon fontSize='medium'/>Why us?</p>
                                 <ul> 
-                                    <li>Reservations at nightclubs and Restaurants.</li>
-                                    <li>Logistics for easy parking in high-demand areas.</li>
+                                    <li>Reservations at <strong>Nightclubs</strong> and Restaurants.</li>
+                                    <li>Logistics for easy parking in <strong>high-demand areas.</strong></li>
                                     <li>Unforgettable unique experience.</li>
                                 </ul>
                             </div>
+                            {/* <div className='aboutInfoContainerDiv'>
+                                <p className='aboutUsTitles'><InstagramIcon fontSize='medium'/>Instagram</p>
+                                <a style={{cursor: 'pointer', color: 'white' }} target='_blank' href='https://www.instagram.com/elevenpro_cars/'>@elevenpro_cars</a>
+                            </div> */}
+                            
+                            {/* <div className='aboutInfoContainerDiv'>
+                                <p className='aboutUsTitles'><DownloadIcon fontSize='medium'/>Catalog</p>
+                                <p onClick={downloadPDF} 
+                                style={{cursor: 'pointer', textDecoration: 'underline' }}> Download here</p>
+                            </div> */}
+                        
                             
                         </div>
                     </div>

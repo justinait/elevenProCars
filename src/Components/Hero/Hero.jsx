@@ -1,6 +1,5 @@
 import React from 'react'
 import hero from '/cars/hero.jpg'
-import hero2 from '/cars/2 mercedesjeep (2).jpg'
 import './Hero.css'
 
 function Hero() {
