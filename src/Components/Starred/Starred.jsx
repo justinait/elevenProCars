@@ -150,7 +150,7 @@ function Starred() {
           </Modal.Footer>
         </Modal> 
 
-        <Link className='seeAllStarred' to={'/cars'}>See all the cars  <EastIcon fontSize='small'/> </Link>
+        <Link className='seeAllStarred' to={'/cars'}>See all the cars</Link>
       </div>
     </div>
   )

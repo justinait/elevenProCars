@@ -2,10 +2,11 @@
     padding-top: 10vh;
 }
 .seeAllStarred {
-    color: white;
+    color: #fafafa;
     text-decoration: none;
-    font-weight: 200;
+    font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: underline;
 }
