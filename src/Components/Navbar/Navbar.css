@@ -51,13 +51,14 @@
 }
 @media(min-width:700px){
     .logoNavbar {
-        width: 80px;
+        width: 200px;
     }
     .navbarBrand{
         font-size: 26px;
     }
     .navbarContainer{
-        justify-content: space-around;
+        padding: 0 5%;
+        justify-content: space-between;
     }
 }
 @media(min-width:1000px){
@@ -68,20 +69,18 @@
 @media(min-width:1200px){
     .logoNavbar {
         margin: 4% 0;
-        width: 90px;
+        width: 220px;
     }
-    /* .navbarContainer {
-        width: 86%;
-        position: absolute;
-        display: flex;
-        padding: 0 7%;
-        justify-content: flex-end;
-        flex-direction: column-reverse;
-    } */
+    .navbarContainer {
+        height: 12vh;
+    }
     .navbarBrand {
         font-size: 40px;
         letter-spacing: 0.3em;
     
+    }
+    .carsNavbar {
+        font-size: 16px;
     }
 }
 @media(min-width:1400px){

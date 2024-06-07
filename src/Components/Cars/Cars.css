@@ -119,6 +119,12 @@ input {
         font-size: 16px;
         padding: 0 8%;
     }
+    .sloganCars{
+        display: none;
+    }
+    .ourCarsStarred {
+        padding: 8vh 0 6vh;
+    }
 }
 @media(min-width:1000px){
     .carItemFirstImage, .infoBlur {

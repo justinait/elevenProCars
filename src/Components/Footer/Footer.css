@@ -73,7 +73,9 @@
     .justina {
         font-size: 12px;
     }
-    
+    .logoFooter {
+        width: 230px;
+    }
 }
 @media(min-width:1200px){
 
