@@ -66,3 +66,15 @@
         height: 96vh;
     }
 }
+
+@media(min-width:1400px){
+    .heroContainer{
+        background-position-y: -800px;
+    }
+}
+
+@media(min-width:1700px){
+    .heroContainer{
+        background-position-y: -870px;
+    }
+}
