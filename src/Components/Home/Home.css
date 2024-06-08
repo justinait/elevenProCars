@@ -104,6 +104,9 @@
 .aboutDiv ul {
     padding-left: 20px;
 }
+.aboutItemsText {
+    margin-left: 15px;
+}
 .aboutUsTitles {
     text-transform: uppercase;
     display: flex;
@@ -191,16 +194,16 @@
     }
     .aboutUsTitles {
         
+        align-items: flex-start;
         margin-bottom: 0em;
     }
-    .aboutInfoContainerDiv{
-        width: 30vw;
+    .aboutInfoContainer {
+        font-size: 18.5px;
     }
-    .aboutDiv p, .aboutDiv a, .aboutDiv li {
-        width: 86%;
-    }
-    .aboutDiv p {
-        
+    
+    .aboutItemsText, .aboutDiv ul {
+        margin-left: 55px;
+        margin-top: -20px;
     }
     .aboutInfoContainer {
         margin-top: 5%;

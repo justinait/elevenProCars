@@ -14,6 +14,7 @@ import './Home.css'
 import Hero from '../Hero/Hero'
 import Starred from '../Starred/Starred'
 import OtherHousesIcon from '@mui/icons-material/OtherHouses';
+import BedIcon from '@mui/icons-material/Bed';
 
 function Home() {
     const downloadPDF = () => {
@@ -45,18 +46,15 @@ function Home() {
                         <div>
                             <div className='aboutInfoContainerDiv'>
                                 <p className='aboutUsTitles'><LocationOnIcon fontSize='medium'/> Mallorca, Spain</p>
-                                <p>Airports, Hotels, or
-                                wherever you need.
-                                </p>
+                                <p className='aboutItemsText'>Airports, Hotels, or wherever you need.</p>
                             </div>
                             <div className='aboutInfoContainerDiv'>
-                                <p className='aboutUsTitles'><OtherHousesIcon fontSize='medium'/> Other services</p>
-                                <p>We manage your stay in <br /> villas, chalets, houses.
-                                </p>
+                                <p className='aboutUsTitles'><BedIcon fontSize='medium'/> Other services</p>
+                                <p className='aboutItemsText'>We manage your stay in <br /> villas, chalets, houses. </p>
                             </div>
                             <div className='aboutInfoContainerDiv'>
                                 <p className='aboutUsTitles'><CalendarMonthIcon fontSize='medium'/>Reservations</p>
-                                <p> <a  style={{cursor: 'pointer', textDecoration: 'underline', color: 'white' }} target='_blank' href='https://wa.link/qva9cx'> Click here</a> or <br /> <strong> +34 634 18 70 73</strong></p>
+                                <p className='aboutItemsText'> <a  style={{cursor: 'pointer', textDecoration: 'underline', color: 'white' }} target='_blank' href='https://wa.link/qva9cx'> Click here</a> or <br /> <strong> +34 634 18 70 73</strong></p>
                             </div>
 
                             <div className='aboutInfoContainerDiv'>
