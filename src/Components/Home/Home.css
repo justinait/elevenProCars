@@ -142,10 +142,10 @@
         margin: 8% 0;
     }
     .aboutUsTitles {
-        font-size: 27px;
+        font-size: 22px;
     }
     .aboutInfoContainer {
-        font-size: 18.5px;
+        font-size: 16.5px;
     }
 }
 @media (min-width: 1200px) {
@@ -198,6 +198,9 @@
     }
     .aboutDiv p, .aboutDiv a, .aboutDiv li {
         width: 86%;
+    }
+    .aboutDiv p {
+        
     }
     .aboutInfoContainer {
         margin-top: 5%;

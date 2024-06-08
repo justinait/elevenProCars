@@ -55,7 +55,8 @@
 
 @media(min-width:1200px){
     .heroContainer{
-        height: 96vh;
+        height: 99vh;
+        background-position-y: -680px;
     }
     .titleHero{
         font-size: 38px;
