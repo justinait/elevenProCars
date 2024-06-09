@@ -2,7 +2,7 @@
 
 <h3>ELEVEN PRO CARS</h3>
 
-<h3>👉🏻 <b>Deploy: <a href="https://elevenprocars.com">THE LOONEY STUDIO</a></b></h3>
+<h3>👉🏻 <b>Deploy: <a href="https://elevenprocars.com">ELEVEN PRO CARS</a></b></h3>
 
 <hr/>
 
