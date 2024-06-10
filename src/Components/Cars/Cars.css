@@ -170,9 +170,12 @@ input {
         visibility: visible;
     }
     .ourCars{
-        margin: 7% auto ;
+
+        margin: auto;
         font-size: 51px;
+        padding: 13% 0px 5%;
     }
+
     .sloganCars{
         font-size: 16px;
         display: none;

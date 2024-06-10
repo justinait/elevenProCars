@@ -10,3 +10,11 @@
     justify-content: center;
     text-decoration: underline;
 }
+
+@media(min-width:1000px){
+    .seeAllStarred{
+
+        left: 90%;
+        position: relative;
+    }
+}

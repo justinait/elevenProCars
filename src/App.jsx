@@ -6,6 +6,7 @@ import Home from './Components/Home/Home'
 import Links from './Components/Links/Links'
 import Navbar from './Components/Navbar/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'animate.css';
 
 function App() {
 
