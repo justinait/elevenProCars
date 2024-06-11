@@ -1,0 +1,41 @@
+{
+  "navbar": {
+    "ourCars": "Our cars"
+  },
+  "home": {
+    "ourFocus": "OUR FOCUS",
+    "ourFocusText": "We aim to provide our clients with a unique and exclusive service, offering luxury cars at your convenience. Whenever and wherever you need them.",
+    "aboutUs": "ABOUT US",
+    "location": "Mallorca, Spain",
+    "locationText": "Airports, Hotels, or wherever you need.",
+    "services": "Other services",
+    "servicesText": "We manage your stay in villas, chalets, houses.",
+    "reservations": "Reservations",
+    "clickHere": "Click here",
+    "phoneNumber": "+34 634 18 70 73",
+    "whyUs": "Why us?",
+    "whyUsText": "Reservations at Nightclubs and Restaurants. Logistics for easy parking in high-demand areas. Unforgettable unique experience.",
+    "homeImagePhrase": "Let's get you on the road. Expertise. Commitment. Value."
+  },
+  "starred": {
+    "highlights": "HIGHLIGHTS",
+    "drive": "Drive the car you want",
+    "discount": "I have a discount code",
+    "book": "BOOK NOW",
+    "see_all": "See all cars"
+  },
+  "whatsapp": {
+    "reservation": "I would like to book",
+    "discount": "I have a discount code"
+  },
+  "cars": {
+    "ourCars": "OUR CARS",
+    "slogan": "Drive the car you want",
+    "whatsappMessage": "I would like to book {{name}}",
+    "discountMessage": "I have a discount code: {{discountCode}}",
+    "discountPlaceholder": "I have a discount code",
+    "bookNow": "BOOK NOW"
+  }
+  
+    
+}

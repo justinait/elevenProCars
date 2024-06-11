@@ -8,10 +8,13 @@ import Navbar from './Components/Navbar/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 
+import { createRoot } from 'react-dom/client';
+import '../i18n';
+
+
 function App() {
 
   return (
-    <>
     <BrowserRouter>
         
       <Navbar />
@@ -20,7 +23,6 @@ function App() {
       <Routes className=''>
 
         <Route path='/' element={< Home />} />
-        
         <Route path='/cars' element={<Cars/>} />
         
       </Routes>
@@ -28,9 +30,6 @@ function App() {
       <Footer />
 
     </BrowserRouter>
-      
-      
-    </>
   )
 }
 

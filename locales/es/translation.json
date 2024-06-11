@@ -1,0 +1,41 @@
+{
+  "navbar": {
+    "ourCars": "Nuestros coches"
+  },
+  "home": {
+    "ourFocus": "NUESTRO ENFOQUE",
+    "ourFocusText": "Nuestro objetivo es proporcionar a nuestros clientes un servicio único y exclusivo, ofreciendo coches de lujo a su conveniencia. Siempre y donde los necesites.",
+    "aboutUs": "SOBRE NOSOTROS",
+    "location": "Mallorca, España",
+    "locationText": "Aeropuertos, Hoteles, o donde lo necesites.",
+    "services": "Otros servicios",
+    "servicesText": "Gestionamos tu estancia en villas, chalets, casas.",
+    "reservations": "Reservas",
+    "clickHere": "Haz clic aquí",
+    "phoneNumber": "+34 634 18 70 73",
+    "whyUs": "¿Por qué nosotros?",
+    "whyUsText": "Reservas en discotecas y restaurantes. Logística para facilitar el aparcamiento en zonas de alta demanda. Experiencia única e inolvidable.",
+    "homeImagePhrase": "Pongámonos en marcha. Experiencia. Compromiso. Valor."
+  },
+  "starred": {
+    "highlights": "DESTACADOS",
+    "drive": "Conduce el coche que deseas",
+    "discount": "Tengo un código de descuento",
+    "book": "RESERVAR",
+    "see_all": "Ver todos los coches"
+  },
+  "whatsapp": {
+    "reservation": "Quisiera reservar",
+    "discount": "Tengo un código de descuento"
+  },
+  "cars": {
+    "ourCars": "NUESTROS COCHES",
+    "slogan": "Conduce el coche que desees",
+    "whatsappMessage": "Me gustaría reservar {{name}}",
+    "discountMessage": "Tengo un código de descuento: {{discountCode}}",
+    "discountPlaceholder": "Tengo un código de descuento",
+    "bookNow": "RESERVAR AHORA"
+  }
+  
+}
+  
