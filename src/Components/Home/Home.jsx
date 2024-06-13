@@ -65,28 +65,10 @@ function Home() {
                                     <li>Unforgettable unique experience.</li>
                                 </ul>
                             </div>
-                            {/* <div className='aboutInfoContainerDiv'>
-                                <p className='aboutUsTitles'><InstagramIcon fontSize='medium'/>Instagram</p>
-                                <a style={{cursor: 'pointer', color: 'white' }} target='_blank' href='https://www.instagram.com/elevenpro_cars/'>@elevenpro_cars</a>
-                            </div> */}
-                            
-                            {/* <div className='aboutInfoContainerDiv'>
-                                <p className='aboutUsTitles'><DownloadIcon fontSize='medium'/>Catalog</p>
-                                <p onClick={downloadPDF} 
-                                style={{cursor: 'pointer', textDecoration: 'underline' }}> Download here</p>
-                            </div> */}
                         
-                            
                         </div>
                     </div>
                 </div>
-                {/* <img className='homeServicesImage mobileOnly' src={image4} alt="" />
-                <img className='homeServicesImage desktopOnly' src={image} alt="" /> */}
-                {/*<div className='homeImagePhrase homeImagePhraseTablet'>
-                    <p className='homeImageP'>Unforgettable Unique Experience. </p>
-                    <p className='homeImageP'>Reservations at Nightclubs and Restaurants.</p>
-                    <p className='homeImageP'>Logistics for Easy Parking in High-Demand Areas.</p>
-                </div> */}
             </div>
 
             <div className='homeImageContainer'>
