@@ -10,6 +10,7 @@ import 'animate.css';
 import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
 import AuthContextComponent from './context/AuthContext'
+import ForgotPassword from './Components/Register/ForgotPassword'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/cars' element={<Cars/>} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/forgot-password' element={<ForgotPassword />} />
         
         
       </Routes>
