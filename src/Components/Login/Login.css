@@ -1,0 +1,72 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.input {
+    /* margin-bottom: 16px; */
+    /* padding: 8px; */
+    border-radius: 5px;
+    margin: 0 auto 8px;
+}
+  
+.passwordContainer {
+    position: relative;
+    margin: 0 auto 20%;
+}
+  
+.passwordToggle {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+  
+.link {
+    color: steelblue;
+    margin-top: 10px;
+    text-align: center;
+}
+  
+.button {
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+  
+.button:hover{
+    background-color: grey;
+    color: white;
+}
+.googleButton {
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+@media(min-width:700px) {
+    .container {
+        min-height: 80vh;
+    }
+}
+@media(min-width:1000px) {
+    .container {
+        min-height: 120vh;
+    }
+}

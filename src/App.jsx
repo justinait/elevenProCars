@@ -7,13 +7,16 @@ import Links from './Components/Links/Links'
 import Navbar from './Components/Navbar/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
+import Login from './Components/Login/Login'
+import Register from './Components/Register/Register'
+import AuthContextComponent from './context/AuthContext'
 
 function App() {
 
   return (
     <>
     <BrowserRouter>
-        
+      <AuthContextComponent>
       <Navbar />
       <Links />
 
@@ -22,11 +25,15 @@ function App() {
         <Route path='/' element={< Home />} />
         
         <Route path='/cars' element={<Cars/>} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        
         
       </Routes>
 
       <Footer />
 
+      </AuthContextComponent>
     </BrowserRouter>
       
       
