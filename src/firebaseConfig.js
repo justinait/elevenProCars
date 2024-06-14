@@ -16,13 +16,13 @@ import {v4} from "uuid"
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAISi0NveB_WYAyOU4N7TZCpOizytjrqSI",
-  authDomain: "elevenprocars-d280c.firebaseapp.com",
-  projectId: "elevenprocars-d280c",
-  storageBucket: "elevenprocars-d280c.appspot.com",
-  messagingSenderId: "322681451303",
-  appId: "1:322681451303:web:906b30cdf7d6c2f07b2f02",
-  measurementId: "G-CSE3Z7FYD7"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
+  measurementId: import.meta.env.VITE_measurementId,
 };
 
 const app = initializeApp(firebaseConfig);
