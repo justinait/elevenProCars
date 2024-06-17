@@ -46,11 +46,11 @@ const Register = () => {
             className="input"
             onChange={handleChange}
           />
-          <div className="">
+          <div className="passwordContainer registerPassword">
             <input
               type={showPassword ? "text" : "password"}
               name="password"
-              placeholder="Contraseña"
+              placeholder="Password"
               className="input"
               onChange={handleChange}
             />
@@ -61,11 +61,11 @@ const Register = () => {
               {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
             </span>
           </div>
-          <div className="passwordContainer">
+          <div className="passwordContainer registerPassword">
             <input
               type={showPassword ? "text" : "password"}
               name="confirmPassword"
-              placeholder="Confirmar contraseña"
+              placeholder="Confirm password"
               className="input"
               onChange={handleChange}
             />
@@ -76,14 +76,14 @@ const Register = () => {
               {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
             </span>
           </div>
-          <Link to="/login" className="link">
-            Regresar
+          <Link to="/login" className="notAccountYet">
+            I already have an account
           </Link>
           <button
             type="submit"
             className="button"
           >
-            Registrarme
+            Register
           </button>
         </div>
       </form>

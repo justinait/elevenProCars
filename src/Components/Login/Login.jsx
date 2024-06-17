@@ -34,7 +34,7 @@ const Login = () => {
 
         let finallyUser = {
           email: res.user.email,
-          //   rol: userDoc.data().rol
+          rol: userDoc.data().rol
         }
 
         handleLogin(finallyUser);//le paso el usuario logueado al contexto
@@ -76,7 +76,7 @@ const Login = () => {
             type={showPassword ? "text" : "password"}
             name="password"
             onChange={handleChange}
-            placeholder="Contraseña"
+            placeholder="Password"
             className="input"
           />
           <span
@@ -87,31 +87,26 @@ const Login = () => {
           </span>
         </div>
         <Link to="/forgot-password" className="link">
-          ¿Olvidaste tu contraseña?
+          Forgot your password?
         </Link>
         <button
           type="submit"
           className="button"
         >
-          Ingresar
+          Sign In
         </button>
         <button
           type="button"
-          className="googleButton"
+          className="googleButton button"
           onClick={googleSignIn} 
         >
           <GoogleIcon style={{ marginRight: "8px" }} /> Ingresa con Google
         </button>
-        <p style={{ color: "var(--color-secondary)", marginTop: "10px" }}>
-          ¿Aún no tienes cuenta?
-        </p>
-        <button
-          type="button"
-          onClick={()=>navigate("/register")}
-          className="button"
-        >
-          Regístrate
-        </button>
+        
+        <div>
+          <p className="notAccountYet" >            Don't have an account yet?         </p>
+          <button type="button" onClick={()=>navigate("/register")} className="button">Register now!</button>
+        </div>
       </form>
     </div>
   );
