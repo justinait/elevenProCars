@@ -11,6 +11,10 @@ import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
 import AuthContextComponent from './context/AuthContext'
 import ForgotPassword from './Components/Register/ForgotPassword'
+import DashboardUsers from './Components/DashboardUsers/DashboardUsers'
+import DashboardAdmin from './Components/DashboardAdmin/DashboardAdmin'
+import ProtectedAdmin from './ProtectedAdmin'
+import ProtectedUsers from './ProtectedAdmin'
 
 function App() {
 
@@ -30,6 +34,15 @@ function App() {
         <Route path='/register' element={<Register />} />
         <Route path='/forgot-password' element={<ForgotPassword />} />
         
+        <Route element={<ProtectedAdmin />}>
+          <Route path='/dashboardAdmin' element={<DashboardAdmin />} />
+        </Route>
+        
+        <Route element={<ProtectedUsers />}>
+          <Route path='/dashboardUsers' element={<DashboardUsers />} />
+        </Route>
+        
+
         
       </Routes>
 
