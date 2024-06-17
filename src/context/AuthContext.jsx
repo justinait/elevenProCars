@@ -18,7 +18,7 @@ const AuthContextComponent = ({ children }) => {
     localStorage.setItem("isLogged", JSON.stringify(true));
   };
 
-  const logoutContext = () => {
+  const handleLogoutAuth = () => {
     setUser({});
     setIsLogged(false);
     localStorage.removeItem("userInfo");
@@ -29,7 +29,7 @@ const AuthContextComponent = ({ children }) => {
     user,
     isLogged,
     handleLogin,
-    logoutContext,
+    handleLogoutAuth
   };
 
   return <AuthContext.Provider value={data}>{children}</AuthContext.Provider>;
