@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import LogoutIcon from "@mui/icons-material/Logout";
 import { AuthContext } from '../../context/AuthContext';
 import { onLogOut } from "../../firebaseConfig";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function Navbar() {
   
@@ -15,7 +16,6 @@ function Navbar() {
     onLogOut();
     handleLogoutAuth()
     navigate('/login')
-    console.log('fuers');
   }
   
 

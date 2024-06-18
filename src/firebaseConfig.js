@@ -13,7 +13,7 @@ import {
 
 import {getStorage, ref, uploadBytes, getDownloadURL} from "firebase/storage"
 import {v4} from "uuid"
-import { getFirestore } from "firebase/firestore";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_apiKey,
@@ -32,17 +32,35 @@ const storage = getStorage(app);
 const auth = getAuth(app);
 export const db = getFirestore(app);
 
-export const onSignIn = async ({email, password}) => {
+// export const onSignIn = async ({email, password}) => {
     
+//   try {
+//     const res = await signInWithEmailAndPassword(auth, email, password)
+//     return res;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+export const onSignIn = async ({ email, password }) => {
   try {
-    const res = await signInWithEmailAndPassword(auth, email, password)
-    return res;
+    const res = await signInWithEmailAndPassword(auth, email, password);
+    const userDoc = await getDoc(doc(db, "users", res.user.uid));
+    if (userDoc.exists()) {
+      const userData = userDoc.data();
+      console.log(userData);
+      if (userData.rol === "JsVd2" || userData.isApproved) {
+        return res;
+      } else {
+        throw new Error("Your account is not approved yet. Please contact the administrator.");
+      }
+    } else {
+      throw new Error("User does not exist.");
+    }
   } catch (error) {
     console.log(error);
+    throw error;
   }
-  
-}
-
+};
 export const onLogOut = () => {
   signOut(auth);
   console.log('cerro');

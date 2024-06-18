@@ -12,7 +12,8 @@ const Register = () => {
   const [userCredentials, setUserCredentials] = useState({
     email:"",
     password:"",
-    confirmPassword:""
+    confirmPassword:"",
+    instagram: ""
   })
 
   const handleChange = (e) => {
@@ -24,7 +25,13 @@ const Register = () => {
     try {
       let res = await signUp(userCredentials);
       if(res.user.uid){
-        await setDoc(doc(db, "users", res.user.uid), {rol: "user"})
+        await setDoc(doc(db, "users", res.user.uid), { 
+          email: userCredentials.email,
+          instagram: userCredentials.instagram,
+          rol: "user",
+          isApproved: false 
+        } )
+        //cambié esto
       }
       navigate('/login');
     } catch (error) {
@@ -43,6 +50,13 @@ const Register = () => {
             type="text"
             name="email"
             placeholder="Email"
+            className="input"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            name="instagram"
+            placeholder="Instagram Username"
             className="input"
             onChange={handleChange}
           />
