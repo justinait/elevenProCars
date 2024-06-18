@@ -38,18 +38,17 @@ function Navbar() {
 
       }
       { (isLogged && open) &&
-        <div>
-          <span className="listItemText" onClick={handleLogOut}><LogoutIcon className="listItemIcon"  /></span>
+        <div className='dropdownLogged'>
           {
             (user.rol == "user") ?
-              <Link to="/dashboardUsers">                <CardGiftcardIcon/>              </Link>
+            <Link to="/dashboardUsers"><CardGiftcardIcon/>My referrals</Link>
             : 
-              <>
-                <Link to="/dashboardAdmin"><PersonAddAltIcon/></Link>
-                <Link to="/dashboardAdminCRUD"><AddCardIcon/></Link>
-                
+            <>
+                <Link to="/dashboardAdmin"><PersonAddAltIcon/>Add Colaborator</Link>
+                <Link to="/dashboardAdminCRUD"><AddCardIcon/>Add Rent</Link>
               </>
           }
+          <span className="listItemText" onClick={handleLogOut}><LogoutIcon className="listItemIcon"  />Log out</span>
         </div>  
       }
       

@@ -51,10 +51,10 @@ export const onSignIn = async ({ email, password }) => {
       if (userData.rol === "JsVd2" || userData.isApproved) {
         return res;
       } else {
-        throw new Error("Your account is not approved yet. Please contact the administrator.");
+        alert("Your account is not approved yet. Please contact the administrator.");
       }
     } else {
-      throw new Error("User does not exist.");
+      alert("User does not exist.");
     }
   } catch (error) {
     console.log(error);
