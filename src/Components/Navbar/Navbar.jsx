@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import logo from '/logonegro3.png'
 import './Navbar.css'
 import { Link, useNavigate } from 'react-router-dom'
@@ -6,11 +6,15 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { AuthContext } from '../../context/AuthContext';
 import { onLogOut } from "../../firebaseConfig";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
+import AddCardIcon from '@mui/icons-material/AddCard';
 
 function Navbar() {
   
-  const {handleLogoutAuth, isLogged} = useContext(AuthContext)
+  const {handleLogoutAuth, isLogged, user} = useContext(AuthContext)
   let navigate = useNavigate()
+  const [open, setOpen] = useState(false)
 
   const handleLogOut = () => {
     onLogOut();
@@ -18,6 +22,9 @@ function Navbar() {
     navigate('/login')
   }
   
+  const handleOpen =()=> {
+    setOpen(!open);
+  }
 
   return (
     <div className='navbarContainer'>
@@ -27,8 +34,24 @@ function Navbar() {
 
       {
         isLogged &&
-        <span className="listItemText" onClick={handleLogOut}><LogoutIcon className="listItemIcon"  /></span>
-      }  
+        <AccountCircleIcon onClick={handleOpen} />
+
+      }
+      { (isLogged && open) &&
+        <div>
+          <span className="listItemText" onClick={handleLogOut}><LogoutIcon className="listItemIcon"  /></span>
+          {
+            (user.rol == "user") ?
+              <Link to="/dashboardUsers">                <CardGiftcardIcon/>              </Link>
+            : 
+              <>
+                <Link to="/dashboardAdmin"><PersonAddAltIcon/></Link>
+                <Link to="/dashboardAdminCRUD"><AddCardIcon/></Link>
+                
+              </>
+          }
+        </div>  
+      }
       
     </div>
   )
