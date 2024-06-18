@@ -15,6 +15,7 @@ import DashboardUsers from './Components/DashboardUsers/DashboardUsers'
 import DashboardAdmin from './Components/DashboardAdmin/DashboardAdmin'
 import ProtectedAdmin from './ProtectedAdmin'
 import ProtectedUsers from './ProtectedAdmin'
+import DashboardAdminCRUD from './Components/DashboardAdmin/DashboardAdminCRUD'
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
         
         <Route element={<ProtectedAdmin />}>
           <Route path='/dashboardAdmin' element={<DashboardAdmin />} />
+          <Route path='/dashboardAdminCRUD' element={<DashboardAdminCRUD />} />
         </Route>
         
         <Route element={<ProtectedUsers />}>
