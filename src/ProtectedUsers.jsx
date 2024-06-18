@@ -7,7 +7,7 @@ function ProtectedUsers() {
   return (
     <>
       {
-        isLogged && user?.rol === "user" ?
+        isLogged  ?
         <Outlet /> :
         <Navigate to="/login" />
       }

@@ -44,10 +44,12 @@ function Navbar() {
             <Link to="/dashboardUsers"><CardGiftcardIcon/>My referrals</Link>
             : 
             <>
-                <Link to="/dashboardAdmin"><PersonAddAltIcon/>Add Colaborator</Link>
-                <Link to="/dashboardAdminCRUD"><AddCardIcon/>Add Rent</Link>
-              </>
+              <Link to="/dashboardAdmin"><PersonAddAltIcon/>Add Colaborator</Link>
+              <Link to="/dashboardAdminCRUD"><AddCardIcon/>Add Rent</Link>
+            </>
           }
+        {console.log(user)}
+        {console.log(isLogged)}
           <span className="listItemText" onClick={handleLogOut}><LogoutIcon className="listItemIcon"  />Log out</span>
         </div>  
       }

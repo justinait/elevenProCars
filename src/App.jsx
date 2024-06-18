@@ -14,7 +14,7 @@ import ForgotPassword from './Components/Register/ForgotPassword'
 import DashboardUsers from './Components/DashboardUsers/DashboardUsers'
 import DashboardAdmin from './Components/DashboardAdmin/DashboardAdmin'
 import ProtectedAdmin from './ProtectedAdmin'
-import ProtectedUsers from './ProtectedAdmin'
+import ProtectedUsers from './ProtectedUsers'
 import DashboardAdminCRUD from './Components/DashboardAdmin/DashboardAdminCRUD'
 
 function App() {
