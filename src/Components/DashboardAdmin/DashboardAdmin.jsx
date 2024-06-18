@@ -56,6 +56,7 @@ const DashboardAdmin = () => {
               </>
             ) :
               <>
+                <p>Ref Code: {user.refCode}</p>
                 <button onClick={() => deleteAccount(user.id)}>Eliminar</button>
               </>            
             }
