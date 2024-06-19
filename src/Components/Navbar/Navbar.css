@@ -62,6 +62,7 @@
     position: absolute;
     right: 0;
     top: 220%;
+    top: 120px;
     transform: translateY(-50%);
     background: black;
     padding: 17px;

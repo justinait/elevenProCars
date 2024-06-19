@@ -20,6 +20,7 @@ const DashboardUsers = () => {
   }, [user]);
   
   {console.log(user)}
+  {console.log(user.refCode)}
   {console.log(orders)}
   return (
     <div>
@@ -28,10 +29,9 @@ const DashboardUsers = () => {
         {orders.map((e) => (
           <li key={e.id}>
             <p>Nombre: {e.firstName}</p>
-            <p>Apellido: {e.lastName}</p>
             <p>Cantidad de Días: {e.days}</p>
             <p>Modelo del Coche: {e.carModel}</p>
-            <p>Tarifa Final: {e.finalRate}</p>
+            <p>Tarifa Final: EUR {e.finalRate}</p>
             <p>Código de Referencia: {e.refCode}</p>
           </li>
         ))}

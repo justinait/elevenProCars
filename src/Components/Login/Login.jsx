@@ -34,7 +34,9 @@ const Login = () => {
 
         let finallyUser = {
           email: res.user.email,
-          rol: userDoc.data().rol
+          rol: userDoc.data().rol,
+          instagram: userDoc.data().instagram,
+          refCode: userDoc.data().refCode,
         }
 
         handleLogin(finallyUser);//le paso el usuario logueado al contexto
