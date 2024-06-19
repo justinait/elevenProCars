@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../../firebaseConfig';
 import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
+import './Dashboard.css'
 
 const DashboardAdminCRUD = () => {
   const [users, setUsers] = useState([]);
@@ -60,7 +61,7 @@ const DashboardAdminCRUD = () => {
   };
 
   return (
-    <div>
+    <div className='dashboardContainer'>
       <h1>CRUD de Administrador</h1>
       <div>
         <h2>Agregar Pedido</h2>

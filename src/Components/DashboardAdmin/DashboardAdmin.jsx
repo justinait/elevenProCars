@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../../firebaseConfig";
 import { collection, getDocs, doc, updateDoc, deleteDoc } from "firebase/firestore";
+import './Dashboard.css'
 
 const DashboardAdmin = () => {
   const [users, setUsers] = useState([]);
@@ -32,7 +33,7 @@ const DashboardAdmin = () => {
   };
 
   return (
-    <div>
+    <div className="dashboardContainer">
       <h1>Panel de Administrador</h1>
       <div>
         <button onClick={() => setShowApproved(false)}>Pendientes</button>

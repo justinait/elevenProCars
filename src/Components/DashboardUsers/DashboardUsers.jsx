@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { db } from '../../firebaseConfig';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { AuthContext } from '../../context/AuthContext';
+import '../DashboardAdmin/Dashboard.css'
 
 const DashboardUsers = () => {
   const [orders, setOrders] = useState([]);
@@ -23,7 +24,7 @@ const DashboardUsers = () => {
   {console.log(user.refCode)}
   {console.log(orders)}
   return (
-    <div>
+    <div className='dashboardContainer'>
       <h2>Mis Pedidos</h2>
       <ul>
         {orders.map((e) => (
