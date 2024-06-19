@@ -6,6 +6,7 @@ import './Dashboard.css'
 const DashboardAdmin = () => {
   const [users, setUsers] = useState([]);
   const [showApproved, setShowApproved] = useState(false);
+  const [selectedButton, setSelectedButton] = useState('pendientes'); // Estado para el botón seleccionado
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -25,7 +26,10 @@ const DashboardAdmin = () => {
     await updateDoc(userRef, { isApproved: true, refCode: refCode });
     setUsers(users.map(user => user.id === userId ? { ...user, isApproved: true, refCode: refCode } : user));
   };
-
+  const handleButtonClick = (buttonType) => {
+    setShowApproved(buttonType === 'activos');
+    setSelectedButton(buttonType);
+  };
   const deleteAccount = async (userId) => {
     const userRef = doc(db, "users", userId);
     await deleteDoc(userRef);
@@ -34,11 +38,24 @@ const DashboardAdmin = () => {
 
   return (
     <div className="dashboardContainer">
-      <h1>Panel de Administrador</h1>
-      <div>
-        <button onClick={() => setShowApproved(false)}>Pendientes</button>
-        <button onClick={() => setShowApproved(true)}>Colaboradores Activos</button>
+      <div className="headingBoxDashboard">
+        <h1>Panel de Administrador</h1>
+        <div>
+          <button
+            className={`buttonsDashboardAdmin ${selectedButton === 'pendientes' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('pendientes')}
+          >
+            Pendientes
+          </button>
+          <button
+            className={`buttonsDashboardAdmin ${selectedButton === 'activos' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('activos')}
+          >
+            Colaboradores Activos
+          </button>
+        </div>
       </div>
+
       <ul>
         {users.filter(user => user.isApproved === showApproved).map((user) => (
           <li key={user.id}>
