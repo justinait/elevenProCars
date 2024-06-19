@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Footer.css'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -6,8 +6,12 @@ import PushPinIcon from '@mui/icons-material/PushPin';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import logo from '/public/logonegro2.png'
 import { Link } from "react-router-dom";
+import { AuthContext } from '../../context/AuthContext';
 
 function Footer() {
+  
+  const {user, isLogged} = useContext(AuthContext)
+
   const downloadPDF = () => {
     const pdfPath = 'https://drive.google.com/file/d/19Drxs_hA-NHrFKU717mxexuMp6hvFPj6/view?usp=sharing';
     const link = document.createElement('a');
@@ -30,7 +34,10 @@ function Footer() {
       </div>
       
       <div className='justina'>
-        <Link to={'/login'}>Colaborators: click here</Link>
+        {
+          !isLogged &&
+          <Link to={'/login'}>Colaborators: click here</Link>
+        }
         <p >Powered by <a target='_blank' href="https://imjustwebs.com/"><strong > I'mJustWebs</strong></a></p>
       </div>
 
