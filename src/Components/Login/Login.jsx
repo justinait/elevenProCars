@@ -25,9 +25,9 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await onSignIn(userCredentials);
-      
+
       if(res?.user){
-        
+
         const userCollection = collection(db, "users");
         const userRef = doc(userCollection, res.user.uid)
         const userDoc = await getDoc(userRef);
@@ -41,9 +41,9 @@ const Login = () => {
 
         handleLogin(finallyUser);//le paso el usuario logueado al contexto
         navigate('/');
-      }  
+      }
     } catch (error) {
-      console.log(error);  
+      console.log(error);
     }
   }
 
@@ -60,7 +60,7 @@ const Login = () => {
 
   const handleClickShowPassword = () => setShowPassword(!showPassword);
   const navigate = useNavigate();
-  
+
   return (
     <div className="container">
       <form onSubmit={handleSubmit} className="form">
@@ -97,14 +97,14 @@ const Login = () => {
         >
           Sign In
         </button>
-        <button
+        {/*<button
           type="button"
           className="googleButton button"
-          onClick={googleSignIn} 
+          onClick={googleSignIn}
         >
           <GoogleIcon style={{ marginRight: "8px" }} /> Ingresa con Google
         </button>
-        
+        */}
         <div>
           <p className="notAccountYet" >            Don't have an account yet?         </p>
           <button type="button" onClick={()=>navigate("/register")} className="button">Register now!</button>

@@ -3,6 +3,7 @@ import { db } from '../../firebaseConfig';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { AuthContext } from '../../context/AuthContext';
 import '../DashboardAdmin/Dashboard.css'
+import avatar from '/avatar.png'
 
 const DashboardUsers = () => {
   const [orders, setOrders] = useState([]);
@@ -20,23 +21,37 @@ const DashboardUsers = () => {
     fetchOrders();
   }, [user]);
   
-  {console.log(user)}
-  {console.log(user.refCode)}
-  {console.log(orders)}
   return (
     <div className='dashboardContainer'>
-      <h2>Mis Pedidos</h2>
-      <ul>
-        {orders.map((e) => (
-          <li key={e.id}>
-            <p>Nombre: {e.firstName}</p>
-            <p>Cantidad de Días: {e.days}</p>
-            <p>Modelo del Coche: {e.carModel}</p>
-            <p>Tarifa Final: EUR {e.finalRate}</p>
-            <p>Código de Referencia: {e.refCode}</p>
-          </li>
-        ))}
-      </ul>
+
+      <h4>My referrals | {user.instagram}</h4>
+      <p className='refCodeUserDashboard' >Reference Code: {user.refCode} </p>
+      
+      {orders.map((e) => (
+        <div className='cards' key={e.id}>
+          <div className='cardMainData'>
+            <img className='avatarCard' src={avatar} alt="" />
+            <div className='cardMainDataText'>
+              <h5>{e.firstName}</h5>
+              <p>{e.carModel}</p>
+            </div>
+          </div>
+          <div className='infoBox'>
+            <div>
+              <p className='cardInfoTitle'>Price</p>
+              <p className='cardInfoText'>€ {e.finalRate}</p>
+            </div>
+            <div>
+              <p className='cardInfoTitle'>Month</p>
+              <p className='cardInfoText'>{e.finalRate}</p>
+            </div>
+            <div>
+              <p className='cardInfoTitle'>Comission</p>
+              <p className='cardInfoText'>€ {(e.finalRate * 0.10).toFixed(2)}</p>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
