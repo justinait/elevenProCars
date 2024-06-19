@@ -34,7 +34,7 @@ const DashboardUsers = () => {
             <img className='avatarCard' src={avatar} alt="" />
             <div className='cardMainDataText'>
               <h5>{e.firstName}</h5>
-              <p>{e.carModel}</p>
+              <p className='carCard' >{e.carModel}</p>
             </div>
           </div>
           <div className='infoBox'>
@@ -44,11 +44,12 @@ const DashboardUsers = () => {
             </div>
             <div>
               <p className='cardInfoTitle'>Month</p>
-              <p className='cardInfoText'>{e.finalRate}</p>
+              <p className='cardInfoText'>{e.month}</p>
             </div>
             <div>
               <p className='cardInfoTitle'>Comission</p>
-              <p className='cardInfoText'>€ {(e.finalRate * 0.10).toFixed(2)}</p>
+              <p className='cardInfoText'>€ {(e.finalRate * 0.10)}</p>
+              {/* .toFixed(2) */}
             </div>
           </div>
         </div>

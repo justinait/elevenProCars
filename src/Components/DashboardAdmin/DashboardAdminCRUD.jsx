@@ -8,7 +8,7 @@ const DashboardAdminCRUD = () => {
   const [orders, setOrders] = useState([]);
   const [newOrder, setNewOrder] = useState({
     firstName: '',
-    days: '',
+    month: '',
     carModel: '',
     finalRate: '',
     refCode: ''
@@ -37,15 +37,15 @@ const DashboardAdminCRUD = () => {
   };
 
   const handleAddOrder = async () => {
-    const { firstName, days, carModel, finalRate, refCode } = newOrder;
-    if (!firstName || !days || !carModel || !finalRate || !refCode) {
+    const { firstName, month, carModel, finalRate, refCode } = newOrder;
+    if (!firstName || !month || !carModel || !finalRate || !refCode) {
       alert('Todos los campos son obligatorios.');
       return;
     }
 
     const docRef = await addDoc(collection(db, 'orders'), newOrder);
     setOrders([...orders, { id: docRef.id, ...newOrder }]);
-    setNewOrder({ firstName: '', days: '', carModel: '', finalRate: '', refCode: '' });
+    setNewOrder({ firstName: '', month: '', carModel: '', finalRate: '', refCode: '' });
   };
 
   const handleUpdateOrder = async (id) => {
@@ -66,7 +66,7 @@ const DashboardAdminCRUD = () => {
       <div>
         <h2>Agregar Pedido</h2>
         <input type="text" name="firstName" placeholder="Nombre y apellido" value={newOrder.firstName} onChange={handleInputChange} />
-        <input type="number" name="days" placeholder="Cantidad de Días" value={newOrder.days} onChange={handleInputChange} />
+        <input type="number" name="month" placeholder="Cantidad de Días" value={newOrder.month} onChange={handleInputChange} />
         <input type="text" name="carModel" placeholder="Modelo del Coche" value={newOrder.carModel} onChange={handleInputChange} />
         <input type="number" name="finalRate" placeholder="Tarifa Final" value={newOrder.finalRate} onChange={handleInputChange} />
         <select name="refCode" value={newOrder.refCode} onChange={handleInputChange}>
@@ -84,7 +84,7 @@ const DashboardAdminCRUD = () => {
           {orders.map((order) => (
             <li key={order.id}>
               <p>Nombre y apellido: {order.firstName}</p>
-              <p>Cantidad de Días: {order.days}</p>
+              <p>Cantidad de Días: {order.month}</p>
               <p>Modelo del Coche: {order.carModel}</p>
               <p>Tarifa Final: {order.finalRate}</p>
               <p>Código de Referencia: {order.refCode}</p>
