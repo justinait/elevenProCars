@@ -33,11 +33,12 @@
 }
 .justina {
     color:#656668;   
-    display: block !important;
-    
+    /* display: block !important; */
+    display: flex;
     padding: 5% 0 0;
     text-align: right;
     font-size: 10px;
+    justify-content: space-between;
     margin: -8px 0;
 }
 .justina strong {
@@ -45,6 +46,9 @@
 }
 .justina a {
     color:#656668;   
+}
+.justina p {
+    margin-bottom: 0;
 }
 .footerContainer p {
     display: flex;
