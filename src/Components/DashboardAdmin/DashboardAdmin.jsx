@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { db } from "../../firebaseConfig";
 import { collection, getDocs, doc, updateDoc, deleteDoc } from "firebase/firestore";
 import './Dashboard.css'
+import avatar from '/avatar.png'
 
 const DashboardAdmin = () => {
   const [users, setUsers] = useState([]);
@@ -56,12 +57,15 @@ const DashboardAdmin = () => {
         </div>
       </div>
 
-      <ul>
-        {users.filter(user => user.isApproved === showApproved).map((user) => (
-          <li key={user.id}>
-            <p>e-mail: {user.email}</p> 
-            <p>Instagram: {user.instagram}</p>
-            <p>Estado: {user.isApproved ? "Aprobado" : "Pendiente"}</p>
+      {users.filter(user => user.isApproved === showApproved).map((user) => (
+        <div className="cardsAdmin" key={user.id}>
+          
+          <img className='avatarCard' src={avatar} alt="" />
+          <div>
+
+            <p> <strong>Instagram:</strong> {user.instagram}</p>
+            <p><strong>Estado:</strong> {user.isApproved ? "Aprobado" : "Pendiente"}</p>
+            <p><strong>e-mail:</strong> {user.email}</p> 
 
             {!user.isApproved ? (
               <>
@@ -74,13 +78,14 @@ const DashboardAdmin = () => {
               </>
             ) :
               <>
-                <p>Ref Code: {user.refCode}</p>
-                <button onClick={() => deleteAccount(user.id)}>Eliminar</button>
+                <p> <strong>Ref Code:</strong> {user.refCode}</p>
+                <button className="deleteButtonAdmin" onClick={() => deleteAccount(user.id)}>Eliminar</button>
               </>            
-            }
-          </li>
-        ))}
-      </ul>
+          }
+          
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
