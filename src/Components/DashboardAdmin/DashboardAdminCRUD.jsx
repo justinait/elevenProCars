@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { db } from '../../firebaseConfig';
 import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
 import './Dashboard.css'
+import avatar from '/avatar.png'
 
 const DashboardAdminCRUD = () => {
   const [users, setUsers] = useState([]);
@@ -62,37 +63,54 @@ const DashboardAdminCRUD = () => {
 
   return (
     <div className='dashboardContainer'>
-      <h1>CRUD de Administrador</h1>
-      <div>
-        <h2>Agregar Pedido</h2>
-        <input type="text" name="firstName" placeholder="Nombre y apellido" value={newOrder.firstName} onChange={handleInputChange} />
-        <input type="number" name="month" placeholder="Cantidad de Días" value={newOrder.month} onChange={handleInputChange} />
-        <input type="text" name="carModel" placeholder="Modelo del Coche" value={newOrder.carModel} onChange={handleInputChange} />
-        <input type="number" name="finalRate" placeholder="Tarifa Final" value={newOrder.finalRate} onChange={handleInputChange} />
-        <select name="refCode" value={newOrder.refCode} onChange={handleInputChange}>
-          <option value="">Seleccionar Código de Referencia</option>
-          {users.map((user) => (
-            <option key={user.id} value={user.refCode}>{user.refCode}</option>
-          ))}
-        </select>
-        <button onClick={handleAddOrder}>Agregar Pedido</button>
+      <h1>Administrador: rentas</h1>
+
+      <div className='cardsAdmin'>
+        <div>
+
+          <h5 className='cardAdminTitle'>Agregar Pedido</h5>
+          <input type="text" name="firstName" placeholder="Nombre y apellido" value={newOrder.firstName} onChange={handleInputChange} />
+          <input type="number" name="month" placeholder="Mes" value={newOrder.month} onChange={handleInputChange} />
+          <input type="text" name="carModel" placeholder="Modelo del Coche" value={newOrder.carModel} onChange={handleInputChange} />
+          <input type="number" name="finalRate" placeholder="Tarifa Final" value={newOrder.finalRate} onChange={handleInputChange} />
+          <select className='selectCardCRUDAdmin' name="refCode" value={newOrder.refCode} onChange={handleInputChange}>
+            <option value="">Seleccionar Ref Code</option>
+            {users.map((user) => (
+              <option key={user.id} value={user.refCode}>{user.refCode}</option>
+            ))}
+          </select>
+          <button className='deleteButtonAdmin selectCardCRUDAdmin' onClick={handleAddOrder}>Agregar Pedido</button>
+        </div>
       </div>
 
       <div>
-        <h2>Lista de Pedidos</h2>
-        <ul>
-          {orders.map((order) => (
-            <li key={order.id}>
-              <p>Nombre y apellido: {order.firstName}</p>
-              <p>Cantidad de Días: {order.month}</p>
-              <p>Modelo del Coche: {order.carModel}</p>
-              <p>Tarifa Final: {order.finalRate}</p>
-              <p>Código de Referencia: {order.refCode}</p>
-              {/* <button onClick={() => handleUpdateOrder(order.id)}>Actualizar</button> */}
-              <button onClick={() => handleDeleteOrder(order.id)}>Eliminar</button>
-            </li>
+        <h5>Lista de Pedidos</h5>
+          {orders.map((e) => (
+            <div className='cards' key={e.id}>
+            <div className='cardMainData'>
+              <img className='avatarCard' src={avatar} alt="" />
+              <div className='cardMainDataText'>
+                <h5>{e.firstName}</h5>
+                <p className='carCard' >{e.carModel}</p>
+              </div>
+            </div>
+            <div className='infoBox'>
+              <div>
+                <p className='cardInfoTitle'>Price</p>
+                <p className='cardInfoText'>€ {e.finalRate}</p>
+              </div>
+              <div>
+                <p className='cardInfoTitle'>Month</p>
+                <p className='cardInfoText'>{e.month}</p>
+              </div>
+              <div>
+                <p className='cardInfoTitle'>Comission</p>
+                <p className='cardInfoText'>€ {(e.finalRate * 0.10)}</p>
+                {/* .toFixed(2) */}
+              </div>
+            </div>
+          </div>
           ))}
-        </ul>
       </div>
     </div>
   );
