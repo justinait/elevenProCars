@@ -24,8 +24,9 @@ const DashboardUsers = () => {
   return (
     <div className='dashboardContainer'>
 
-      <h4>My referrals | {user.instagram}</h4>
-      <p className='refCodeUserDashboard' >Reference Code: {user.refCode} </p>
+      <h2>My referrals</h2>
+      <h6> <strong>Instagram:</strong>  {user.instagram}</h6>
+      <p className='refCodeUserDashboard' > <strong>Reference code:</strong> {user.refCode} </p>
       
       {orders.map((e) => (
         <div className='cards' key={e.id}>

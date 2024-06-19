@@ -4,6 +4,11 @@
     color: black;
     background: #fefefe;
 }
+h2 {
+   
+    font-weight: 900; 
+    text-transform: uppercase;
+}
 .cards p {
     margin-bottom: 0.5em;
 }
