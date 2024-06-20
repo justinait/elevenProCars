@@ -9,16 +9,25 @@
   
 .form {
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
   
-.input {
-    /* margin-bottom: 16px; */
-    /* padding: 8px; */
-    border-radius: 5px;
+.input {    
+    
+    padding: 2px 8px;
+    border-radius: 10px;
+    width: 178px;
     margin: 0 auto 8px;
 }
-  
+.container h3 {
+    width: 178px;
+    font-size: 14.5px;
+    margin-bottom: 1em;
+}
+.strongh3 {
+    font-size: 18px;
+}
 .passwordContainer {
     position: relative;
     margin: 0 auto -5%;
@@ -52,8 +61,9 @@
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-    width: 88%;
-    background: #000;
+    /* width: 88%; */
+    background: #000;    
+    width: 150px;
 }
   
 .button:hover{
@@ -84,9 +94,42 @@
     .container {
         min-height: 80vh;
     }
+    .input {
+        padding: 8px;
+        border-radius: 9px;
+        margin: 0 auto 11px;
+        width: 280px;
+    }
+    .button {
+        width: 200px;
+        font-size: 20px;
+    }
+    .link {
+        margin-bottom: 20px;
+        color: steelblue;
+        margin-top: 14px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .notAccountYet {
+        font-size: 15px;
+    }
+    .container h3 {
+        line-height: 1.4; 
+        width: 280px;
+        font-size: 23px;
+    }
+    .strongh3 {
+        font-size: 27px;
+    }
 }
 @media(min-width:1000px) {
     .container {
-        min-height: 120vh;
+        min-height: 75vh;
+    }
+}
+@media(min-width:1200px) {
+    .container {
+        min-height: 100vh;
     }
 }

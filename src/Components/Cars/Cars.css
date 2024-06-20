@@ -95,7 +95,7 @@
     background-color: #242424 !important;
     justify-content: center !important;
 }
-input {
+.inputContact {
     padding: 4px 10px;
     border-radius: 0px;
     border: none;
