@@ -121,6 +121,34 @@
     .strongh3 {
         font-size: 26px;
     }
+    .cardsAdmin {
+        text-align: center;
+        margin: 3em 5em;
+    }
+    .cardsAdmin input {
+        border-radius: 12px;
+        margin: 2%;
+        width: 75%;
+        padding: 5px 10px;
+    }
+    .selectCardCRUDAdmin {
+        margin: 5% 2%;
+        width: 47%;
+        padding: 5px;
+        font-size: 14px;
+        border-radius: 10px;
+        border: 1px solid grey;
+    }
+    .cards {
+        width: 70%;
+    }
+    .carCard {
+        font-size: 18px;
+    }
+    .infoBox {
+        font-size: 18px;
+        justify-content: space-around;
+    }
 }
 @media(min-width:1000px) {
     .container {
@@ -130,5 +158,10 @@
 @media(min-width:1200px) {
     .container {
         min-height: 100vh;
+    }
+}
+@media(min-width:1400px) {
+    .container {
+        min-height: 105vh;
     }
 }

@@ -84,7 +84,7 @@ const DashboardAdminCRUD = () => {
       </div>
 
       <div>
-        <h5>Lista de Pedidos</h5>
+        <h3>Lista de Pedidos</h3>
           {orders.map((e) => (
             <div className='cards' key={e.id}>
             <div className='cardMainData'>
