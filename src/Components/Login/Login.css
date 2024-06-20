@@ -14,7 +14,6 @@
 }
   
 .input {    
-    
     padding: 2px 8px;
     border-radius: 10px;
     width: 178px;
@@ -22,11 +21,11 @@
 }
 .container h3 {
     width: 178px;
-    font-size: 14.5px;
+    font-size: 13.5px;
     margin-bottom: 1em;
 }
 .strongh3 {
-    font-size: 18px;
+    font-size: 17px;
 }
 .passwordContainer {
     position: relative;
@@ -117,10 +116,10 @@
     .container h3 {
         line-height: 1.4; 
         width: 280px;
-        font-size: 23px;
+        font-size: 20px;
     }
     .strongh3 {
-        font-size: 27px;
+        font-size: 26px;
     }
 }
 @media(min-width:1000px) {

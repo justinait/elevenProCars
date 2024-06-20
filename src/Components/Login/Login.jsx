@@ -65,7 +65,7 @@ const Login = () => {
     <div className="container">
       {/* <h2>Log in</h2> */}
       <form onSubmit={handleSubmit} className="form">
-      <h3>Are you an affiliate from Eleven Pro Cars? <strong className="strongh3">LOG IN</strong> </h3>
+      <h3>Are you an affiliate? <br /> <br /> <strong className="strongh3">LOG IN</strong> </h3>
         <div className="">
           <input
             type="text"

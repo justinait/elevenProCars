@@ -81,11 +81,23 @@
     .navbarContainer{
         padding: 0 5%;
         justify-content: space-between;
+        height: 100px;
+    }
+    .dropdownLogged {
+        left: 85%;
+        width: 30%;
+        top: 100px;
     }
 }
 @media(min-width:1000px){
     .navbarBrand{
         font-size: 30px;
+    }
+    .dropdownLogged  {
+        left: 88%;
+        width: 24%;
+        top: 135px;
+        font-size: 16px;
     }
 }
 @media(min-width:1200px){
@@ -94,15 +106,17 @@
         width: 220px;
     }
     .navbarContainer {
-        height: 12vh;
+        height: 96px;
     }
     .navbarBrand {
         font-size: 40px;
         letter-spacing: 0.3em;
-    
     }
     .carsNavbar {
         font-size: 16px;
+    }
+    .dropdownLogged {
+        top: 96px;
     }
 }
 @media(min-width:1400px){
