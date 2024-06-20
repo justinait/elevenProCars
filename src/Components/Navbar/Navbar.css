@@ -86,7 +86,7 @@
     .dropdownLogged {
         left: 85%;
         width: 30%;
-        top: 100px;
+        top: 99px;
     }
 }
 @media(min-width:1000px){
@@ -96,7 +96,7 @@
     .dropdownLogged  {
         left: 88%;
         width: 24%;
-        top: 135px;
+        /* top: 135px; */
         font-size: 16px;
     }
 }
