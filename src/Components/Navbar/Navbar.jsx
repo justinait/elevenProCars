@@ -34,7 +34,7 @@ function Navbar() {
 
       {
         isLogged &&
-        <AccountCircleIcon onClick={handleOpen} />
+        <AccountCircleIcon className='accountIcon' onClick={handleOpen} />
 
       }
       { (isLogged && open) &&
