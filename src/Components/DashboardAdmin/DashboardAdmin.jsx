@@ -23,14 +23,26 @@ const DashboardAdmin = () => {
       alert("El Ref Code es obligatorio para aprobar el usuario.");
       return;
     }
+    const isUnique = await checkUniqueRefCode(refCode);
+    if (!isUnique) {
+      alert("El Ref Code ya está en uso. Por favor, ingresa otro.");
+      return;
+    }
     const userRef = doc(db, "users", userId);
     await updateDoc(userRef, { isApproved: true, refCode: refCode });
     setUsers(users.map(user => user.id === userId ? { ...user, isApproved: true, refCode: refCode } : user));
   };
+
+  const checkUniqueRefCode = async (refCode) => {
+    const querySnapshot = await getDocs(collection(db, "users").where("refCode", "==", refCode));
+    return querySnapshot.empty;
+  };
+
   const handleButtonClick = (buttonType) => {
     setShowApproved(buttonType === 'activos');
     setSelectedButton(buttonType);
   };
+
   const deleteAccount = async (userId) => {
     const userRef = doc(db, "users", userId);
     await deleteDoc(userRef);
@@ -45,24 +57,18 @@ const DashboardAdmin = () => {
           <button
             className={`buttonsDashboardAdmin ${selectedButton === 'pendientes' ? 'active' : ''}`}
             onClick={() => handleButtonClick('pendientes')}
-          >
-            Pendientes
-          </button>
+          >            Pendientes          </button>
           <button
             className={`buttonsDashboardAdmin ${selectedButton === 'activos' ? 'active' : ''}`}
             onClick={() => handleButtonClick('activos')}
-          >
-            Colaboradores Activos
-          </button>
+          >            Colaboradores Activos          </button>
         </div>
       </div>
 
       {users.filter(user => user.isApproved === showApproved).map((user) => (
         <div className="cardsAdmin" key={user.id}>
-          
           <img className='avatarCard' src={avatar} alt="" />
           <div>
-
             <p> <strong>Instagram:</strong> {user.instagram}</p>
             <p><strong>Estado:</strong> {user.isApproved ? "Aprobado" : "Pendiente"}</p>
             <p><strong>e-mail:</strong> {user.email}</p> 
@@ -79,8 +85,9 @@ const DashboardAdmin = () => {
             ) :
               <>
                 <p> <strong>Ref Code:</strong> {user.refCode}</p>
+                <p><strong>Ref link:</strong> <a href={`https://elevenprocar.com/?ref=${user.refCode}`} target="_blank" rel="noopener noreferrer">{`https://elevenprocar.com/?ref=${user.refCode}`}</a></p>
                 <button className="deleteButtonAdmin" onClick={() => deleteAccount(user.id)}>Eliminar</button>
-              </>            
+              </>
           }
           
           </div>

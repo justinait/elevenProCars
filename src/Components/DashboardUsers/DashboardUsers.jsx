@@ -27,6 +27,7 @@ const DashboardUsers = () => {
       <h2>My referrals</h2>
       <h6> <strong>Instagram:</strong>  {user.instagram}</h6>
       <p className='refCodeUserDashboard' > <strong>Reference code:</strong> {user.refCode} </p>
+      <p className='refCodeUserDashboard'><strong>Ref link:</strong> <a href={`https://elevenprocar.com/?ref=${user.refCode}`} target="_blank" rel="noopener noreferrer">{`https://elevenprocar.com/?ref=${user.refCode}`}</a></p>
       
       {orders.map((e) => (
         <div className='cards' key={e.id}>
