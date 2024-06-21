@@ -15,18 +15,9 @@ import Hero from '../Hero/Hero'
 import Starred from '../Starred/Starred'
 import OtherHousesIcon from '@mui/icons-material/OtherHouses';
 import BedIcon from '@mui/icons-material/Bed';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Home() {
-    const downloadPDF = () => {
-        const pdfPath = 'https://drive.google.com/file/d/19Drxs_hA-NHrFKU717mxexuMp6hvFPj6/view?usp=sharing';
-        const link = document.createElement('a');
-        link.href = pdfPath;
-        link.target = '_blank';
-        link.download = 'CaseStudyBenefit.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      };
   return (
     <div>
         <Hero/>
@@ -74,8 +65,8 @@ function Home() {
             <div className='homeImageContainer'>
                 <div className='overlay'></div>
                 <p className='homeImagePhrase'>Let's get you on the road.<br /> Expertise. Commitment. Value.</p>
-                <img src={image3} alt="" className='homeServicesImage mobileOnly'/>
-                <img src={image5} alt="" className='homeServicesImage desktopOnly'/>
+                <LazyLoadImage src={image3} alt="" className='homeServicesImage mobileOnly'/>
+                <LazyLoadImage src={image5} alt="" className='homeServicesImage desktopOnly'/>
             </div>
 
         </div>

@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Carousel from 'react-bootstrap/Carousel';
 import { ReferenceContext } from '../../context/ReferenceContext';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Cars() {
 
@@ -58,7 +59,7 @@ function Cars() {
           cars.map((e, i)=> {
             return (
               <div className='carCard' key={i}  onClick={()=>handleShow(e)}>
-                <img src={e.image} alt="" className='carItemFirstImage'/>
+                <LazyLoadImage src={e.image} alt="" className='carItemFirstImage'  threshold={200}/>
                 <div className='infoBlur'>
                   <p className='titleCar'>{e.name}</p>
                   {e.description &&
@@ -80,48 +81,48 @@ function Cars() {
           <Modal.Body>
             <Carousel>
               <Carousel.Item>
-                <img src={selectedItem.image} alt={selectedItem.name} className='imageModalCars' />
+                <LazyLoadImage src={selectedItem.image} alt={selectedItem.name} className='imageModalCars' />
               </Carousel.Item>
               {
                 selectedItem?.imageBack &&
                 <Carousel.Item>
-                  <img src={selectedItem.imageBack} alt={selectedItem.name} className='imageModalCars' />
+                  <LazyLoadImage src={selectedItem.imageBack} alt={selectedItem.name} className='imageModalCars' />
                 </Carousel.Item>
               }
               {
                 selectedItem?.imageInside &&
                 <Carousel.Item>
-                  <img src={selectedItem.imageInside} alt={selectedItem.name} className='imageModalCars' />
+                  <LazyLoadImage src={selectedItem.imageInside} alt={selectedItem.name} className='imageModalCars' />
                 </Carousel.Item>
               }
               {
                 selectedItem?.extraImage &&
                 <Carousel.Item>
-                  <img src={selectedItem.extraImage} alt={selectedItem.name} className='imageModalCars' />
+                  <LazyLoadImage src={selectedItem.extraImage} alt={selectedItem.name} className='imageModalCars' />
                 </Carousel.Item>
               }
               {
                 selectedItem?.extraImage2 &&
                 <Carousel.Item>
-                  <img src={selectedItem.extraImage2} alt={selectedItem.name} className='imageModalCars' />
+                  <LazyLoadImage src={selectedItem.extraImage2} alt={selectedItem.name} className='imageModalCars' />
                 </Carousel.Item>
               }
               {
                 selectedItem?.extraImage3 &&
                 <Carousel.Item>
-                  <img src={selectedItem.extraImage3} alt={selectedItem.name} className='imageModalCars' />
+                  <LazyLoadImage src={selectedItem.extraImage3} alt={selectedItem.name} className='imageModalCars' />
                 </Carousel.Item>
               }
               {
                 selectedItem?.extraImage4 &&
                 <Carousel.Item>
-                  <img src={selectedItem.extraImage4} alt={selectedItem.name} className='imageModalCars' />
+                  <LazyLoadImage src={selectedItem.extraImage4} alt={selectedItem.name} className='imageModalCars' />
                 </Carousel.Item>
               }
               {
                 selectedItem?.extraImage5 &&
                 <Carousel.Item>
-                  <img src={selectedItem.extraImage5} alt={selectedItem.name} className='imageModalCars' />
+                  <LazyLoadImage src={selectedItem.extraImage5} alt={selectedItem.name} className='imageModalCars' />
                 </Carousel.Item>
               }
             </Carousel>
