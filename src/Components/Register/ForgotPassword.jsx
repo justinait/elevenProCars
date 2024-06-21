@@ -16,7 +16,7 @@ const ForgotPassword = () => {
   return (
     <div className="container">
       <div className="content">
-        <h5 className="title">¿Olvidaste tu contraseña?</h5>
+        <h5 className="title">Forgot your password?</h5>
         <form onSubmit={handleSubmit}>
           <div className="form">
             <input
@@ -27,14 +27,14 @@ const ForgotPassword = () => {
               className="input"
             />
             <button type="submit" className="button">
-              Recuperar
+              Recover
             </button>
             <button
               type="button"
               onClick={() => navigate("/login")}
               className="button"
             >
-              Regresar
+              Back to login
             </button>
           </div>
         </form>
