@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Cars.css'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Carousel from 'react-bootstrap/Carousel';
+import { ReferenceContext } from '../../context/ReferenceContext';
 
 function Cars() {
 
@@ -10,6 +11,7 @@ function Cars() {
   const [cars, setCars] = useState([])
   const [show, setShow] = useState(false);
   const [selectedItem, setSelectedItem] = useState(false);
+  const { referenceCode } = useContext(ReferenceContext);
 
   const handleClose = () => {
     setShow(false)
@@ -32,16 +34,18 @@ function Cars() {
   }, []);
 
   const handleBook = (name, discountCode) => {
-    let whatsappMessage = `I would like to book ${name}`;
+    let whatsappMessage = `Hello. I'd like to book ${name}.`;
     
-    if (discountCode && discountCode !== '') {
-      whatsappMessage += ` My code: ${discountCode}`;
+    const finalDiscountCode = referenceCode || discountCode;
+    if (finalDiscountCode) {
+      whatsappMessage += ` Ref Code: ${finalDiscountCode}`;
     }
-    
+
     const whatsappUrl = `https://api.whatsapp.com/send?phone=+34634187073&text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     show && handleClose();
   };
+
 
   return (
     

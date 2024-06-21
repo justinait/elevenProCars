@@ -1,48 +1,39 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Starred.css'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
 import EastIcon from '@mui/icons-material/East';
+import { ReferenceContext } from '../../context/ReferenceContext';
 
 function Starred() {
 
     const [discountCode, setDiscountCode] = useState('')
-    const [cars, setCars] = useState([])
     const [show, setShow] = useState(false);
     const [selectedItem, setSelectedItem] = useState(false);
+    const { referenceCode } = useContext(ReferenceContext);
 
     const handleClose = () => {
-        setShow(false)
-        setSelectedItem([])
+      setShow(false)
+      setSelectedItem([])
     };
     const handleShow = (e) => {
-        setShow(true)
-        setSelectedItem(e);
+      setShow(true)
+      setSelectedItem(e);
     };
 
-    useEffect(() => {
-        
-        fetch('/data.json')
-        .then((response) => response.json())
-        .then((responseData) => {
-            
-        setCars(responseData.cars);
-    
-        });
-    }, []);
-
     const handleBook = (name, discountCode) => {
-        let whatsappMessage = `Quisiera reservar ${name}`;
-        
-        if (discountCode && discountCode !== '') {
-            whatsappMessage += ` Tengo un código de descuento: ${discountCode}`;
-        }
-        
-        const whatsappUrl = `https://api.whatsapp.com/send?phone=+34634187073&text=${encodeURIComponent(whatsappMessage)}`;
-        window.open(whatsappUrl, '_blank');
-        show && handleClose();
+      let whatsappMessage = `Hello. I'd like to book ${name}.`;
+      
+      const finalDiscountCode = referenceCode || discountCode;
+      if (finalDiscountCode) {
+        whatsappMessage += ` Ref Code: ${finalDiscountCode}`;
+      }
+  
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=+34634187073&text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappUrl, '_blank');
+      show && handleClose();
     };
 
     const starredCars = [

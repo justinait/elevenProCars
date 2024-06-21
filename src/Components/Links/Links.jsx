@@ -7,8 +7,11 @@ function Links() {
   const { referenceCode } = useContext(ReferenceContext);
 
   const formatWhatsAppMessage = () => {
-    const message = `Hello! I want to rent a car. RefCode: ${referenceCode}`;
-    return encodeURIComponent(message);
+    if (referenceCode) {
+      return `Hello! I want to rent a car. RefCode: ${referenceCode}`;
+    } else {
+      return `Hello! I want to rent a car.`; // Mensaje sin RefCode si no hay referencia
+    }
   };
 
   return (
