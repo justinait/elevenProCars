@@ -32,10 +32,10 @@ function Cars() {
   }, []);
 
   const handleBook = (name, discountCode) => {
-    let whatsappMessage = `Quisiera reservar ${name}`;
+    let whatsappMessage = `I would like to book ${name}`;
     
     if (discountCode && discountCode !== '') {
-        whatsappMessage += ` Tengo un código de descuento: ${discountCode}`;
+      whatsappMessage += ` My code: ${discountCode}`;
     }
     
     const whatsappUrl = `https://api.whatsapp.com/send?phone=+34634187073&text=${encodeURIComponent(whatsappMessage)}`;

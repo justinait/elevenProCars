@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
 import Cars from './Components/Cars/Cars'
 import Footer from './Components/Footer/Footer'
@@ -16,16 +16,18 @@ import DashboardAdmin from './Components/DashboardAdmin/DashboardAdmin'
 import ProtectedAdmin from './ProtectedAdmin'
 import ProtectedUsers from './ProtectedUsers'
 import DashboardAdminCRUD from './Components/DashboardAdmin/DashboardAdminCRUD'
+import { useEffect } from 'react'
+import RefCodeManager from './RefCodeManager'
 
 function App() {
-
+  
   return (
     <>
     <BrowserRouter>
       <AuthContextComponent>
       <Navbar />
       <Links />
-
+      <RefCodeManager/>
       <Routes className=''>
 
         <Route path='/' element={< Home />} />
