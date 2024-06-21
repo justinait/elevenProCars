@@ -150,6 +150,7 @@
     .carsContainer {
         display: flex;
         flex-wrap: wrap;
+        overflow: hidden;
         justify-content: space-between;
     }
     .carCard {

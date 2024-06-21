@@ -18,6 +18,7 @@ import ProtectedUsers from './ProtectedUsers'
 import DashboardAdminCRUD from './Components/DashboardAdmin/DashboardAdminCRUD'
 import { useEffect } from 'react'
 import RefCodeManager from './RefCodeManager'
+import { ReferenceContextProvider } from './context/ReferenceContext';
 
 function App() {
   
@@ -25,6 +26,7 @@ function App() {
     <>
     <BrowserRouter>
       <AuthContextComponent>
+      <ReferenceContextProvider>
       <Navbar />
       <Links />
       <RefCodeManager/>
@@ -36,6 +38,9 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/forgot-password' element={<ForgotPassword />} />
+        
+        {/* <Route path="/:ref" element={<RefCodeManager />} /> */}
+        
         
         <Route element={<ProtectedAdmin />}>
           <Route path='/dashboardAdmin' element={<DashboardAdmin />} />
@@ -51,7 +56,7 @@ function App() {
       </Routes>
 
       <Footer />
-
+      </ReferenceContextProvider>
       </AuthContextComponent>
     </BrowserRouter>
       

@@ -34,7 +34,7 @@ const DashboardUsers = () => {
             <img className='avatarCard' src={avatar} alt="" />
             <div className='cardMainDataText'>
               <h5>{e.firstName}</h5>
-              <p className='carCard' >{e.carModel}</p>
+              <p className='carCardDashboard' >{e.carModel}</p>
             </div>
           </div>
           <div className='infoBox'>

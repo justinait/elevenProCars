@@ -150,8 +150,8 @@ function Starred() {
           </Modal.Footer>
         </Modal> 
 
-        <Link className='seeAllStarred animate__animated animate__backInLeft' to={'/cars'}>See all the cars</Link>
       </div>
+        <Link className='seeAllStarred ' to={'/cars'}>See all the cars</Link>
     </div>
   )
 }

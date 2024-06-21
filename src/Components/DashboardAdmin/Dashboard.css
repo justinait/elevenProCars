@@ -50,7 +50,7 @@ h2 {
 .cardMainDataText {
 
 }
-.carCard {
+.carCardDashboard {
     font-size: 15px;
 }
 .infoBox{
@@ -140,7 +140,7 @@ h2 {
     .cards {
         width: 70%;
     }
-    .carCard {
+    .carCardDashboard {
         font-size: 17px;
     }
 }
@@ -154,7 +154,7 @@ h2 {
     }
 }
 @media (min-width: 1200px) {
-    .carCard {
+    .carCardDashboard {
         width: 380px;
     }
     .cards {
