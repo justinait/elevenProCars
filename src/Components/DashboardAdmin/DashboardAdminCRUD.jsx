@@ -75,7 +75,7 @@ const DashboardAdminCRUD = () => {
           <input type="number" name="finalRate" placeholder="Tarifa Final" value={newOrder.finalRate} onChange={handleInputChange} />
           <select className='selectCardCRUDAdmin' name="refCode" value={newOrder.refCode} onChange={handleInputChange}>
             <option value="">Seleccionar Ref Code</option>
-            {users.map((user) => (
+            {users.filter(user => user.refCode).map((user) => (
               <option key={user.id} value={user.refCode}>{user.refCode}</option>
             ))}
           </select>
