@@ -24,9 +24,12 @@ const DashboardAdminCRUD = () => {
 
     const fetchOrders = async () => {
       const querySnapshot = await getDocs(collection(db, 'orders'));
-      const ordersList = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+      const ordersList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      // Ordenar los pedidos por fecha de manera descendente (más reciente primero)
+      ordersList.sort((a, b) => b.createdAt - a.createdAt); 
       setOrders(ordersList);
     };
+    
 
     fetchUsers();
     fetchOrders();
@@ -43,10 +46,17 @@ const DashboardAdminCRUD = () => {
       alert('Todos los campos son obligatorios.');
       return;
     }
-
-    const docRef = await addDoc(collection(db, 'orders'), newOrder);
-    setOrders([...orders, { id: docRef.id, ...newOrder }]);
-    setNewOrder({ firstName: '', month: '', carModel: '', finalRate: '', refCode: '' });
+    const newOrderWithDate = {
+      ...newOrder,
+      createdAt: new Date()
+    };
+    try {
+      const docRef = await addDoc(collection(db, 'orders'), newOrderWithDate);
+      setOrders([...orders, { id: docRef.id, ...newOrderWithDate }]);
+      setNewOrder({ firstName: '', month: '', carModel: '', finalRate: '', refCode: '' });
+    } catch (error) {
+      console.error('Error adding order: ', error);
+    }
   };
 
   const handleUpdateOrder = async (id) => {
@@ -70,7 +80,7 @@ const DashboardAdminCRUD = () => {
 
           <h5 className='cardAdminTitle'>Agregar Pedido</h5>
           <input type="text" name="firstName" placeholder="Nombre y apellido" value={newOrder.firstName} onChange={handleInputChange} />
-          <input type="number" name="month" placeholder="Mes" value={newOrder.month} onChange={handleInputChange} />
+          <input type="text" name="month" placeholder="Mes" value={newOrder.month} onChange={handleInputChange} />
           <input type="text" name="carModel" placeholder="Modelo del Coche" value={newOrder.carModel} onChange={handleInputChange} />
           <input type="number" name="finalRate" placeholder="Tarifa Final" value={newOrder.finalRate} onChange={handleInputChange} />
           <select className='selectCardCRUDAdmin' name="refCode" value={newOrder.refCode} onChange={handleInputChange}>
@@ -86,7 +96,7 @@ const DashboardAdminCRUD = () => {
       <div>
         <h3>Lista de Pedidos</h3>
           {orders.map((e) => (
-            <div className='cards' key={e.id}>
+          <div className='cards' key={e.id}>
             <div className='cardMainData'>
               <img className='avatarCard' src={avatar} alt="" />
               <div className='cardMainDataText'>
@@ -109,6 +119,7 @@ const DashboardAdminCRUD = () => {
                 {/* .toFixed(2) */}
               </div>
             </div>
+            <button className="deleteButtonAdmin" onClick={() => handleDeleteOrder(e.id)}>Eliminar</button>
           </div>
           ))}
       </div>
