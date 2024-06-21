@@ -38,7 +38,8 @@ function Footer() {
           !isLogged &&
           <Link to={'/login'}>Colaborators: click here</Link>
         }
-        <p >Powered by <a target='_blank' href="https://imjustwebs.com/"><strong > I'mJustWebs</strong></a></p>
+        <p>Powered by &nbsp;<a target='_blank' href="https://imjustwebs.com/"><strong> I'mJustWebs</strong></a></p>
+
       </div>
 
     </div>

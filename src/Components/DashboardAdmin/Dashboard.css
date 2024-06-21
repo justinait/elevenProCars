@@ -160,6 +160,10 @@ h2 {
     .cards {
         width: 45%;
     }
+    .dashboardContainer {
+        
+        padding: 20vh 10%;
+    }
 }
 
 @media (min-width: 1700px) {
