@@ -29,7 +29,8 @@ function Navbar() {
   return (
     <div className='navbarContainer'>
       <Link to={'/'} className='navbarBrand'><img src={logo} alt="" className='logoNavbar'/></Link>
-      
+      <div>
+
       <Link to={'/cars'} className='carsNavbar'>Our cars</Link>
 
       {
@@ -51,6 +52,7 @@ function Navbar() {
           <span className="listItemText" onClick={handleLogOut}><LogoutIcon className="listItemIcon"  />Log out</span>
         </div>  
       }
+      </div>
       
     </div>
   )
