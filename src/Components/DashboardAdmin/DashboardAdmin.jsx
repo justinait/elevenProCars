@@ -23,20 +23,20 @@ const DashboardAdmin = () => {
       alert("El Ref Code es obligatorio para aprobar el usuario.");
       return;
     }
-    const isUnique = await checkUniqueRefCode(refCode);
-    if (!isUnique) {
-      alert("El Ref Code ya está en uso. Por favor, ingresa otro.");
-      return;
-    }
+    // const isUnique = await checkUniqueRefCode(refCode);
+    // if (!isUnique) {
+    //   alert("El Ref Code ya está en uso. Por favor, ingresa otro.");
+    //   return;
+    // }
     const userRef = doc(db, "users", userId);
     await updateDoc(userRef, { isApproved: true, refCode: refCode });
     setUsers(users.map(user => user.id === userId ? { ...user, isApproved: true, refCode: refCode } : user));
   };
 
-  const checkUniqueRefCode = async (refCode) => {
-    const querySnapshot = await getDocs(collection(db, "users").where("refCode", "==", refCode));
-    return querySnapshot.empty;
-  };
+  // const checkUniqueRefCode = async (refCode) => {
+  //   const querySnapshot = await getDocs(collection(db, "users").where("refCode", "==", refCode));
+  //   return querySnapshot.empty;
+  // };
 
   const handleButtonClick = (buttonType) => {
     setShowApproved(buttonType === 'activos');

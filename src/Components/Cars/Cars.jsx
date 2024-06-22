@@ -59,7 +59,7 @@ function Cars() {
           cars.map((e, i)=> {
             return (
               <div className='carCard' key={i}  onClick={()=>handleShow(e)}>
-                <LazyLoadImage src={e.image} alt="" className='carItemFirstImage'  threshold={200}/>
+                <LazyLoadImage src={e.image} alt="" className='carItemFirstImage' threshold={200}/>
                 <div className='infoBlur'>
                   <p className='titleCar'>{e.name}</p>
                   {e.description &&
