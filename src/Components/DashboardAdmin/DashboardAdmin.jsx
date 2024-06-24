@@ -18,7 +18,7 @@ const DashboardAdmin = () => {
     fetchUsers();
   }, []);
 
-  const approveUser = async (userId, refCode) => {
+  const approveUser = async (userId, refCode, commission=10) => {
     if (!refCode) {
       alert("El Ref Code es obligatorio para aprobar el usuario.");
       return;
@@ -29,7 +29,7 @@ const DashboardAdmin = () => {
     //   return;
     // }
     const userRef = doc(db, "users", userId);
-    await updateDoc(userRef, { isApproved: true, refCode: refCode });
+    await updateDoc(userRef, { isApproved: true, refCode: refCode, commission: commission  });
     setUsers(users.map(user => user.id === userId ? { ...user, isApproved: true, refCode: refCode } : user));
   };
 
@@ -76,18 +76,21 @@ const DashboardAdmin = () => {
             {!user.isApproved ? (
               <>
                 <input type="text" placeholder="Ref Code" id={`refCode-${user.id}`} />
+                <input type="number" placeholder="Comisión (%)" id={`commission-${user.id}`} defaultValue={10} />
                 <button onClick={() => {
                   const refCode = document.getElementById(`refCode-${user.id}`).value;
-                  approveUser(user.id, refCode);
+                  const commission = document.getElementById(`commission-${user.id}`).value;
+                  approveUser(user.id, refCode, commission);
                 }}>Aprobar</button>
                 <button onClick={() => deleteAccount(user.id)}>Rechazar</button>
               </>
             ) :
-              <>
-                <p> <strong>Ref Code:</strong> {user.refCode}</p>
-                <p><strong>Ref link:</strong> <a href={`https://elevenprocar.com/?ref=${user.refCode}`} target="_blank" rel="noopener noreferrer">{`https://elevenprocar.com/?ref=${user.refCode}`}</a></p>
-                <button className="deleteButtonAdmin" onClick={() => deleteAccount(user.id)}>Eliminar</button>
-              </>
+            <>
+              <p> <strong>Ref Code:</strong> {user.refCode}</p>
+              <p><strong>Comisión:</strong> {user.commission || 10} %</p>
+              <p><strong>Ref link:</strong> <a href={`https://elevenprocar.com/?ref=${user.refCode}`} target="_blank" rel="noopener noreferrer">{`https://elevenprocar.com/?ref=${user.refCode}`}</a></p>
+              <button className="deleteButtonAdmin" onClick={() => deleteAccount(user.id)}>Eliminar</button>
+            </>
           }
           
           </div>

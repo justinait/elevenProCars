@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { db } from '../../firebaseConfig';
 import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
 import './Dashboard.css'
-import avatar from '/avatarneutro.png'
+import avatar from '/avatar.png'
 
 const DashboardAdminCRUD = () => {
   const [users, setUsers] = useState([]);
@@ -71,6 +71,10 @@ const DashboardAdminCRUD = () => {
     setOrders(orders.filter((order) => order.id !== id));
   };
 
+  const getUserCommission = (refCode) => {
+    const user = users.find(user => user.refCode === refCode);
+    return user ? user.commission || 10 : 10;
+  };
   return (
     <div className='dashboardContainer'>
       <h1>Administrador: rentas</h1>
@@ -102,6 +106,7 @@ const DashboardAdminCRUD = () => {
               <div className='cardMainDataText'>
                 <h5>{e.firstName}</h5>
                 <p className='carCardDashboard' >{e.carModel}</p>
+                <p><strong>Colaborador:</strong> {e.refCode}</p>
               </div>
             </div>
             <div className='infoBox'>
@@ -115,7 +120,7 @@ const DashboardAdminCRUD = () => {
               </div>
               <div>
                 <p className='cardInfoTitle'>Comission</p>
-                <p className='cardInfoText'>€ {(e.finalRate * 0.10)}</p>
+                <p className='cardInfoText'>€ {(e.finalRate * (getUserCommission(e.refCode) / 100))}</p>
                 {/* .toFixed(2) */}
               </div>
             </div>

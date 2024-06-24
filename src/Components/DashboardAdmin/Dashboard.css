@@ -47,11 +47,9 @@ h2 {
     align-items: center;
     display: flex;
 }
-.cardMainDataText {
-
-}
 .carCardDashboard {
     font-size: 15px;
+    margin-bottom: 0;
 }
 .infoBox{
     display: flex;
