@@ -44,7 +44,7 @@ const Login = () => {
         navigate('/');
       }
     } catch (error) {
-      setError('Contraseña incorrecta');
+      setError('Wrong Password');
       console.log(error);
     }
   }
