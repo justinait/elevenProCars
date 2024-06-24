@@ -9,13 +9,14 @@ import {collection, doc, getDoc} from "firebase/firestore"
 import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
-  const {handleLogin} = useContext(AuthContext)
 
+  const {handleLogin} = useContext(AuthContext)
   const [showPassword, setShowPassword] = useState(false);
   const [userCredentials, setUserCredentials] = useState({
     email:'',
     password:''
   })
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setUserCredentials({...userCredentials, [e.target.name]: e.target.value})
@@ -43,6 +44,7 @@ const Login = () => {
         navigate('/');
       }
     } catch (error) {
+      setError('Contraseña incorrecta');
       console.log(error);
     }
   }
@@ -90,6 +92,7 @@ const Login = () => {
             {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </span>
         </div>
+        {error && <p className="errorMessage">{error}</p>} {/* Muestra el mensaje de error */}
         <Link to="/forgot-password" className="link">
           Forgot your password?
         </Link>
