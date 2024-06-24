@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { db } from "../../firebaseConfig";
 import { collection, getDocs, doc, updateDoc, deleteDoc } from "firebase/firestore";
 import './Dashboard.css'
-import avatar from '/avatar.png'
+import avatar from '/avatarneutro.png'
 
 const DashboardAdmin = () => {
   const [users, setUsers] = useState([]);

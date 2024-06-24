@@ -3,7 +3,7 @@ import { db } from '../../firebaseConfig';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { AuthContext } from '../../context/AuthContext';
 import '../DashboardAdmin/Dashboard.css'
-import avatar from '/avatar.png'
+import avatar from '/avatarneutro.png'
 
 const DashboardUsers = () => {
   const [orders, setOrders] = useState([]);
