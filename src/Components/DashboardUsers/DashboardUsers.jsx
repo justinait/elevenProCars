@@ -25,7 +25,7 @@ const DashboardUsers = () => {
         const querySnapshot = await getDocs(q);
         if (!querySnapshot.empty) {
           const userData = querySnapshot.docs[0].data();
-          setCommission(userData.commission || 10); // Establece la comisión o 10 si no está definida
+          setCommission(userData.commission || 10);
         }
       }
     };
