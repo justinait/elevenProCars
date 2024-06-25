@@ -112,7 +112,7 @@ h2 {
 @media(min-width: 700px){
     .headingBoxDashboard div {
         
-        justify-content: flex-start;
+        width: 30vw;
     }
     .infoBox {
         font-size: 18px;
