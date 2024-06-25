@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import { collection, getDocs, query, where, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
 import './Dashboard.css'
 import avatar from '/avatar.png'
+import { Subject } from '@mui/icons-material';
 
 const DashboardAdminCRUD = () => {
   const [users, setUsers] = useState([]);
@@ -85,15 +86,20 @@ const DashboardAdminCRUD = () => {
     setOrders(orders.filter((order) => order.id !== id));
   };
 
-  const sendEmail = async (recipientEmail, orderDetails) => {
+  const sendEmail = async (recipientEmail) => {
     try {
       const templateParams = {
         to_email: recipientEmail,
-        subject: 'New refferal on Eleven Pro Cars. You have got commission',
+        Subject: "New refferal",
+        message: 'New refferal on Eleven Pro Cars. You have got commission',
       };
 
-      // Envío del correo electrónico utilizando EmailJS
-      await emailjs.send('<YOUR_SERVICE_ID>', '<YOUR_TEMPLATE_ID>', templateParams, '<YOUR_USER_ID>');
+      await emailjs.send(
+        "service_nd2a3jv",
+        "template_ekeg9d8",
+        templateParams,
+        "uxKxDjmCUzoySUkXT"
+      );
 
       console.log('Correo electrónico enviado correctamente.');
     } catch (error) {
@@ -103,8 +109,9 @@ const DashboardAdminCRUD = () => {
 
   const getUserCommission = (refCode) => {
     const user = users.find(user => user.refCode === refCode);
-    return user ? user.commission || 10 : 10;
+    return user ? user.commission || 10 : 10
   };
+
   return (
     <div className='dashboardContainer'>
       <h1>Administrador: rentas</h1>

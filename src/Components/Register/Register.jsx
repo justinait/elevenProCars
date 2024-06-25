@@ -66,14 +66,15 @@ const Register = () => {
   const sendEmailToOwner = async () => {
     try {
       const templateParams = {
-        ownerEmail: "elevenprocars@gmail.com",
+        to_email: "elevenprocars@gmail.com",
         subject: "Nuevo Usuario Pendiente",
         message: `Nuevo usuario registrado. Revisa la casilla de colaboradores en la web para aprobar o rechazar usuarios.`,
+        from_email: userCredentials.email
       };
 
       await emailjs.send(
         "service_nd2a3jv",
-        "<YOUR_TEMPLATE_ID>",
+        "template_ekeg9d8",
         templateParams,
         "uxKxDjmCUzoySUkXT"
       );
