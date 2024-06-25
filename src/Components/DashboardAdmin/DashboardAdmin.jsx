@@ -3,11 +3,14 @@ import { db } from "../../firebaseConfig";
 import { collection, getDocs, doc, updateDoc, deleteDoc } from "firebase/firestore";
 import './Dashboard.css'
 import avatar from '/avatarneutro.png'
+import { Modal, Button } from 'react-bootstrap';
 
 const DashboardAdmin = () => {
   const [users, setUsers] = useState([]);
   const [showApproved, setShowApproved] = useState(false);
-  const [selectedButton, setSelectedButton] = useState('pendientes'); // Estado para el botón seleccionado
+  const [selectedButton, setSelectedButton] = useState('pendientes');
+  const [userToDelete, setUserToDelete] = useState(null);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -43,12 +46,19 @@ const DashboardAdmin = () => {
     setSelectedButton(buttonType);
   };
 
-  const deleteAccount = async (userId) => {
-    const userRef = doc(db, "users", userId);
+  const deleteAccount = async () => {
+    const userRef = doc(db, "users", userToDelete);
     await deleteDoc(userRef);
-    setUsers(users.filter(user => user.id !== userId));
+    setUsers(users.filter(user => user.id !== userToDelete));
+    handleClose();
   };
 
+  const handleShow = (userId) => {
+    setUserToDelete(userId);
+    setShow(true);
+  };
+
+  const handleClose = () => setShow(false);
   return (
     <div className="dashboardContainer">
       <div className="headingBoxDashboard">
@@ -82,20 +92,35 @@ const DashboardAdmin = () => {
                   const commission = document.getElementById(`commission-${user.id}`).value;
                   approveUser(user.id, refCode, commission);
                 }}>Aprobar</button>
-                <button onClick={() => deleteAccount(user.id)}>Rechazar</button>
+                <button onClick={() => handleShow(user.id)}>Rechazar</button>
               </>
             ) :
             <>
               <p> <strong>Ref Code:</strong> {user.refCode}</p>
               <p><strong>Comisión:</strong> {user.commission || 10} %</p>
               <p><strong>Ref link:</strong> <a href={`https://elevenprocar.com/?ref=${user.refCode}`} target="_blank" rel="noopener noreferrer">{`https://elevenprocar.com/?ref=${user.refCode}`}</a></p>
-              <button className="deleteButtonAdmin" onClick={() => deleteAccount(user.id)}>Eliminar</button>
+              <button className="deleteButtonAdmin" onClick={() => handleShow(user.id)}>Eliminar</button>
             </>
           }
           
           </div>
         </div>
       ))}
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirmar Eliminación</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>¿Está seguro que desea eliminar este colaborador?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Cancelar
+          </Button>
+          <Button variant="danger" onClick={deleteAccount}>
+            Eliminar
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };

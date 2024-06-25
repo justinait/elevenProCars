@@ -105,6 +105,9 @@ h2 {
 .selectCardCRUDAdmin {
     margin: 5% 2%;
 }
+.modal-dialog {
+    color: black;
+}
 
 @media(min-width: 700px){
     .headingBoxDashboard div {
