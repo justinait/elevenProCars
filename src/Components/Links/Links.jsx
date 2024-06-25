@@ -21,7 +21,7 @@ function Links() {
         className='whatsappLink'
         target='_blank'
         rel='noopener noreferrer'
-        href={`https://wa.me/?text=${formatWhatsAppMessage()}`}
+        href={`https://wa.me/34634187073?text=${encodeURIComponent(formatWhatsAppMessage())}`}
       >
         <WhatsAppIcon className='linksIcons' />
       </a>

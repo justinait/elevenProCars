@@ -101,6 +101,10 @@ const DashboardAdminCRUD = () => {
     }
   };
 
+  const getUserCommission = (refCode) => {
+    const user = users.find(user => user.refCode === refCode);
+    return user ? user.commission || 10 : 10;
+  };
   return (
     <div className='dashboardContainer'>
       <h1>Administrador: rentas</h1>
@@ -110,7 +114,7 @@ const DashboardAdminCRUD = () => {
 
           <h5 className='cardAdminTitle'>Agregar Pedido</h5>
           <input type="text" name="firstName" placeholder="Nombre y apellido" value={newOrder.firstName} onChange={handleInputChange} />
-          <input type="text" name="month" placeholder="Mes" value={newOrder.month} onChange={handleInputChange} />
+          <input type="text" name="month" placeholder="Fecha" value={newOrder.month} onChange={handleInputChange} />
           <input type="text" name="carModel" placeholder="Modelo del Coche" value={newOrder.carModel} onChange={handleInputChange} />
           <input type="number" name="finalRate" placeholder="Tarifa Final" value={newOrder.finalRate} onChange={handleInputChange} />
           <select className='selectCardCRUDAdmin' name="refCode" value={newOrder.refCode} onChange={handleInputChange}>
@@ -132,6 +136,7 @@ const DashboardAdminCRUD = () => {
               <div className='cardMainDataText'>
                 <h5>{e.firstName}</h5>
                 <p className='carCardDashboard' >{e.carModel}</p>
+                <p><strong>Colaborador:</strong> {e.refCode}</p>
               </div>
             </div>
             <div className='infoBox'>
@@ -140,12 +145,12 @@ const DashboardAdminCRUD = () => {
                 <p className='cardInfoText'>€ {e.finalRate}</p>
               </div>
               <div>
-                <p className='cardInfoTitle'>Month</p>
+                <p className='cardInfoTitle'>Date</p>
                 <p className='cardInfoText'>{e.month}</p>
               </div>
               <div>
                 <p className='cardInfoTitle'>Comission</p>
-                <p className='cardInfoText'>€ {(e.finalRate * 0.10)}</p>
+                <p className='cardInfoText'>€ {(e.finalRate * (getUserCommission(e.refCode) / 100))}</p>
                 {/* .toFixed(2) */}
               </div>
             </div>

@@ -3,11 +3,12 @@ import { db } from '../../firebaseConfig';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { AuthContext } from '../../context/AuthContext';
 import '../DashboardAdmin/Dashboard.css'
-import avatar from '/avatar.png'
+import avatar from '/avatarneutro.png'
 
 const DashboardUsers = () => {
   const [orders, setOrders] = useState([]);
   const { user } = useContext(AuthContext);
+  const [commission, setCommission] = useState(10);
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -18,7 +19,18 @@ const DashboardUsers = () => {
         setOrders(ordersList);
       }
     };
+    const fetchUserCommission = async () => {
+      if (user?.refCode) {
+        const q = query(collection(db, 'users'), where('refCode', '==', user.refCode));
+        const querySnapshot = await getDocs(q);
+        if (!querySnapshot.empty) {
+          const userData = querySnapshot.docs[0].data();
+          setCommission(userData.commission || 10);
+        }
+      }
+    };
     fetchOrders();
+    fetchUserCommission();
   }, [user]);
   
   return (
@@ -44,12 +56,12 @@ const DashboardUsers = () => {
               <p className='cardInfoText'>€ {e.finalRate}</p>
             </div>
             <div>
-              <p className='cardInfoTitle'>Month</p>
+              <p className='cardInfoTitle'>Date</p>
               <p className='cardInfoText'>{e.month}</p>
             </div>
             <div>
               <p className='cardInfoTitle'>Comission</p>
-              <p className='cardInfoText'>€ {(e.finalRate * 0.10)}</p>
+              <p className='cardInfoText'>€ {(e.finalRate * (commission / 100))}</p>
               {/* .toFixed(2) */}
             </div>
           </div>
