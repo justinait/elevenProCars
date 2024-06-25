@@ -19,7 +19,7 @@
     color: #242424;
     font-size: 2em !important;
 }
-@media (min-width:639px){
+@media (min-width:700px){
     
     .linksIcons {
         font-size: 3.4em !important;
@@ -37,13 +37,13 @@
         transition: background-color 0.3s ease, color 0.3s ease;
     }
 }
-@media (min-width:1023px){
+@media (min-width:1000px){
     
     .linksIcons {
         font-size: 3em !important;
     }
 }
-@media (min-width:1279px){
+@media (min-width:1200px){
     
     .linksIcons {
         font-size: 1.8em !important;
