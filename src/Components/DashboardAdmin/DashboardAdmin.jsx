@@ -54,14 +54,14 @@ const DashboardAdmin = () => {
       <div className="headingBoxDashboard">
         <h1>Panel de Administrador</h1>
         <div>
-          <button
+          <p
             className={`buttonsDashboardAdmin ${selectedButton === 'pendientes' ? 'active' : ''}`}
             onClick={() => handleButtonClick('pendientes')}
-          >            Pendientes          </button>
-          <button
+          >            Pendientes          </p>
+          <p
             className={`buttonsDashboardAdmin ${selectedButton === 'activos' ? 'active' : ''}`}
             onClick={() => handleButtonClick('activos')}
-          >            Colaboradores Activos          </button>
+          >            Colaboradores Activos          </p>
         </div>
       </div>
 
