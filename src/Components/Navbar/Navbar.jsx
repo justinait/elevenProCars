@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import logo from '/logonegro3.png'
 import './Navbar.css'
 import { Link, useNavigate } from 'react-router-dom'
@@ -15,7 +15,31 @@ function Navbar() {
   const {handleLogoutAuth, isLogged, user} = useContext(AuthContext)
   let navigate = useNavigate()
   const [open, setOpen] = useState(false)
+  // const [hasNewReferrals, setHasNewReferrals] = useState(false);
+  // const [pendingApprovals, setPendingApprovals] = useState(0);
 
+  // useEffect(() => {
+  //   const checkNotifications = async () => {
+  //     if (user?.refCode) {
+  //       const q = query(collection(db, 'orders'), where('refCode', '==', user.refCode));
+  //       const querySnapshot = await getDocs(q);
+  //       if (querySnapshot.docs.length > 0) {
+  //         setHasNewReferrals(true);
+  //       }
+  //     }
+
+  //     if (user?.rol === 'admin') {
+  //       const usersSnapshot = await getDocs(collection(db, 'users'));
+  //       const pendingUsers = usersSnapshot.docs.filter(doc => !doc.data().isApproved).length;
+  //       setPendingApprovals(pendingUsers);
+  //     }
+  //   };
+
+  //   if (isLogged) {
+  //     checkNotifications();
+  //   }
+  // }, [isLogged, user]);
+  
   const handleLogOut = () => {
     onLogOut();
     handleLogoutAuth()

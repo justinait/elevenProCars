@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { db, signUp } from "../../firebaseConfig";
+import emailjs from '@emailjs/browser';
 import {setDoc, addDoc, doc} from "firebase/firestore"
 
 const Register = () => {
@@ -49,6 +50,7 @@ const Register = () => {
           rol: "user",
           isApproved: false
         });
+        await sendEmailToOwner();
       }
       setShowConfirmationMessage(true);
       setTimeout(() => {
@@ -60,6 +62,27 @@ const Register = () => {
   };
 
   const handleClickShowPassword = () => setShowPassword(!showPassword);
+
+  const sendEmailToOwner = async () => {
+    try {
+      const templateParams = {
+        ownerEmail: "elevenprocars@gmail.com",
+        subject: "Nuevo Usuario Pendiente",
+        message: `Nuevo usuario registrado. Revisa la casilla de colaboradores en la web para aprobar o rechazar usuarios.`,
+      };
+
+      await emailjs.send(
+        "service_nd2a3jv",
+        "<YOUR_TEMPLATE_ID>",
+        templateParams,
+        "uxKxDjmCUzoySUkXT"
+      );
+
+      console.log("Email sent to owner successfully.");
+    } catch (error) {
+      console.error("Error sending email to owner:", error);
+    }
+  };
 
   return (
     <div      className="container"    >

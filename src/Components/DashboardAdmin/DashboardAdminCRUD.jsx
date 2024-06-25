@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../../firebaseConfig';
-import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
+import emailjs from '@emailjs/browser';
+import { collection, getDocs, query, where, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
 import './Dashboard.css'
 import avatar from '/avatar.png'
 
@@ -35,6 +36,16 @@ const DashboardAdminCRUD = () => {
     fetchOrders();
   }, []);
 
+  const fetchUserEmailByRefCode = async (refCode) => {
+    const q = query(collection(db, 'users'), where('refCode', '==', refCode));
+    const querySnapshot = await getDocs(q);
+    if (!querySnapshot.empty) {
+      const user = querySnapshot.docs[0].data();
+      return user.email; // Devuelve el correo electrónico del primer usuario encontrado
+    } else {
+      throw new Error(`No se encontró ningún usuario con refCode ${refCode}.`);
+    }
+  };
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewOrder({ ...newOrder, [name]: value });
@@ -48,12 +59,15 @@ const DashboardAdminCRUD = () => {
     }
     const newOrderWithDate = {
       ...newOrder,
-      createdAt: new Date()
+      createdAt: new Date().getTime()
     };
     try {
       const docRef = await addDoc(collection(db, 'orders'), newOrderWithDate);
       setOrders([...orders, { id: docRef.id, ...newOrderWithDate }]);
       setNewOrder({ firstName: '', month: '', carModel: '', finalRate: '', refCode: '' });
+    
+      const recipientEmail = await fetchUserEmailByRefCode(refCode);
+      await sendEmail(recipientEmail, newOrderWithDate);
     } catch (error) {
       console.error('Error adding order: ', error);
     }
@@ -69,6 +83,22 @@ const DashboardAdminCRUD = () => {
     const orderRef = doc(db, 'orders', id);
     await deleteDoc(orderRef);
     setOrders(orders.filter((order) => order.id !== id));
+  };
+
+  const sendEmail = async (recipientEmail, orderDetails) => {
+    try {
+      const templateParams = {
+        to_email: recipientEmail,
+        subject: 'New refferal on Eleven Pro Cars. You have got commission',
+      };
+
+      // Envío del correo electrónico utilizando EmailJS
+      await emailjs.send('<YOUR_SERVICE_ID>', '<YOUR_TEMPLATE_ID>', templateParams, '<YOUR_USER_ID>');
+
+      console.log('Correo electrónico enviado correctamente.');
+    } catch (error) {
+      console.error('Error al enviar el correo electrónico:', error);
+    }
   };
 
   return (
