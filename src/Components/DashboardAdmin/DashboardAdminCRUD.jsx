@@ -4,7 +4,6 @@ import emailjs from '@emailjs/browser';
 import { collection, getDocs, query, where, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
 import './Dashboard.css'
 import avatar from '/avatar.png'
-import { Subject } from '@mui/icons-material';
 
 const DashboardAdminCRUD = () => {
   const [users, setUsers] = useState([]);
@@ -90,7 +89,7 @@ const DashboardAdminCRUD = () => {
     try {
       const templateParams = {
         to_email: recipientEmail,
-        Subject: "New refferal",
+        subject: "New refferal",
         message: 'New refferal on Eleven Pro Cars. You have got commission',
       };
 
