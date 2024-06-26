@@ -106,18 +106,7 @@
 .aboutItemsText {
     margin-left: 15px;
 }
-.aboutUsTitles {
-    text-transform: uppercase;
-    display: flex;
-    font-weight: 600;
-    font-size: 16px;
-    align-items: center;
-    margin-bottom: 0.5em;
-}
-/* .aboutDivContainer {
-    display: flex;
-    flex-direction: column;
-} */
+
 @media(min-width:700px){
     .ourFocus {
         font-size: 45px;

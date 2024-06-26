@@ -34,7 +34,7 @@ function Services() {
   return (
     <div>
         
-        <p className='ourFocus'>ABOUT US</p>
+        <p className='ourFocus aboutUs'>ABOUT US</p>
 
         <Slider {...settings}>
             {images.map((e, index) => (
