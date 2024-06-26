@@ -29,35 +29,33 @@ function App() {
     <BrowserRouter>
       <AuthContextComponent>
       <ReferenceContextProvider>
-      <Navbar />
-      <Links />
-      <RefCodeManager/>
-      <Routes className=''>
+        <Navbar />
+        <Links />
+        <RefCodeManager/>
+        <Routes className=''>
 
-        <Route path='/' element={< Home />} />
-        
-        <Route path='/cars' element={<Cars/>} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/forgot-password' element={<ForgotPassword />} />
-        
-        {/* <Route path="/:ref" element={<RefCodeManager />} /> */}
-        
-        
-        <Route element={<ProtectedAdmin />}>
-          <Route path='/dashboardAdmin' element={<DashboardAdmin />} />
-          <Route path='/dashboardAdminCRUD' element={<DashboardAdminCRUD />} />
-        </Route>
-        
-        <Route element={<ProtectedUsers />}>
-          <Route path='/dashboardUsers' element={<DashboardUsers />} />
-        </Route>
-        
+          <Route path='/' element={< Home />} />
+          
+          <Route path='/cars' element={<Cars/>} />
+          
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/forgot-password' element={<ForgotPassword />} />
+                    
+          <Route element={<ProtectedAdmin />}>
+            <Route path='/dashboardAdmin' element={<DashboardAdmin />} />
+            <Route path='/dashboardAdminCRUD' element={<DashboardAdminCRUD />} />
+          </Route>
+          
+          <Route element={<ProtectedUsers />}>
+            <Route path='/dashboardUsers' element={<DashboardUsers />} />
+          </Route>
+          
 
-        
-      </Routes>
+          
+        </Routes>
 
-      <Footer />
+        <Footer />
       </ReferenceContextProvider>
       </AuthContextComponent>
     </BrowserRouter>

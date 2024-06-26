@@ -1,5 +1,5 @@
 .ourCarsStarred{
-    padding-top: 10vh;
+    padding-top: 5vh;
 }
 .seeAllStarred {
     color: #fafafa;
@@ -11,6 +11,11 @@
     text-decoration: underline;
 }
 
+@media(min-width:700px){
+    .ourCarsStarred {
+        padding: 8vh 0 6vh;
+    }
+}
 @media(min-width:1000px){
     .seeAllStarred{
 
