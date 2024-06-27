@@ -17,8 +17,9 @@ function Services() {
     
     const images = [
         {
-          url: '/home/house.jpg',
-          text: 'We manage your stay in villas, chales, houses.'
+          url: '/home/house2.jpg',
+          text: 'We manage your stay in villas, chales, houses.',
+          className: 'blackText'
         },
         {
           url: '/home/driver2.jpg',
@@ -37,12 +38,12 @@ function Services() {
         <p className='ourFocus aboutUs'>ABOUT US</p>
 
         <Slider {...settings}>
-            {images.map((e, index) => (
-                <div key={index} className='carouselItemDiv'>
-                    <img className='imageServicesCarousel' src={e.url} alt={`Slide ${index + 1}`} loading="lazy" />
-                    <p className='imageServicesText'>{e.text}</p>
-                </div>
-            ))}
+          {images.map((e, index) => (
+            <div key={index} className='carouselItemDiv'>
+              <img className='imageServicesCarousel' src={e.url} alt={`Slide ${index + 1}`} loading="lazy" />
+              <p className={`imageServicesText ${e.className || ''}`}>{e.text}</p>
+            </div>
+          ))}
         </Slider>
 
     </div>
