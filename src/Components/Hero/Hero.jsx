@@ -7,10 +7,14 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 function Hero() {
   return (
-    <div className='heroContainer'>
+    <div className='heroDiv'>
+      <video src="/home/hero.MOV" className='heroVideo' muted loop autoPlay playsInline ></video>
       {/* <div className='overlayHero'></div> */}
-      <p className='getStartedHero animate__animated animate__pulse'>Get started <ArrowForwardIcon/> </p>
-      <p className='heroText'> <LocationOnIcon fontSize='small'/> Mallorca, Spain</p>
+      <div className='heroBox'>
+
+        <p className='getStartedHero animate__animated animate__pulse'>Get started <ArrowForwardIcon/> </p>
+        <p className='heroText'> <LocationOnIcon fontSize='small'/> Mallorca, Spain</p>
+      </div>
     </div>
   )
 }
