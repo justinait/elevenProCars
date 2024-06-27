@@ -2,41 +2,54 @@
     background-image: url('/cars/2autos.jpg');
     height: 76vh;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-position: unset;
     background-repeat: no-repeat;
     background-position: center;
     object-fit: cover;
     background-size: cover;
-    justify-content: center;
-    z-index: 2;
+    
+    display: flex;
     justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: space-evenly;
 }
 .heroText {
-    font-size: 20px;
-}
-.heroImage {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-}
-.titleHero {
-    display: none;
     font-family: "Libre Caslon Text", serif;
-    font-weight: 600;
-    margin: 0;
-    /* color: #242424; */
-    font-size: 23px;
-    padding: 2% 5%;
-    /* text-align: center; */
+    display: flex;
+    padding: 2%;
+    color: white;
+    width: auto;
+    border-radius: 25px;
     line-height: 32px;
     z-index: 2;
-    width: 90%;
+    text-align: center;
+    font-size: 15.5px;
+    padding: 1.35% 5%;
+    margin-top: 2em;
+    align-items: center;
+}
+.getStartedHero {
+    /* font-family: "Libre Caslon Text", serif;
+    font-weight: 600; */
+    /* margin: 0.5em; */
+    color: #242424;
+    background: white;
+    background: #ffd120;
+    border: 1.5px solid #ffd120;
+    width: auto;
+    border-radius: 25px;
+    line-height: 32px;
+    z-index: 2;
+    text-align: center;
+    font-size: 15px;
+    padding: 1.2% 4%;
+    margin-top: 2em;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 }
 .overlayHero {
-    
     position: absolute;
     top: 0;
     left: 0;
@@ -46,10 +59,7 @@
     z-index: 1;
 }
 @media(min-width:700px){
-    .titleHero {        
-        font-size: 42px;
-        line-height: normal;
-    }
+    
     .heroText{
         font-size: 35px;
     }
@@ -59,10 +69,6 @@
     .heroContainer{
         height: 99vh;
         background-position-y: -680px;
-    }
-    .titleHero{
-        font-size: 38px;
-        display: none;
     }
     .overlayHero {
         height: 96vh;
