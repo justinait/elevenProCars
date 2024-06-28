@@ -22,18 +22,15 @@
     width: 45vw;
     border-radius: 25px;
     line-height: 32px;
-    z-index: 2;
     text-align: center;
     font-size: 15.5px;
     padding: 1.35% 5%;
-    margin-top: 2em;
+    margin-top: 0em;
+    margin-bottom: 0.5em;
     align-items: center;
     justify-content: center;
 }
 .getStartedHero {
-    /* font-family: "Libre Caslon Text", serif;
-    font-weight: 600; */
-    /* margin: 0.5em; */
     color: #242424;
     background: white;
     background: #ffd120;
@@ -41,7 +38,6 @@
     width: auto;
     border-radius: 25px;
     line-height: 32px;
-    z-index: 2;
     text-align: center;
     font-size: 15px;
     padding: 1.2% 4%;
@@ -59,13 +55,14 @@
     background-color: rgba(0, 0, 0, 0.25); /* Color negro transparente */
     z-index: 1;
 }
-.heroVideo { object-fit: cover;
+.heroVideo { 
+    object-fit: cover;
     width: 100%;
     height: 100vh;
 }
 .heroBox {
     position: absolute;
-    bottom: 50px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;

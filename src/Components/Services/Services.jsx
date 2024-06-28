@@ -24,13 +24,18 @@ function Services() {
         className: 'blackText'
       },
       {
-        // url: '/cars/VolanteMercedes2.jpg',
+        // url: '/cars/aerop2.jpg',
         url: '/home/driver2.jpg',
         text: 'Private transport Mallorca. Airports, Hotels, or wherever you need.'
       },
       {
         url: '/home/bar.jpg',
         text: 'Reservations at NightClubs and Restaurants. Logistics for easy parking in high-demand areas.'
+      },
+      {
+        url: '/home/yacht.jpg',
+        text: 'Reservations at NightClubs and Restaurants. Logistics for easy parking in high-demand areas.',
+        className: 'blackText'
       },
     ];
       
