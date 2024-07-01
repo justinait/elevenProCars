@@ -4,6 +4,7 @@ import './Hero.css'
 import EastIcon from '@mui/icons-material/East';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
@@ -12,7 +13,7 @@ function Hero() {
       {/* <div className='overlayHero'></div> */}
       <div className='heroBox'>
 
-        <p className='getStartedHero animate__animated animate__pulse'>Get started <ArrowForwardIcon/> </p>
+        <Link to='/cars' className='getStartedHero animate__animated animate__pulse'>Get started <ArrowForwardIcon/> </Link>
         <p className='heroText'> <LocationOnIcon fontSize='small'/> Mallorca, Spain</p>
       </div>
     </div>

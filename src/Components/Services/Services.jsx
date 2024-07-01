@@ -21,7 +21,6 @@ function Services() {
       {
         url: '/home/housemallorca3.jpg',
         text: 'We manage your stay in villas, chales, houses.',
-        className: 'blackText'
       },
       {
         // url: '/cars/aerop2.jpg',
@@ -34,7 +33,7 @@ function Services() {
       },
       {
         url: '/home/yacht.jpg',
-        text: 'Reservations at NightClubs and Restaurants. Logistics for easy parking in high-demand areas.',
+        text: 'Unique experiences in the island.',
         className: 'blackText'
       },
     ];
