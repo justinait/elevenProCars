@@ -72,6 +72,7 @@
     top: 220%;
     top: 60px;
     transform: translateX(-50%);
+    z-index: 20;
 }
 .carsNavbar {
     margin-right: 10px;
