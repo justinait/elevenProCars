@@ -23,13 +23,16 @@ function Services() {
         text: 'We manage your stay in villas, chales, houses.',
       },
       {
-        // url: '/cars/aerop2.jpg',
-        url: '/home/driver2.jpg',
+        url: '/home/aerop.jpg',
         text: 'Private transport Mallorca. Airports, Hotels, or wherever you need.'
       },
       {
-        url: '/home/bar.jpg',
-        text: 'Reservations at NightClubs and Restaurants. Logistics for easy parking in high-demand areas.'
+        url: '/home/bar3.jpg',
+        text: 'Reservations at NightClubs and Restaurants.'
+      },
+      {
+        url: '/home/driver2.jpg',
+        text: 'Logistics for easy parking in high-demand areas.'
       },
       {
         url: '/home/yacht.jpg',
