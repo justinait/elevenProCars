@@ -59,21 +59,21 @@ function Navbar() {
 
       {
         isLogged &&
-        <AccountCircleIcon className='accountIcon' onClick={handleOpen} />
+        <AccountCircleIcon className='accountIcon icons' onClick={handleOpen} />
 
       }
       { (isLogged && open) &&
         <div className='dropdownLogged'>
           {
             (user.rol == "user") ?
-            <Link to="/dashboardUsers"><CardGiftcardIcon/>My referrals</Link>
+            <Link to="/dashboardUsers"><CardGiftcardIcon className='icons'/>My referrals</Link>
             : 
             <>
-              <Link to="/dashboardAdmin"><PersonAddAltIcon/>Add Colaborator</Link>
-              <Link to="/dashboardAdminCRUD"><AddCardIcon/>Add Rent</Link>
+              <Link to="/dashboardAdmin"><PersonAddAltIcon className='icons'/>Add Colaborator</Link>
+              <Link to="/dashboardAdminCRUD"><AddCardIcon className='icons'/>Add Rent</Link>
             </>
           }
-          <span className="listItemText" onClick={handleLogOut}><LogoutIcon className="listItemIcon"  />Log out</span>
+          <span className="listItemText" onClick={handleLogOut}><LogoutIcon className="listItemIcon icons"  />Log out</span>
         </div>  
       }
       </div>

@@ -76,7 +76,13 @@
 .carsNavbar {
     margin-right: 10px;
 }
+.icons{
+    font-size: 2em !important;
+}
 @media(min-width:700px){
+    .icons{
+        font-size: 3.4em !important;
+    }
     .logoNavbar {
         width: 200px;
     }
@@ -98,6 +104,9 @@
     }
 }
 @media(min-width:1000px){
+    .icons{
+        font-size: 3em !important;
+    }
     .navbarBrand{
         font-size: 30px;
     }
@@ -109,6 +118,9 @@
     }
 }
 @media(min-width:1200px){
+    .icons{
+        font-size: 1.8em !important;
+    }
     .logoNavbar {
         margin: 4% 0;
         width: 220px;
@@ -132,4 +144,13 @@
 }
 @media(min-width:1400px){
     
+    .icons{
+        font-size: 2.8em !important;
+    }
+}
+@media(min-width:1700px){
+    
+    .icons{
+        font-size: 3em !important;
+    }
 }

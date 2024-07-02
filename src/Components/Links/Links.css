@@ -55,7 +55,7 @@
         padding: 20%;
         border-radius: 30%;
     }
-    .css-i4bv87-MuiSvgIcon-root{
+    .linksIcons{
         font-size: 2.5em !important;
     }
 }
@@ -71,11 +71,11 @@
         padding: 20%;
         border-radius: 30%;
     }
-    .css-i4bv87-MuiSvgIcon-root{
+    .linksIcons{
         font-size: 2.8em !important;
     }
 }
-@media (min-width:1900px){
+@media (min-width:1700px){
     
     .linksIcons {
         font-size: 3em !important;
@@ -83,7 +83,7 @@
     .linksContainer {
         left: 93vw;
     }
-    .css-i4bv87-MuiSvgIcon-root{
+    .linksIcons{
         font-size: 3.5em !important;
     }
 }

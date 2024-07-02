@@ -13,7 +13,7 @@ function Hero() {
       {/* <div className='overlayHero'></div> */}
       <div className='heroBox'>
 
-        <Link to='/cars' className='getStartedHero animate__animated animate__pulse'>Get started <ArrowForwardIcon/> </Link>
+        <Link to='/cars' className='getStartedHero animate__animated animate__pulse'>Get started <ArrowForwardIcon className='arrowHero'/> </Link>
         <p className='heroText'> <LocationOnIcon fontSize='small'/> Mallorca, Spain</p>
       </div>
     </div>
