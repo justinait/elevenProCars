@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function Hero() {
   return (
     <div className='heroDiv'>
-      <video src="/home/hero.MOV" className='heroVideo' muted loop autoPlay playsInline ></video>
+      <video src="/home/heroeditado.mp4" className='heroVideo' muted loop autoPlay playsInline ></video>
       {/* <div className='overlayHero'></div> */}
       <div className='heroBox'>
 
