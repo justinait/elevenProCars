@@ -11,7 +11,7 @@ const RefCodeManager = () => {
     const ref = searchParams.get('ref');
     
     if (ref) {
-      setRefCode(ref); // Actualiza el código de referencia en el contexto
+      setRefCode(ref);
     }
   }, [location.search, setRefCode]);
 

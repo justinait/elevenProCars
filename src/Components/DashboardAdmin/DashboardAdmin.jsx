@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../../firebaseConfig";
-import { collection, getDocs, doc, updateDoc, deleteDoc } from "firebase/firestore";
+import { collection, getDocs, doc, updateDoc, deleteDoc, query, where  } from "firebase/firestore";
 import './Dashboard.css'
 import avatar from '/avatarneutro.png'
 import { Modal, Button } from 'react-bootstrap';
@@ -26,11 +26,11 @@ const DashboardAdmin = () => {
       alert("El Ref Code es obligatorio para aprobar el usuario.");
       return;
     }
-    // const isUnique = await checkUniqueRefCode(refCode);
-    // if (!isUnique) {
-    //   alert("El Ref Code ya está en uso. Por favor, ingresa otro.");
-    //   return;
-    // }
+    const isUnique = await checkUniqueRefCode(refCode);
+    if (!isUnique) {
+      alert("El Ref Code ya está en uso. Por favor, ingresa otro.");
+      return;
+    }
     const userRef = doc(db, "users", userId);
     await updateDoc(userRef, { isApproved: true, refCode: refCode, commission: commission  });
     setUsers(users.map(user => user.id === userId ? { ...user, isApproved: true, refCode: refCode } : user));
@@ -40,6 +40,11 @@ const DashboardAdmin = () => {
   //   const querySnapshot = await getDocs(collection(db, "users").where("refCode", "==", refCode));
   //   return querySnapshot.empty;
   // };
+  const checkUniqueRefCode = async (refCode) => {
+    const q = query(collection(db, "users"), where("refCode", "==", refCode));
+    const querySnapshot = await getDocs(q);
+    return querySnapshot.empty;
+  };
 
   const handleButtonClick = (buttonType) => {
     setShowApproved(buttonType === 'activos');
