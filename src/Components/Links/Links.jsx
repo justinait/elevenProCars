@@ -10,7 +10,7 @@ function Links() {
     if (referenceCode) {
       return `Hello! I want to rent a car. RefCode: ${referenceCode}`;
     } else {
-      return `Hello! I want to rent a car.`; // Mensaje sin RefCode si no hay referencia
+      return `Hello! I want to rent a car.`;
     }
   };
 

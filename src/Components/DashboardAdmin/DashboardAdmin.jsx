@@ -36,10 +36,6 @@ const DashboardAdmin = () => {
     setUsers(users.map(user => user.id === userId ? { ...user, isApproved: true, refCode: refCode } : user));
   };
 
-  // const checkUniqueRefCode = async (refCode) => {
-  //   const querySnapshot = await getDocs(collection(db, "users").where("refCode", "==", refCode));
-  //   return querySnapshot.empty;
-  // };
   const checkUniqueRefCode = async (refCode) => {
     const q = query(collection(db, "users"), where("refCode", "==", refCode));
     const querySnapshot = await getDocs(q);

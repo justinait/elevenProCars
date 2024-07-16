@@ -32,15 +32,6 @@ const storage = getStorage(app);
 const auth = getAuth(app);
 export const db = getFirestore(app);
 
-// export const onSignIn = async ({email, password}) => {
-    
-//   try {
-//     const res = await signInWithEmailAndPassword(auth, email, password)
-//     return res;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
 export const onSignIn = async ({ email, password }) => {
   try {
     const res = await signInWithEmailAndPassword(auth, email, password);
