@@ -53,6 +53,7 @@ h2 {
 }
 .infoBox{
     display: flex;
+    padding: 5px 0;
     justify-content: space-between;
 }
 .cardInfoTitle {

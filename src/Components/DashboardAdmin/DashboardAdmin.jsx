@@ -4,6 +4,7 @@ import { collection, getDocs, doc, updateDoc, deleteDoc, query, where  } from "f
 import './Dashboard.css'
 import avatar from '/avatarneutro.png'
 import { Modal, Button } from 'react-bootstrap';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 const DashboardAdmin = () => {
   const [users, setUsers] = useState([]);
@@ -11,6 +12,7 @@ const DashboardAdmin = () => {
   const [selectedButton, setSelectedButton] = useState('pendientes');
   const [userToDelete, setUserToDelete] = useState(null);
   const [show, setShow] = useState(false);
+  const [copied, setCopied] = useState(false); 
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -58,7 +60,12 @@ const DashboardAdmin = () => {
     setUserToDelete(userId);
     setShow(true);
   };
-
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Mostrar "Copied" por 2 segundos
+    });
+  };
   const handleClose = () => setShow(false);
   return (
     <div className="dashboardContainer">
@@ -99,6 +106,10 @@ const DashboardAdmin = () => {
             <>
               <p> <strong>Ref Code:</strong> {user.refCode}</p>
               <p><strong>Comisión:</strong> {user.commission || 10} %</p>
+              {
+                user.userCBU &&
+                <p><strong>CBU:</strong> {user.userCBU} <ContentCopyIcon fontSize="small" onClick={() => copyToClipboard(user.userCBU)} style={{ cursor: 'pointer', marginLeft: '5px' }}  /></p> 
+              }
               <p><strong>Ref link:</strong> <a href={`https://elevenprocar.com/?ref=${user.refCode}`} target="_blank" rel="noopener noreferrer">{`https://elevenprocar.com/?ref=${user.refCode}`}</a></p>
               <button className="deleteButtonAdmin" onClick={() => handleShow(user.id)}>Eliminar</button>
             </>

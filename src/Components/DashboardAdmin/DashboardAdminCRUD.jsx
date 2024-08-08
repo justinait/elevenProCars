@@ -51,23 +51,36 @@ const DashboardAdminCRUD = () => {
     setNewOrder({ ...newOrder, [name]: value });
   };
 
+  const handleTogglePaid = async (id, isPaid) => {
+    const orderRef = doc(db, 'orders', id);
+    await updateDoc(orderRef, { isPaid: !isPaid });
+    setOrders(orders.map(order => (order.id === id ? { ...order, isPaid: !isPaid } : order)));
+  };
+
   const handleAddOrder = async () => {
     const { firstName, month, carModel, finalRate, refCode } = newOrder;
     if (!firstName || !month || !carModel || !finalRate || !refCode) {
       alert('Todos los campos son obligatorios.');
       return;
     }
-    const newOrderWithDate = {
-      ...newOrder,
-      createdAt: new Date().getTime()
-    };
+    
     try {
-      const docRef = await addDoc(collection(db, 'orders'), newOrderWithDate);
-      setOrders([...orders, { id: docRef.id, ...newOrderWithDate }]);
+
+      const user = users.find(user => user.refCode === refCode);
+
+      const newOrderWithUser = {
+        ...newOrder,
+        createdAt: new Date().getTime(),
+        userId: user.id,
+        ...(user.cbu && { userCBU: user.cbu })
+      };
+
+      const docRef = await addDoc(collection(db, 'orders'), newOrderWithUser);
+      setOrders([...orders, { id: docRef.id, ...newOrderWithUser }]);
       setNewOrder({ firstName: '', month: '', carModel: '', finalRate: '', refCode: '' });
     
       const recipientEmail = await fetchUserEmailByRefCode(refCode);
-      await sendEmail(recipientEmail, newOrderWithDate);
+      await sendEmail(recipientEmail, newOrderWithUser);
     } catch (error) {
       console.error('Error adding order: ', error);
     }
@@ -142,7 +155,8 @@ const DashboardAdminCRUD = () => {
               <div className='cardMainDataText'>
                 <h5>{e.firstName}</h5>
                 <p className='carCardDashboard' >{e.carModel}</p>
-                <p><strong>Colaborador:</strong> {e.refCode}</p>
+                <p className='carCardDashboard'><strong>Colaborador:</strong> {e.refCode}</p>
+                <p><strong>CBU:</strong> {e.userCBU}</p> 
               </div>
             </div>
             <div className='infoBox'>
@@ -160,7 +174,17 @@ const DashboardAdminCRUD = () => {
                 {/* .toFixed(2) */}
               </div>
             </div>
-            <button className="deleteButtonAdmin" onClick={() => handleDeleteOrder(e.id)}>Eliminar</button>
+            <div className='infoBox'>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={e.isPaid || false}
+                  onChange={() => handleTogglePaid(e.id, e.isPaid)}
+                />
+                 Dinero enviado
+              </label>
+              <button className="deleteButtonAdmin" onClick={() => handleDeleteOrder(e.id)}>Eliminar</button>
+            </div>
           </div>
           ))}
       </div>
