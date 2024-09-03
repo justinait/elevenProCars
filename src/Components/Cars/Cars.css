@@ -131,7 +131,7 @@
 
 @media(min-width:1200px){
     .modal-dialog {
-        max-width: 60vw !important;
+        /* max-width: 60vw !important; */
     }
     .carItemFirstImage, .infoBlur {
         height: 450px;
