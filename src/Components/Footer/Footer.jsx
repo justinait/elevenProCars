@@ -13,7 +13,7 @@ function Footer() {
   const {user, isLogged} = useContext(AuthContext)
 
   const downloadPDF = () => {
-    const pdfPath = 'https://drive.google.com/file/d/19Drxs_hA-NHrFKU717mxexuMp6hvFPj6/view?usp=sharing';
+    const pdfPath = 'https://drive.google.com/file/d/1zoByiu1w_R4UDuzQ4zPZSO-fdpoA270j/view?usp=sharing';
     const link = document.createElement('a');
     link.href = pdfPath;
     link.target = '_blank';
