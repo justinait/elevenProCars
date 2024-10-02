@@ -12,23 +12,23 @@ function Footer() {
   
   const {user, isLogged} = useContext(AuthContext)
 
-  const downloadPDF = () => {
-    const pdfPath = 'https://drive.google.com/file/d/1zoByiu1w_R4UDuzQ4zPZSO-fdpoA270j/view?usp=sharing';
+  const openPDF = () => {
+    const pdfPath = '/Eleven Pro Cars catalogo 2024.pdf';
     const link = document.createElement('a');
     link.href = pdfPath;
     link.target = '_blank';
-    link.download = 'CaseStudyBenefit.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
+
   return (
     <div className='footerContainer'>
       {/* <p>Eleven Pro Cars</p> */}
       <div className='footerContainer3'>
         <img src={logo} alt="" className='logoFooter' />
         <div >
-          <p onClick={downloadPDF} style={{cursor: 'pointer', textDecoration: 'underline' }} className=''><DownloadIcon fontSize='medium'/>Download Catalog</p>
+          <p onClick={openPDF} style={{cursor: 'pointer', textDecoration: 'underline' }} className=''><DownloadIcon fontSize='medium'/>Download Catalog</p>
           <a className='' style={{cursor: 'pointer', color: 'white' }} target='_blank' href='https://www.instagram.com/elevenpro_cars/'><InstagramIcon fontSize='medium'/>@elevenpro_cars</a>
         </div>
       </div>
