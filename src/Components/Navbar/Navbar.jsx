@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import logo from '/logonegro3.png'
+import logo from '/logo.png'
 import './Navbar.css'
 import { Link, useNavigate } from 'react-router-dom'
 import LogoutIcon from "@mui/icons-material/Logout";

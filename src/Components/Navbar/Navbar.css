@@ -22,7 +22,7 @@
     font-size: smaller;
 }
 .logoNavbar {
-    width: 175px;
+    width: 105px;
     z-index: 12;
 }
 .rightNavbar {
@@ -85,7 +85,7 @@
         font-size: 3.4em !important;
     }
     .logoNavbar {
-        width: 200px;
+        width: 170px;
     }
     .navbarBrand{
         font-size: 26px;
@@ -102,6 +102,7 @@
     }
     .carsNavbar {
         margin-right: 30px;
+        font-size: larger;
     }
 }
 @media(min-width:1000px){
@@ -124,7 +125,7 @@
     }
     .logoNavbar {
         margin: 4% 0;
-        width: 220px;
+        width: 150px;
     }
     .navbarContainer {
         height: 96px;
