@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
 import './Footer.css'
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DownloadIcon from '@mui/icons-material/Download';
-import PushPinIcon from '@mui/icons-material/PushPin';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import logo from '/public/logonegro2.png'
 import { Link } from "react-router-dom";
@@ -24,7 +22,7 @@ function Footer() {
 
   return (
     <div className='footerContainer'>
-      {/* <p>Eleven Pro Cars</p> */}
+      
       <div className='footerContainer3'>
         <img src={logo} alt="" className='logoFooter' />
         <div >
