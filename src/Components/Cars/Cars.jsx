@@ -50,7 +50,7 @@ function Cars() {
 
   return (
     
-    <div>
+    <div className='ourCarsContainer'>
       <p className='ourCars'>OUR CARS</p>
       <p className='sloganCars'>Drive the car you want</p>
 

@@ -15,7 +15,9 @@
     height: 280px;
     object-fit: cover;
 }
-  
+.ourCarsContainer {
+    min-height: 70vh;
+}
 .infoBlur {
     position: absolute;
     top: 0;
