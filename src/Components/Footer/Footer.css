@@ -15,9 +15,8 @@
     justify-content: flex-end;
 }
 .footerContainer {
-    /* text-align: center; */
     font-size: 12px;
-    padding: 5% 5%;
+    padding: 9% 5% 0;
     margin: 3% 0 0;
     background: black;
 }
@@ -35,7 +34,7 @@
     color:#656668;   
     /* display: block !important; */
     display: flex;
-    padding: 5% 0 0;
+    padding: 8% 0 5px;
     text-align: right;
     font-size: 10px;
     justify-content: space-between;
@@ -55,14 +54,27 @@
     align-items: center;
 }
 .logoFooter {
-    width: 145px;
+    width: 130px;
 }
 .footerContainer3 {
     
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
+}
+.footerContainer3 div {
+    display: flex;
+    flex-direction: column;
+}
+.footerIcons {
+    font-size: 1.2rem !important;
+    margin-right: 5px;
 
+}
+.footerItemsContact{
+    margin: 0;
+    margin: 3px 0;
 }
 
 @media(min-width:700px){
@@ -73,6 +85,7 @@
     }
     .footerContainer{
         font-size: 18px;
+        padding: 5% 5%;
     }
     .justina {
         font-size: 12px;
@@ -94,14 +107,13 @@
     
     .footerContainer{
         font-size: 18px;
-        padding: 0 3%;
+        padding: 3% 3% 0 3%;
         margin: 0;
     }
     .justina {
-        padding: 0% 0 10px;
         text-align: right;
         margin: 3px 0;
-        padding: 0% 0 7px;
+        padding: 4% 0 7px;
         font-size: 14px;
     }
     .logoFooter {
