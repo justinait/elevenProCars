@@ -40,7 +40,7 @@ function Footer() {
       </div>
       <br /><br />
       
-      <p>Todos los métodos de pago 
+      <p>Todos los medios de pago 
         <br /> 
         Visa, Mastercard, PayPal, Links de pago, Efectivo 
       </p> 
