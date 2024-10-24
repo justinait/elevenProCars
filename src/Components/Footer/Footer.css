@@ -15,7 +15,7 @@
     justify-content: flex-end;
 }
 .footerContainer {
-    font-size: 12px;
+    font-size: 11px;
     padding: 9% 5% 0;
     margin: 3% 0 0;
     background: black;
@@ -57,11 +57,9 @@
     width: 130px;
 }
 .footerContainer3 {
-    
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    
 }
 .footerContainer3 div {
     display: flex;
@@ -70,7 +68,6 @@
 .footerIcons {
     font-size: 1.2rem !important;
     margin-right: 5px;
-
 }
 .footerItemsContact{
     margin: 0;

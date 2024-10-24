@@ -7,6 +7,8 @@ import PinDropIcon from '@mui/icons-material/PinDrop';
 import logo from '/public/logonegro2.png'
 import { Link } from "react-router-dom";
 import { AuthContext } from '../../context/AuthContext';
+import CreditCardIcon from '@mui/icons-material/CreditCard';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 function Footer() {
   
@@ -36,7 +38,12 @@ function Footer() {
 
         </div>
       </div>
+      <br /><br />
       
+      <p>Todos los métodos de pago 
+        <br /> 
+        Visa, Mastercard, PayPal, Links de pago, Efectivo 
+      </p> 
       <div className='justina'>
         {
           !isLogged &&
