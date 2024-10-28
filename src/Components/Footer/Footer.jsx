@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from '../../context/AuthContext';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import PaymentsIcon from '@mui/icons-material/Payments';
 
 function Footer() {
   
@@ -40,10 +41,14 @@ function Footer() {
       </div>
       <br /><br />
       
-      <p>Todos los medios de pago 
-        <br /> 
-        Visa, Mastercard, PayPal, Links de pago, Efectivo 
-      </p> 
+      <div className='footerPaymentMethods'>
+        <p>All payment methods accepted</p>
+        <div>
+          <CreditCardIcon className='footerIcons' /> <AttachMoneyIcon className='footerIcons' /> <PaymentsIcon className='footerIcons' />
+        </div>
+      </div>
+      
+
       <div className='justina'>
         {
           !isLogged &&

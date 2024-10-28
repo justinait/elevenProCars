@@ -73,7 +73,15 @@
     margin: 0;
     margin: 3px 0;
 }
-
+.footerPaymentMethods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #acacac;
+}
+.footerPaymentMethods p {
+    margin: 0.5em;
+}
 @media(min-width:700px){
 
     .footerContainer h2 {
