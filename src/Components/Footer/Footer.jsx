@@ -46,6 +46,7 @@ function Footer() {
         <div>
           <CreditCardIcon className='footerIcons' /> <AttachMoneyIcon className='footerIcons' /> <PaymentsIcon className='footerIcons' />
         </div>
+        <button>Go to Payment</button>
       </div>
       
 
