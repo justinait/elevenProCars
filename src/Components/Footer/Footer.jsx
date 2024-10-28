@@ -32,7 +32,7 @@ function Footer() {
         <img src={logo} alt="" className='logoFooter' />
         <div>
           <p onClick={openPDF} style={{cursor: 'pointer', textDecoration: 'underline' }} className='footerItemsContact'><DownloadIcon className='footerIcons'/>Download Catalog</p>
-          <a className='footerItemsContact' style={{cursor: 'pointer', color: 'white' }} target='_blank' href='https://www.instagram.com/elevenpro_cars/'><InstagramIcon className='footerIcons'/>@elevenpro_cars</a>
+          <a className='footerItemsContact' style={{cursor: 'pointer', color: 'white' }} target='_blank'  rel="noopener noreferrer" href='https://www.instagram.com/elevenpro_cars/'><InstagramIcon className='footerIcons'/>@elevenpro_cars</a>
 
           <p className='footerItemsContact' style={{cursor: 'pointer', color: 'white' }}><PhoneIcon className='footerIcons'/>+34 634 18 70 73</p>
           <p className='footerItemsContact' style={{cursor: 'pointer', color: 'white' }}><PinDropIcon className='footerIcons'/>Mallorca, Islas Baleares, 07015</p>
@@ -54,7 +54,7 @@ function Footer() {
           !isLogged &&
           <Link to={'/login'}>Colaborators: click here</Link>
         }
-        <p>Powered by &nbsp;<a target='_blank' href="https://imjustwebs.com/"><strong> I'mJustWebs</strong></a></p>
+        <p>Powered by &nbsp;<a target='_blank'  rel="noopener noreferrer" href="https://imjustwebs.com/"><strong> I'mJustWebs</strong></a></p>
 
       </div>
 
