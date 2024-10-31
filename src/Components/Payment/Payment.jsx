@@ -7,7 +7,7 @@ import './Payment.css';
 function Payment() {
   const [amount, setAmount] = useState(); // Monto en euros
   const [order] = useState(`ORD${Math.floor(Math.random() * 1000000)}`);
-  const secretKey = 'sq7HjrUOBfKmC576ILgskD5srU870gJ7';
+  const secretKey = import.meta.env.VITE_redSysSecretKey;
   const merchantCode = '14544407';
   const terminal = '001';
   const currency = '978';
