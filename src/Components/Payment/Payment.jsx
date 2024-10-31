@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CryptoJS from 'crypto-js';
+import './Payment.css'
 
 function Payment() {
     const [amount, setAmount] = useState(1000); // Puedes hacer esto variable si quieres
@@ -81,8 +82,7 @@ function Payment() {
 
     return (
       <div>
-        <h2>Pago</h2>
-        <button onClick={() => setModalVisible(true)}>Make payment</button>
+        <button className='makePaymentButton' onClick={() => setModalVisible(true)}>Make a payment</button>
 
         {/* Modal */}
         <div className={`modal ${modalVisible ? 'show' : ''}`} style={{ display: modalVisible ? 'block' : 'none' }}>
@@ -107,7 +107,7 @@ function Payment() {
                 <button type="button" className="btn btn-secondary" onClick={() => setModalVisible(false)}>
                   Cancel
                 </button>
-                <button type="button" className="btn btn-primary" onClick={() => {
+                <button type="button" className="btn btn-light" onClick={() => {
                   handlePayment();
                   setModalVisible(false);
                 }}>
