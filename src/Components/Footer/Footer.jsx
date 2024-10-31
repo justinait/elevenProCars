@@ -10,6 +10,7 @@ import { AuthContext } from '../../context/AuthContext';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import PaymentsIcon from '@mui/icons-material/Payments';
+import Payment from '../Payment/Payment';
 
 function Footer() {
   
@@ -46,7 +47,7 @@ function Footer() {
         <div>
           <CreditCardIcon className='footerIcons' /> <AttachMoneyIcon className='footerIcons' /> <PaymentsIcon className='footerIcons' />
         </div>
-        <button>Go to Payment</button>
+        <Payment/>
       </div>
       
 

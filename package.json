@@ -21,6 +21,7 @@
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
+    "crypto-js": "^4.2.0",
     "firebase": "^10.12.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
