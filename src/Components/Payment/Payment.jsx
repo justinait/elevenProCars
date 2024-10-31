@@ -89,7 +89,7 @@ function Payment() {
       {/* Modal de React Bootstrap */}
       <Modal show={modalVisible} onHide={() => setModalVisible(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Enter the amount to pay</Modal.Title>
+          <Modal.Title>Enter the amount to pay in Euros</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <input
