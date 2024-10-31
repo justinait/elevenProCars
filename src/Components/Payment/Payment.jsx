@@ -62,7 +62,7 @@ function Payment() {
     // Crear formulario dinámicamente para enviar los datos de pago
     const form = document.createElement('form');
     form.method = 'POST';
-    form.action = 'https://sis-t.redsys.es:25443/sis/realizarPago';
+    form.action = 'https://sis-t.redsys.es/sis/realizarPago';
 
     const parameters = {
       Ds_SignatureVersion: 'HMAC_SHA256_V1',
