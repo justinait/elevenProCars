@@ -23,7 +23,7 @@ app.post('/api/generate-payment-data', (req, res) => {
         signature,
     } = req.body;
 
-    const paymentUrl = 'https://sis-t.redsys.es/sis/realizarPago';
+    const paymentUrl = 'https://sis.redsys.es/sis/realizarPago';
 
     // Crear un objeto con los datos de pago
     const formData = {

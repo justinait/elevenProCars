@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Asegúrate de tener el CSS de 
 import './Payment.css';
 
 function Payment() {
-  const [amount, setAmount] = useState(); // Monto en euros
+  const [amount, setAmount] = useState(''); // Monto en euros
   const [order] = useState(`ORD${Math.floor(Math.random() * 1000000)}`);
   const secretKey = import.meta.env.VITE_redSysSecretKey;
   const merchantCode = '14544407';
@@ -37,6 +37,10 @@ function Payment() {
   };
 
   const handlePayment = () => {
+    if (!amount || amount <= 0) {
+      alert("Please enter a valid amount greater than 0.");
+      return; // Evita que el pago continúe si el monto es inválido
+    }
     const amountInCents = amount * 100; // Convertimos a céntimos
     const merchantOrder = order;
 
@@ -62,7 +66,7 @@ function Payment() {
     // Crear formulario dinámicamente para enviar los datos de pago
     const form = document.createElement('form');
     form.method = 'POST';
-    form.action = 'https://sis-t.redsys.es/sis/realizarPago';
+    form.action = 'https://sis.redsys.es/sis/realizarPago';
 
     const parameters = {
       Ds_SignatureVersion: 'HMAC_SHA256_V1',
@@ -77,6 +81,8 @@ function Payment() {
       input.value = parameters[key];
       form.appendChild(input);
     }
+    console.log("Merchant Parameters:", Ds_MerchantParameters);
+    console.log(amount);
 
     document.body.appendChild(form);
     form.submit();
@@ -98,6 +104,7 @@ function Payment() {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             className="form-control"
+            min="1"
           />
         </Modal.Body>
         <Modal.Footer>
