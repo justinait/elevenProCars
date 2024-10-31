@@ -1,3 +1,12 @@
 .makePaymentButton {
-    margin-top: 10px;
+    margin-top: 15px;
+    color: #242424;
+    background: white;
+    background: #ffd120;
+    border: 1.5px solid #ffd120;
+    width: 37vw;
+    border-radius: 25px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 15px;
 }
