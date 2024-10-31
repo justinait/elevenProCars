@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Asegúrate de tener el CSS de 
 import './Payment.css';
 
 function Payment() {
-  const [amount, setAmount] = useState(5); // Monto en euros
+  const [amount, setAmount] = useState(); // Monto en euros
   const [order] = useState(`ORD${Math.floor(Math.random() * 1000000)}`);
   const secretKey = 'sq7HjrUOBfKmC576ILgskD5srU870gJ7';
   const merchantCode = '14544407';
