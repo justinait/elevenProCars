@@ -82,6 +82,9 @@
 .footerPaymentMethods p {
     margin: 0.5em;
 }
+.footerIconsCard {
+    width: 38px;
+}
 @media(min-width:700px){
 
     .footerContainer h2 {
@@ -97,6 +100,9 @@
     }
     .logoFooter {
         width: 230px;
+    }
+    .footerIconsCard {
+        width: 60px;
     }
 }
 @media(min-width:1200px){
@@ -123,5 +129,8 @@
     }
     .logoFooter {
         width: 270px;
+    }
+    .footerContainer3 {
+        padding: 0 6%;
     }
 }

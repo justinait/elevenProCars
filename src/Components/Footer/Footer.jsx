@@ -11,6 +11,12 @@ import CreditCardIcon from '@mui/icons-material/CreditCard';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import PaymentsIcon from '@mui/icons-material/Payments';
 import Payment from '../Payment/Payment';
+import visa from '/public/home/visa.svg'
+import master from '/public/home/mastercard.svg'
+import amex from '/public/home/amex.svg'
+import redsys from '/public/home/Redsys.jpg'
+import dolar from '/public/home/dolar.png'
+
 
 function Footer() {
   
@@ -45,7 +51,13 @@ function Footer() {
       <div className='footerPaymentMethods'>
         <p>All payment methods accepted</p>
         <div>
-          <CreditCardIcon className='footerIcons' /> <AttachMoneyIcon className='footerIcons' /> <PaymentsIcon className='footerIcons' />
+          {/* <CreditCardIcon className='footerIcons' /> <AttachMoneyIcon className='footerIcons' /> <PaymentsIcon className='footerIcons' /> */}
+          <img src={redsys} alt="redsys" className='footerIconsCard' />
+          <img src={master} alt="Mastercard" className='footerIconsCard' />
+          <img src={visa} alt="visa" className='footerIconsCard' />
+          <img src={amex} alt="amex" className='footerIconsCard' />
+          <img src={dolar} alt="dolar" className='footerIconsCard' />
+
         </div>
         <Payment/>
       </div>
